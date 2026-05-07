@@ -306,15 +306,15 @@ body.page-id-products.vl-theme-middle .vl-products-grid-wrap .vl-product-card:ho
   opacity: 0.75;
 }
 
-/* Match live products page: compact tiles (icon + title); keep extras for a11y.
-   `#voltis-apps` lists full descriptions from voltislabs.com `data.tsx`. */
+/* Products catalog grids (#voltis-apps, #voltis-core): visible category labels and titles only. */
 #voltis-apps .vl-products-grid-wrap .vl-product-card__meta,
-#voltis-apps .vl-products-grid-wrap .vl-product-card__desc {
+#voltis-core .vl-products-grid-wrap .vl-product-card__meta {
   position: static;
   width: auto;
   height: auto;
   padding: 0;
   margin: 0;
+  margin-bottom: 0.2rem;
   overflow: visible;
   clip: auto;
   white-space: normal;
@@ -322,16 +322,9 @@ body.page-id-products.vl-theme-middle .vl-products-grid-wrap .vl-product-card:ho
   clip-path: none;
 }
 
-#voltis-apps .vl-products-grid-wrap .vl-product-card__meta {
-  margin-bottom: 0.2rem;
-}
-
-#voltis-apps .vl-products-grid-wrap .vl-product-card__desc {
-  margin-top: 0.35rem;
-}
-
-/* Long catalog copy reads better left-aligned beneath each tile */
-#voltis-apps .vl-products-grid-wrap .vl-product-card__body {
+/* Tile body: tighter stack under icon without long catalog blurbs */
+#voltis-apps .vl-products-grid-wrap .vl-product-card__body,
+#voltis-core .vl-products-grid-wrap .vl-product-card__body {
   align-items: stretch;
   text-align: left;
   padding: 0.45rem 0.5rem 0.65rem;
@@ -340,16 +333,19 @@ body.page-id-products.vl-theme-middle .vl-products-grid-wrap .vl-product-card:ho
 }
 
 #voltis-apps .vl-products-grid-wrap .vl-product-card__meta,
-#voltis-apps .vl-products-grid-wrap .vl-product-card__title {
+#voltis-apps .vl-products-grid-wrap .vl-product-card__title,
+#voltis-core .vl-products-grid-wrap .vl-product-card__meta,
+#voltis-core .vl-products-grid-wrap .vl-product-card__title {
   text-align: center;
 }
 
-#voltis-apps .vl-products-grid-wrap .vl-product-card__desc,
-#voltis-apps .vl-products-grid-wrap .vl-product-card__link {
+#voltis-apps .vl-products-grid-wrap .vl-product-card__link,
+#voltis-core .vl-products-grid-wrap .vl-product-card__link {
   align-self: stretch;
 }
 
-#voltis-apps .vl-products-grid {
+#voltis-apps .vl-products-grid,
+#voltis-core .vl-products-grid {
   align-items: start;
 }
 
@@ -416,9 +412,9 @@ body.page-id-businesses .section-media--full .media {
   overflow: hidden;
 }
 
-/* Hero orbit renders outside the intrinsic box; clipping would crop the ring at 12 / 6 o'clock. */
+/* Businesses hero: video fills the framed media strip. */
 body.page-id-businesses .section-media--full .media.vl-businesses-hero-wrap {
-  overflow: visible;
+  overflow: hidden;
 }
 
 body.page-id-businesses .section-media--full .media video {
