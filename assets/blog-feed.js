@@ -422,11 +422,12 @@
       return;
     }
     const cats = getCategories();
+    /* Newspaper chips: always ghost + newspaper rail in blog.css (.vl-news-edition); never filled primary */
     container.innerHTML = cats
       .map(
         (cat) =>
-          `<button type="button" class="vl-blog-cat vl-liquid-btn vl-liquid-btn--sm${
-            state.activeTab === cat ? ' vl-blog-cat--active' : ' vl-liquid-btn--ghost'
+          `<button type="button" class="vl-blog-cat vl-liquid-btn vl-liquid-btn--ghost vl-liquid-btn--sm${
+            state.activeTab === cat ? ' vl-blog-cat--active' : ''
           }" data-category="${escapeHtml(cat)}"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">${escapeHtml(
             cat,
           )}</span></button>`,
@@ -456,7 +457,7 @@
         <div class="vl-blog-error-inner">
           <p class="vl-blog-error__title">Network Error</p>
           <p class="vl-blog-error__msg">${escapeHtml(state.error)}</p>
-          <button type="button" class="vl-liquid-btn" id="vl-blog-retry"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">${escapeHtml(state.retrying ? 'Retrying…' : 'Retry')}</span></button>
+          <button type="button" class="vl-liquid-btn vl-liquid-btn--ghost vl-liquid-btn--sm" id="vl-blog-retry"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">${escapeHtml(state.retrying ? 'Retrying…' : 'Retry')}</span></button>
         </div>`;
       const btn = $('vl-blog-retry');
       if (btn && !state.retrying) {
@@ -476,7 +477,7 @@
         errEl.innerHTML = `
           <div class="vl-blog-loadmore-err">
             <p>${escapeHtml(state.loadMoreError)}</p>
-            <button type="button" class="vl-liquid-btn vl-liquid-btn--danger" id="vl-blog-retry-more"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">Retry</span></button>
+            <button type="button" class="vl-liquid-btn vl-liquid-btn--ghost vl-liquid-btn--sm vl-liquid-btn--danger" id="vl-blog-retry-more"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">Retry</span></button>
           </div>`;
         const r = $('vl-blog-retry-more');
         if (r) {
