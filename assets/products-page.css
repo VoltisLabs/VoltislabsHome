@@ -1,0 +1,297 @@
+/* Supplemental layout for products.html - works with grapheine-main.css */
+
+/* Theme masks images with .media::after until ScrollTrigger + load; force reveal on this page */
+body.page-id-products .media::after {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+body.page-id-products .media img,
+body.page-id-products .media video {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.vl-products-grid-wrap .vl-products-grid {
+  display: grid !important;
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+  box-sizing: border-box;
+  color: var(--color-text, #fff);
+}
+
+/* Full-width row in the theme grid so inner columns are not squeezed to one track */
+body.page-id-products .vl-products-grid-wrap {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  padding-inline: clamp(1rem, 4vw, 1.5rem);
+  box-sizing: border-box;
+}
+
+/* Wrapper uses theme subgrid: a single child without placement sits in column 1 only (~1 track wide). */
+.vl-products-grid-wrap.grid.subgrid > .vl-products-grid {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Space between catalog intro copy and tiles (avoid overlap / cramped stacks) */
+#voltis-apps .grid > .vl-products-grid-wrap {
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.vl-products-grid {
+  display: grid;
+  /* Match voltislabs.com/products: grid-cols-2 sm:2 md:3 lg:4, centered tiles */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .vl-products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .vl-products-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.vl-product-card {
+  position: relative;
+  width: 100%;
+  max-width: 12rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+/* Catalog: icon lives in its own framed tile; name sits below as plain text */
+.vl-products-grid-wrap .vl-product-card {
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+.vl-products-grid-wrap .vl-product-card:hover {
+  transform: none;
+  background: transparent;
+}
+.vl-products-grid-wrap .vl-product-card:hover .vl-product-card__thumb {
+  transform: scale(1.02);
+}
+.vl-product-card:hover {
+  border-color: rgba(255, 43, 43, 0.45);
+  background: rgba(255, 255, 255, 0.03);
+}
+.vl-product-card__thumb {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: none;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.vl-products-grid-wrap .vl-product-card__thumb {
+  flex-shrink: 0;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  box-sizing: border-box;
+  margin-bottom: 0.65rem;
+  transition: transform 0.2s ease;
+  /* Block + relative so the icon absolutely fills the frame (avoid flex-row squishing) */
+  display: block;
+  position: relative;
+}
+.vl-product-card--productivity .vl-product-card__thumb {
+  background: linear-gradient(155deg, #1a2035 0%, #0a0b10 100%);
+}
+.vl-product-card--fashion .vl-product-card__thumb {
+  background: linear-gradient(155deg, #2a1528 0%, #0c090d 100%);
+}
+.vl-product-card--lifestyle .vl-product-card__thumb {
+  background: linear-gradient(155deg, #142a22 0%, #080c0a 100%);
+}
+.vl-product-card--games .vl-product-card__thumb {
+  background: linear-gradient(155deg, #152238 0%, #080b12 100%);
+}
+.vl-product-card--social .vl-product-card__thumb {
+  background: linear-gradient(155deg, #241818 0%, #0a0808 100%);
+}
+.vl-product-card__thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 43, 43, 0.35) 0%,
+    transparent 55%
+  );
+  pointer-events: none;
+}
+.vl-product-card__thumb-img {
+  position: relative;
+  z-index: 1;
+  width: 96px !important;
+  height: 96px !important;
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  border-radius: 22px;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.55);
+}
+
+.vl-products-grid-wrap .vl-product-card__thumb-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90% !important;
+  height: 90% !important;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+}
+.vl-product-card__body {
+  padding: 0.5rem 0.5rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+}
+.vl-products-grid-wrap .vl-product-card__body {
+  padding: 0 0.2rem;
+  flex: 0 0 auto;
+  align-items: center;
+  background: transparent;
+}
+.vl-products-grid-wrap .vl-product-card__title {
+  pointer-events: none;
+  margin-top: 0.1rem;
+  line-height: 1.35;
+}
+.vl-product-card__meta {
+  margin: 0;
+}
+.vl-product-card__cat {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.vl-product-card__title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+@media (min-width: 640px) {
+  .vl-product-card__title {
+    font-size: 1rem;
+  }
+}
+.vl-product-card__desc {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  opacity: 0.82;
+  flex: 1;
+}
+.vl-product-card__link {
+  margin-top: 0.25rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  align-self: flex-start;
+}
+.vl-product-card__link:hover {
+  opacity: 0.75;
+}
+
+/* Match live products page: compact tiles (icon + title); keep extras for a11y */
+.vl-products-grid-wrap .vl-product-card__meta,
+.vl-products-grid-wrap .vl-product-card__desc {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.vl-products-grid-wrap .vl-product-card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  border: none;
+  opacity: 0;
+  font-size: 0;
+}
+.vl-products-grid-wrap .vl-product-card__link:focus-visible {
+  opacity: 1;
+  font-size: 0.75rem;
+  outline: 2px solid rgba(255, 43, 43, 0.85);
+  outline-offset: 2px;
+}
+.vl-sector-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.65rem;
+}
+.vl-sector-pill {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  text-decoration: none;
+  opacity: 0.88;
+}
+.vl-sector-pill:hover {
+  border-color: rgba(255, 43, 43, 0.5);
+  opacity: 1;
+}
+.vl-logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.25rem 1.75rem;
+}
+.vl-logo-strip img {
+  height: 36px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.15);
+  opacity: 0.85;
+  position: relative;
+  z-index: 1;
+}
+/* Voltis live site keeps 2 columns on small viewports; narrow cards stay readable */

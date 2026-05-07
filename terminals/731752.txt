@@ -1,0 +1,21 @@
+---
+pid: 345072
+cwd: "C:\\Users\\toziz"
+command: "curl.exe -sSI \"https://image.thum.io/get/width/900/crop/560/noanimate/https://voltislabs.com\" | Select-Object -First 8"
+started_at: 2026-05-06T22:07:55.149Z
+running_for_ms: 90096    
+---
+HTTP/1.1 200 
+Date: Wed, 06 May 2026 22:09:28 GMT
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+---
+exit_code: 0
+elapsed_ms: 94535
+ended_at: 2026-05-06T22:09:29.684Z
+---

@@ -1,0 +1,9 @@
+---
+pid: 342396
+cwd: "C:\\Users\\toziz"
+command: "Set-Location \"C:\\Users\\toziz\\.cursor\\projects\\C-Users-toziz-AppData-Local-Temp-c89c31b7-d619-4c02-8e71-e1c09a273f2b\"; python -m http.server 8765 --bind 127.0.0.1"
+started_at: 2026-05-07T02:06:58.519Z
+running_for_ms: 5603761  
+---
+127.0.0.1 - - [07/May/2026 03:07:47] "GET /products.html HTTP/1.1" 200 -
+127.0.0.1 - - [07/May/2026 03:13:39] "GET /products.html HTTP/1.1" 200 -

@@ -1,0 +1,915 @@
+---
+pid: 331876
+cwd: "C:\\Users\\toziz\\prelura-workspace\\voltislabs.com"
+command: "npm run dev"
+started_at: 2026-05-06T12:26:24.551Z
+running_for_ms: 54834002 
+---
+
+> voltislabs-com@0.1.0 dev
+> next dev -p 3000
+
+   ▲ Next.js 15.1.11
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.207:3000
+
+ ✓ Starting...
+ ✓ Ready in 4.5s
+ ○ Compiling /tools ...
+ ✓ Compiled /tools in 7.6s (1648 modules)
+ GET /tools 200 in 8443ms
+ GET / 200 in 8444ms
+ GET / 200 in 8460ms
+ ✓ Compiled in 511ms (771 modules)
+ ✓ Compiled /favicon.ico in 262ms (892 modules)
+ ○ Compiling /api/hygraph ...
+ ✓ Compiled /api/hygraph in 593ms (1654 modules)
+ GET /favicon.ico 200 in 970ms
+ GET /favicon.ico 200 in 21ms
+ POST /api/hygraph 200 in 1148ms
+ GET / 200 in 197ms
+ POST /api/hygraph 200 in 365ms
+ GET / 200 in 10ms
+ GET / 200 in 10ms
+ GET / 200 in 10ms
+ GET /tools 200 in 12ms
+ ✓ Compiled in 784ms (1649 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 133ms
+ GET /tools 200 in 137ms
+ GET / 200 in 140ms
+ ✓ Compiled /api/hygraph in 114ms (894 modules)
+ POST /api/hygraph 200 in 389ms
+ GET /tools 200 in 93ms
+ ✓ Compiled /products in 343ms (1659 modules)
+ GET /products 200 in 383ms
+ ✓ Compiled in 715ms (1673 modules)
+ GET /products 200 in 36ms
+ GET /tools 200 in 37ms
+ GET / 200 in 37ms
+ GET /tools 200 in 10ms
+ ✓ Compiled in 642ms (1656 modules)
+ GET /products 200 in 86ms
+ GET /tools 200 in 87ms
+ GET / 200 in 87ms
+ GET /tools 200 in 11ms
+ ✓ Compiled in 770ms (1656 modules)
+ GET /products 200 in 63ms
+ GET /tools 200 in 64ms
+ GET / 200 in 65ms
+ GET /tools 200 in 12ms
+ ✓ Compiled in 691ms (1656 modules)
+ GET /products 200 in 36ms
+ GET /tools 200 in 37ms
+ GET / 200 in 37ms
+ GET /tools 200 in 10ms
+ ✓ Compiled in 691ms (1656 modules)
+ GET /tools 200 in 41ms
+ GET /products 200 in 40ms
+ GET / 200 in 39ms
+ GET /tools 200 in 10ms
+ ✓ Compiled in 894ms (1656 modules)
+ GET /products 200 in 61ms
+ GET /tools 200 in 61ms
+ GET / 200 in 60ms
+ GET /tools 200 in 8ms
+ ✓ Compiled in 704ms (1656 modules)
+ GET /products 200 in 30ms
+ GET /tools 200 in 31ms
+ GET / 200 in 32ms
+ GET /tools 200 in 10ms
+ GET / 200 in 7ms
+ ✓ Compiled /api/hygraph in 135ms (899 modules)
+ POST /api/hygraph 200 in 421ms
+ POST /api/hygraph 200 in 422ms
+ ✓ Compiled in 782ms (1673 modules)
+ GET / 200 in 58ms
+ GET /tools 200 in 62ms
+ GET /products 200 in 45ms
+ GET / 200 in 38ms
+ POST /api/hygraph 200 in 251ms
+ POST /api/hygraph 200 in 269ms
+ ✓ Compiled in 704ms (1656 modules)
+ GET /products 200 in 92ms
+ GET /tools 200 in 93ms
+ GET / 200 in 94ms
+ ✓ Compiled /api/hygraph in 102ms (899 modules)
+ GET / 200 in 254ms
+ POST /api/hygraph 200 in 410ms
+ POST /api/hygraph 200 in 419ms
+ GET / 200 in 8ms
+ POST /api/hygraph 200 in 210ms
+ POST /api/hygraph 200 in 212ms
+ GET /products 200 in 9ms
+ GET / 200 in 8ms
+ POST /api/hygraph 200 in 188ms
+ POST /api/hygraph 200 in 321ms
+ GET /tools 200 in 8ms
+ GET /tools 200 in 7ms
+ ✓ Compiled in 924ms (1656 modules)
+ GET /tools 200 in 69ms
+ GET / 200 in 78ms
+ GET /tools 200 in 78ms
+ GET /tools 200 in 7ms
+ GET / 200 in 8ms
+ ✓ Compiled /api/hygraph in 264ms (899 modules)
+ POST /api/hygraph 200 in 524ms
+ POST /api/hygraph 200 in 534ms
+ ✓ Compiled /api/hygraph in 764ms (1656 modules)
+ ✓ Compiled in 0ms (899 modules)
+ GET /tools 200 in 267ms
+ GET / 200 in 268ms
+ GET /tools 200 in 268ms
+ GET / 200 in 10ms
+ POST /api/hygraph 200 in 564ms
+ POST /api/hygraph 200 in 567ms
+ GET /tools 200 in 238ms
+ GET / 200 in 238ms
+ GET /tools 200 in 238ms
+ ✓ Compiled in 563ms (1673 modules)
+ GET / 200 in 231ms
+ GET /tools 200 in 50ms
+ GET /tools 200 in 51ms
+ GET / 200 in 20ms
+ GET / 200 in 8ms
+ GET / 200 in 155ms
+ ✓ Compiled /api/hygraph in 256ms (897 modules)
+ ✓ Compiled (901 modules)
+ GET /favicon.ico 200 in 371ms
+ POST /api/hygraph 200 in 1079ms
+ ○ Compiling /bars ...
+ ✓ Compiled /bars in 791ms (1692 modules)
+ GET /bars 200 in 930ms
+ GET / 200 in 11ms
+ POST /api/hygraph 200 in 904ms
+ POST /api/hygraph 200 in 981ms
+ GET / 200 in 81ms
+ GET /favicon.ico 200 in 13ms
+ POST /api/hygraph 200 in 215ms
+ GET / 200 in 11ms
+ GET /products 200 in 11ms
+ ✓ Compiled /blog in 452ms (1700 modules)
+ GET /blog 200 in 518ms
+ ✓ Compiled /api/hygraph in 124ms (931 modules)
+ POST /api/hygraph 200 in 382ms
+ POST /api/hygraph 200 in 382ms
+ POST /api/hygraph 200 in 73ms
+ ✓ Compiled /Aboutus in 327ms (1724 modules)
+ GET /Aboutus 200 in 403ms
+ ✓ Compiled /contact-us in 229ms (1735 modules)
+ GET /contact-us 200 in 273ms
+ GET / 200 in 162ms
+ ✓ Compiled /api/hygraph in 252ms (921 modules)
+ ✓ Compiled (925 modules)
+ GET /favicon.ico 200 in 399ms
+ POST /api/hygraph 200 in 615ms
+ GET /bars 200 in 91ms
+ GET / 200 in 12ms
+ POST /api/hygraph 200 in 193ms
+ POST /api/hygraph 200 in 283ms
+ GET / 200 in 82ms
+ GET /favicon.ico 200 in 11ms
+ POST /api/hygraph 200 in 249ms
+ GET /tools 200 in 16ms
+ GET /tools 200 in 14ms
+ GET /favicon.ico 200 in 8ms
+ GET /tools 200 in 18ms
+ GET /favicon.ico 200 in 8ms
+ ✓ Compiled in 1184ms (1731 modules)
+ ✓ Compiled in 0ms (925 modules)
+ ✓ Compiled in 1ms (925 modules)
+ ✓ Compiled in 0ms (925 modules)
+ GET /tools 200 in 468ms
+ GET /tools 200 in 468ms
+ GET / 200 in 468ms
+ POST /api/hygraph 200 in 862ms
+ ✓ Compiled in 690ms (1731 modules)
+ GET /tools 200 in 32ms
+ GET /tools 200 in 31ms
+ GET / 200 in 31ms
+ GET / 200 in 11ms
+ POST /api/hygraph 200 in 238ms
+ POST /api/hygraph 200 in 247ms
+ ✓ Compiled in 847ms (1731 modules)
+ GET /tools 200 in 57ms
+ GET / 200 in 67ms
+ GET / 200 in 21ms
+ POST /api/hygraph 200 in 210ms
+ POST /api/hygraph 200 in 226ms
+ ✓ Compiled in 834ms (1729 modules)
+ GET /tools 200 in 66ms
+ GET / 200 in 66ms
+ GET / 200 in 10ms
+ GET / 200 in 90ms
+ GET /tools 200 in 91ms
+ ✓ Compiled in 315ms (1715 modules)
+ GET / 200 in 259ms
+ GET /tools 200 in 33ms
+ GET / 200 in 15ms
+ GET / 200 in 11ms
+ ✓ Compiled in 521ms (806 modules)
+ GET /tools 200 in 19ms
+ GET / 200 in 20ms
+ GET / 200 in 8ms
+ GET /tools 200 in 284ms
+ GET / 200 in 286ms
+ ✓ Compiled in 690ms (1712 modules)
+ GET / 200 in 444ms
+ GET /tools 200 in 15ms
+ GET / 200 in 16ms
+ GET / 200 in 8ms
+ GET /products 200 in 12ms
+ ○ Compiling /test ...
+ ✓ Compiled /test in 521ms (1711 modules)
+ GET /test 200 in 647ms
+ GET / 200 in 13ms
+ ✓ Compiled /api/hygraph in 165ms (914 modules)
+ POST /api/hygraph 200 in 346ms
+ POST /api/hygraph 200 in 423ms
+ GET / 200 in 33ms
+ GET / 200 in 136ms
+ ✓ Compiled /favicon.ico in 209ms (916 modules)
+ GET /favicon.ico 200 in 275ms
+ POST /api/hygraph 200 in 303ms
+ ✓ Compiled in 720ms (808 modules)
+ GET /tools 200 in 94ms
+ GET /products 200 in 85ms
+ GET / 200 in 85ms
+ GET / 200 in 11ms
+ ✓ Compiled in 464ms (913 modules)
+ ✓ Compiled in 891ms (1721 modules)
+ GET /tools 200 in 90ms
+ GET / 200 in 92ms
+ GET /products 200 in 92ms
+ GET / 200 in 16ms
+ GET /test 200 in 19ms
+ ○ Compiling /spinner ...
+ ✓ Compiled /spinner in 1082ms (1832 modules)
+ GET /spinner 200 in 1157ms
+ ✓ Compiled /clipstack in 490ms (1811 modules)
+ GET /clipstack 200 in 538ms
+ ✓ Compiled in 1031ms (1753 modules)
+ GET /tools 200 in 98ms
+ GET /products 200 in 91ms
+ GET / 200 in 92ms
+ GET /test 200 in 91ms
+ ✓ Compiled in 675ms (1753 modules)
+ GET /tools 200 in 35ms
+ GET / 200 in 36ms
+ GET /test 200 in 36ms
+ GET /products 200 in 36ms
+ ✓ Compiled in 718ms (1753 modules)
+ GET /tools 200 in 36ms
+ GET /test 200 in 37ms
+ GET / 200 in 37ms
+ GET /products 200 in 37ms
+ ✓ Compiled in 796ms (1753 modules)
+ GET /tools 200 in 19ms
+ GET /products 200 in 18ms
+ GET / 200 in 17ms
+ GET /test 200 in 18ms
+ ✓ Compiled in 497ms (859 modules)
+ GET /tools 200 in 24ms
+ GET /products 200 in 23ms
+ GET /test 200 in 24ms
+ GET / 200 in 23ms
+ ✓ Compiled in 409ms (894 modules)
+ ✓ Compiled in 517ms (859 modules)
+ GET /tools 200 in 39ms
+ GET /test 200 in 37ms
+ GET / 200 in 38ms
+ GET /products 200 in 38ms
+ ✓ Compiled in 414ms (894 modules)
+ ✓ Compiled in 514ms (859 modules)
+ GET /tools 200 in 48ms
+ GET / 200 in 47ms
+ GET /test 200 in 46ms
+ GET /products 200 in 47ms
+ ✓ Compiled in 644ms (1753 modules)
+ GET /tools 200 in 31ms
+ GET /products 200 in 31ms
+ GET / 200 in 32ms
+ GET /test 200 in 32ms
+ ✓ Compiled in 832ms (1753 modules)
+ GET /tools 200 in 87ms
+ GET /products 200 in 83ms
+ GET /test 200 in 83ms
+ GET / 200 in 88ms
+ ✓ Compiled in 854ms (1753 modules)
+ GET /tools 200 in 94ms
+ GET / 200 in 95ms
+ GET /products 200 in 95ms
+ GET /test 200 in 96ms
+ GET /test 200 in 90ms
+ ✓ Compiled in 822ms (1753 modules)
+ GET /tools 200 in 84ms
+ GET / 200 in 84ms
+ GET /products 200 in 85ms
+ GET /test 200 in 85ms
+ GET /test 200 in 13ms
+ GET /test 200 in 69ms
+ ✓ Compiled in 869ms (1753 modules)
+ GET /tools 200 in 77ms
+ GET / 200 in 67ms
+ GET /products 200 in 67ms
+ GET /test 200 in 77ms
+ GET /test 200 in 23ms
+ GET /test 200 in 19ms
+ ✓ Compiled in 622ms (1753 modules)
+ GET /tools 200 in 42ms
+ GET /products 200 in 48ms
+ GET /test 200 in 48ms
+ GET / 200 in 50ms
+ GET /test 200 in 23ms
+ GET /test 200 in 10ms
+ GET /test 200 in 46ms
+ ✓ Compiled in 819ms (1753 modules)
+ GET /tools 200 in 94ms
+ GET / 200 in 89ms
+ GET /test 200 in 94ms
+ GET /products 200 in 90ms
+ GET /test 200 in 23ms
+ GET /test 200 in 17ms
+ GET /test 200 in 15ms
+ GET /test 200 in 48ms
+ ✓ Compiled in 645ms (1753 modules)
+ GET /tools 200 in 41ms
+ GET /products 200 in 42ms
+ GET /test 200 in 42ms
+ GET / 200 in 43ms
+ GET /test 200 in 17ms
+ GET /test 200 in 13ms
+ GET /test 200 in 13ms
+ GET /test 200 in 9ms
+ GET /test 200 in 43ms
+ ✓ Compiled in 748ms (1753 modules)
+ GET /tools 200 in 47ms
+ GET /test 200 in 49ms
+ GET / 200 in 50ms
+ GET /products 200 in 50ms
+ GET /test 200 in 17ms
+ GET /test 200 in 22ms
+ GET /test 200 in 18ms
+ GET /test 200 in 11ms
+ GET /test 200 in 9ms
+ GET /test 200 in 51ms
+ ✓ Compiled in 814ms (1753 modules)
+ GET /tools 200 in 49ms
+ GET / 200 in 49ms
+ GET /products 200 in 49ms
+ GET /test 200 in 50ms
+ GET /test 200 in 13ms
+ GET /test 200 in 10ms
+ GET /test 200 in 16ms
+ GET /test 200 in 12ms
+ GET /test 200 in 16ms
+ GET /test 200 in 11ms
+ GET /test 200 in 43ms
+ ✓ Compiled in 649ms (1753 modules)
+ GET /tools 200 in 40ms
+ GET /test 200 in 43ms
+ GET /products 200 in 44ms
+ GET / 200 in 45ms
+ GET /test 200 in 16ms
+ GET /test 200 in 13ms
+ GET /test 200 in 15ms
+ GET /test 200 in 14ms
+ GET /test 200 in 11ms
+ GET /test 200 in 9ms
+ GET /test 200 in 7ms
+ GET /test 200 in 42ms
+ GET / 200 in 8ms
+ ✓ Compiled /api/hygraph in 266ms (911 modules)
+ POST /api/hygraph 200 in 528ms
+ POST /api/hygraph 200 in 528ms
+ ✓ Compiled /VoltisCore in 445ms (1744 modules)
+ GET /VoltisCore 200 in 540ms
+ ✓ Compiled in 831ms (1751 modules)
+ GET /tools 200 in 119ms
+ GET /test 200 in 119ms
+ GET / 200 in 117ms
+ GET /products 200 in 118ms
+ GET /test 200 in 83ms
+ ✓ Compiled in 696ms (1751 modules)
+ GET /tools 200 in 54ms
+ GET /test 200 in 56ms
+ GET / 200 in 58ms
+ GET /products 200 in 56ms
+ GET /test 200 in 22ms
+ GET /test 200 in 63ms
+ ✓ Compiled in 667ms (1751 modules)
+ GET /tools 200 in 52ms
+ GET /test 200 in 52ms
+ GET /products 200 in 52ms
+ GET / 200 in 53ms
+ GET /test 200 in 15ms
+ GET /test 200 in 14ms
+ GET /test 200 in 45ms
+ ✓ Compiled in 883ms (1751 modules)
+ GET /tools 200 in 100ms
+ GET / 200 in 100ms
+ GET /products 200 in 101ms
+ GET /test 200 in 102ms
+ GET /test 200 in 25ms
+ GET /test 200 in 17ms
+ GET /test 200 in 18ms
+ GET /test 200 in 45ms
+ ✓ Compiled in 837ms (1751 modules)
+ GET /tools 200 in 90ms
+ GET / 200 in 91ms
+ GET /test 200 in 92ms
+ GET /products 200 in 92ms
+ GET /test 200 in 15ms
+ GET /test 200 in 13ms
+ GET /test 200 in 11ms
+ GET /test 200 in 14ms
+ ✓ Compiled in 640ms (1751 modules)
+ GET /tools 200 in 44ms
+ GET /test 200 in 45ms
+ GET /products 200 in 45ms
+ GET / 200 in 45ms
+ GET /test 200 in 21ms
+ GET /test 200 in 11ms
+ GET /test 200 in 11ms
+ GET /test 200 in 10ms
+ ✓ Compiled in 616ms (1751 modules)
+ GET /tools 200 in 59ms
+ GET /test 200 in 59ms
+ GET / 200 in 60ms
+ GET /products 200 in 60ms
+ GET /test 200 in 25ms
+ GET /test 200 in 21ms
+ GET /test 200 in 25ms
+ GET /test 200 in 10ms
+ GET /test 200 in 82ms
+ GET / 200 in 254ms
+ GET /products 200 in 253ms
+ GET /tools 200 in 257ms
+ ✓ Compiled /_not-found in 743ms (1734 modules)
+ GET /test 404 in 764ms
+ GET /test 404 in 25ms
+ GET /test 404 in 11ms
+ GET /test 404 in 9ms
+ GET /test 404 in 6ms
+ GET /test 404 in 9ms
+ GET /test 404 in 56ms
+ GET /test 404 in 56ms
+ GET /test 404 in 63ms
+ GET /test 404 in 16ms
+ GET /test 404 in 16ms
+ GET /test 404 in 10ms
+ ✓ Compiled in 924ms (1748 modules)
+ GET /test 404 in 32ms
+ GET /test 404 in 8ms
+ GET /test 404 in 47ms
+ GET /test 404 in 50ms
+ GET /test 404 in 49ms
+ GET /test 404 in 18ms
+ GET /test 404 in 19ms
+ GET /test 404 in 10ms
+ ✓ Compiled in 426ms (847 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 544ms (1734 modules)
+ GET /test 404 in 575ms
+ GET /test 404 in 7ms
+ GET /test 404 in 7ms
+ GET /test 404 in 6ms
+ GET /test 404 in 7ms
+ GET /test 404 in 9ms
+ GET /test 404 in 71ms
+ GET /test 404 in 76ms
+ GET /test 404 in 76ms
+ GET /test 404 in 19ms
+ GET /test 404 in 23ms
+ GET /test 404 in 14ms
+ ✓ Compiled in 547ms (861 modules)
+ ✓ Compiled in 785ms (1748 modules)
+ GET /test 404 in 62ms
+ GET /test 404 in 47ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 50ms
+ GET /test 404 in 18ms
+ GET /test 404 in 22ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 20ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 24ms
+ GET /test 404 in 46ms
+ ○ Compiling /api/hygraph ...
+ ✓ Compiled /api/hygraph in 873ms (1765 modules)
+ POST /api/hygraph 200 in 1244ms
+ POST /api/hygraph 200 in 217ms
+ ✓ Compiled in 780ms (1765 modules)
+ GET /test 404 in 38ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 49ms
+ GET /test 404 in 57ms
+ GET /test 404 in 16ms
+ GET /test 404 in 16ms
+ GET /test 404 in 15ms
+ GET /test 404 in 9ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 19ms
+ POST /api/hygraph 200 in 69ms
+ ✓ Compiled in 800ms (1765 modules)
+ POST /api/hygraph 200 in 107ms
+ ✓ Compiled in 656ms (1765 modules)
+ GET /test 404 in 29ms
+ GET /test 404 in 44ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 47ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 23ms
+ GET /test 404 in 30ms
+ GET /test 404 in 16ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 26ms
+ GET /test 404 in 10ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ POST /api/hygraph 200 in 87ms
+ ✓ Compiled in 852ms (1765 modules)
+ POST /api/hygraph 200 in 102ms
+ ✓ Compiled in 635ms (1765 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /test 404 in 46ms
+ GET /test 404 in 58ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 28ms
+ GET /test 404 in 30ms
+ GET /test 404 in 11ms
+ GET /test 404 in 23ms
+ GET /test 404 in 14ms
+ POST /api/hygraph 200 in 62ms
+ ✓ Compiled in 763ms (1765 modules)
+ POST /api/hygraph 200 in 80ms
+ ✓ Compiled /favicon.ico in 228ms (906 modules)
+ GET /favicon.ico 200 in 270ms
+ GET /favicon.ico 200 in 14ms
+ GET /favicon.ico 200 in 9ms
+ GET /favicon.ico 200 in 6ms
+ ✓ Compiled in 1009ms (1767 modules)
+ GET /test 404 in 136ms
+ GET /test 404 in 141ms
+ GET /test 404 in 17ms
+ GET /test 404 in 24ms
+ GET /test 404 in 31ms
+ GET /test 404 in 22ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 813ms (1769 modules)
+ GET /favicon.ico 200 in 455ms
+ GET /test 404 in 39ms
+ GET /favicon.ico 200 in 12ms
+ GET /test 404 in 63ms
+ GET /test 404 in 61ms
+ GET /test 404 in 70ms
+ GET /test 404 in 21ms
+ GET /favicon.ico 200 in 22ms
+ GET /test 404 in 24ms
+ GET /test 404 in 15ms
+ GET /test 404 in 10ms
+ ✓ Compiled in 664ms (1769 modules)
+ ✓ Compiled in 645ms (1769 modules)
+ GET /test 404 in 19ms
+ GET /test 404 in 6ms
+ GET /test 404 in 35ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 43ms
+ GET /test 404 in 14ms
+ GET /test 404 in 22ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 25ms
+ GET /test 404 in 13ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 667ms (1769 modules)
+ GET /test 404 in 21ms
+ GET /test 404 in 10ms
+ GET /test 404 in 33ms
+ GET /test 404 in 39ms
+ GET /test 404 in 15ms
+ GET /test 404 in 14ms
+ GET /test 404 in 21ms
+ GET /test 404 in 15ms
+ ✓ Compiled in 729ms (1769 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 894ms (1755 modules)
+ GET /test 404 in 257ms
+ GET /test 404 in 8ms
+ GET /test 404 in 5ms
+ GET /test 404 in 4ms
+ GET /test 404 in 8ms
+ GET /test 404 in 15ms
+ GET /test 404 in 11ms
+ ✓ Compiled /api/site-thumb in 725ms (1769 modules)
+ ✓ Compiled in 180ms (848 modules)
+ GET /favicon.ico 200 in 59ms
+ ✓ Compiled in 916ms (1771 modules)
+ ✓ Compiled in 448ms (1771 modules)
+ ✓ Compiled in 0ms (909 modules)
+ ✓ Compiled in 219ms (1757 modules)
+ GET /favicon.ico 200 in 1052ms
+ GET /test 404 in 817ms
+ GET /favicon.ico 200 in 11ms
+ GET /test 404 in 13ms
+ GET /test 404 in 12ms
+ GET /favicon.ico 200 in 13ms
+ GET /test 404 in 11ms
+ GET /test 404 in 9ms
+ GET /test 404 in 3ms
+ GET /test 404 in 31ms
+ GET /test 404 in 4ms
+ GET /test 404 in 12ms
+ GET /test 404 in 7ms
+ GET /test 404 in 13ms
+ GET /test 404 in 7ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvoltislabs.com%2Fbars&fb=%2Ficons%2Fbars.svg 200 in 5382ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvoltislabs.com%2Fbars&fb=%2Ficons%2Fbars.svg 200 in 7150ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvoltislabs.com%2Fpinnacle-transfer&fb=%2Ficons%2Fpinnacle-transfer.svg 200 in 5581ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvoltislabs.com%2Fpinnacle-transfer&fb=%2Ficons%2Fpinnacle-transfer.svg 200 in 7430ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvoltislabs.com%2Fclipstack&fb=%2Ficons%2Fclipstack.svg 200 in 3339ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvoltislabs.com%2Fclipstack&fb=%2Ficons%2Fclipstack.svg 200 in 8761ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvoltislabs.com%2Fnotepadpro&fb=%2Fproducts%2Fnotepad-pro%2Fframe-103.svg 200 in 8900ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvoltislabs.com%2Fnotepadpro&fb=%2Fproducts%2Fnotepad-pro%2Fframe-103.svg 200 in 10790ms
+ GET /api/site-thumb?url=https%3A%2F%2Fvmodelapp.com&fb=%2Fimage%2Fvmodel-icon.png 200 in 4526ms
+ GET /api/site-thumb?url=https%3A%2F%2Fmywearhouse.co.uk&fb=%2Ficons%2Fprimary-logo.svg 200 in 7838ms
+ GET /api/site-thumb?url=https%3A%2F%2Fmyponyapp.com%2F&fb=%2Fimage%2Fponylogo.png 200 in 6585ms
+ GET /api/site-thumb?url=https%3A%2F%2Fwww.afrogarm.com&fb=%2Fimage%2FFrame.jpg 200 in 4826ms
+ GET /api/site-thumb?url=https%3A%2F%2Fspinnersonic.com%2F&fb=%2Fimage%2Fspinner.png 200 in 6267ms
+[Error: ENOENT: no such file or directory, stat 'C:\Users\toziz\prelura-workspace\voltislabs.com\.next\cache\webpack\server-development\4.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\toziz\\prelura-workspace\\voltislabs.com\\.next\\cache\\webpack\\server-development\\4.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat 'C:\Users\toziz\prelura-workspace\voltislabs.com\.next\cache\webpack\server-development\4.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\toziz\\prelura-workspace\\voltislabs.com\\.next\\cache\\webpack\\server-development\\4.pack.gz'
+}
+ ⨯ unhandledRejection:  [Error: ENOENT: no such file or directory, stat 'C:\Users\toziz\prelura-workspace\voltislabs.com\.next\cache\webpack\server-development\4.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\toziz\\prelura-workspace\\voltislabs.com\\.next\\cache\\webpack\\server-development\\4.pack.gz'
+}
+[Error: ENOENT: no such file or directory, stat 'C:\Users\toziz\prelura-workspace\voltislabs.com\.next\cache\webpack\server-development\16.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\toziz\\prelura-workspace\\voltislabs.com\\.next\\cache\\webpack\\server-development\\16.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat 'C:\Users\toziz\prelura-workspace\voltislabs.com\.next\cache\webpack\server-development\16.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\toziz\\prelura-workspace\\voltislabs.com\\.next\\cache\\webpack\\server-development\\16.pack.gz'
+}
+ ⨯ unhandledRejection:  [Error: ENOENT: no such file or directory, stat 'C:\Users\toziz\prelura-workspace\voltislabs.com\.next\cache\webpack\server-development\16.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'C:\\Users\\toziz\\prelura-workspace\\voltislabs.com\\.next\\cache\\webpack\\server-development\\16.pack.gz'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat 'C:\Users\toziz\prelura-workspace\voltislabs.com\.next\cache\webpack\server-development\4.pack.gz'
+ ✓ Compiled /_not-found in 394ms (1736 modules)
+ ○ Compiling /_error ...
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ GET /test 500 in 1248ms
+ GET /test 500 in 3ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 4ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 3ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ GET /test 500 in 2ms
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/products/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/products/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/products/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/products/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ⨯ ./src/lib/productThumbnail.ts
+Error: Failed to read source code from C:\Users\toziz\prelura-workspace\voltislabs.com\src\lib\productThumbnail.ts
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/lib/productThumbnail.ts
+./src/app/tools/page.tsx
+ ✓ Compiled /api/hygraph in 1925ms (2007 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /_next/static/webpack/7029064c3d973a6e.webpack.hot-update.json 404 in 1466ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /test 404 in 28ms
+ GET /_next/static/webpack/7029064c3d973a6e.webpack.hot-update.json 404 in 28ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /_next/static/webpack/7029064c3d973a6e.webpack.hot-update.json 404 in 19ms
+ GET /test 404 in 32ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /_next/static/webpack/7029064c3d973a6e.webpack.hot-update.json 404 in 28ms
+ GET /_next/static/css/app/layout.css?v=1778105204305 404 in 32ms
+ GET /test 404 in 31ms
+ GET /_next/static/css/app/layout.css?v=1778105204333 404 in 23ms
+ GET /test 404 in 26ms
+ GET /_next/static/css/app/layout.css?v=1778105204362 404 in 10ms
+ GET /_next/static/css/app/layout.css?v=1778105204380 404 in 10ms
+ POST /api/hygraph 200 in 1655ms
+ GET /_next/static/chunks/main-app.js?v=1778105204305 404 in 28ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 27ms
+ GET /_next/static/chunks/app/error.js 404 in 42ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 39ms
+ GET /_next/static/chunks/app/error.js 404 in 36ms
+ GET /_next/static/chunks/main-app.js?v=1778105204333 404 in 39ms
+ GET /_next/static/chunks/main-app.js?v=1778105204362 404 in 18ms
+ GET /_next/static/chunks/main-app.js?v=1778105204380 404 in 20ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 21ms
+ GET /_next/static/chunks/app/error.js 404 in 17ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 16ms
+ GET /_next/static/chunks/app/error.js 404 in 7ms
+ GET /_next/static/chunks/app/global-error.js 404 in 8ms
+ GET /_next/static/chunks/app/global-error.js 404 in 14ms
+ GET /_next/static/chunks/app/global-error.js 404 in 12ms
+ GET /_next/static/chunks/app/global-error.js 404 in 18ms
+ ✓ Compiled /favicon.ico in 134ms (951 modules)
+ GET /favicon.ico 200 in 165ms
+ GET /favicon.ico 200 in 8ms
+ GET /favicon.ico 200 in 7ms
+ GET /favicon.ico 200 in 7ms
+ ✓ Compiled in 378ms (1044 modules)

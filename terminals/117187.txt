@@ -1,0 +1,7 @@
+---
+pid: 310892
+cwd: "C:\\Users\\toziz"
+command: "curl.exe -sSL -H \"User-Agent: x\" \"https://api.github.com/repos/VoltisLabs/voltislabs.com/contents/\" | powershell -NoProfile -Command \"$j = $input | ConvertFrom-Json; $j | ForEach-Object { $_.name }\""
+started_at: 2026-05-07T00:27:24.715Z
+running_for_ms: 11573838 
+---

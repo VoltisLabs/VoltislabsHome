@@ -1,0 +1,7 @@
+---
+pid: 330032
+cwd: "C:\\Users\\toziz"
+command: "curl.exe -sSL -H \"User-Agent: VoltisLabsMirror\" \"https://api.github.com/repos/VoltisLabs/voltislabs.com/readme\" | powershell -NoProfile -Command \"$input | ConvertFrom-Json | Select-Object -ExpandProperty content | ForEach-Object { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }\""
+started_at: 2026-05-07T00:26:37.803Z
+running_for_ms: 11623828 
+---

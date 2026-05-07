@@ -1,0 +1,1804 @@
+{
+  "sha": "49b801799914235b4d3a1634c321a0d4a65fe357",
+  "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/49b801799914235b4d3a1634c321a0d4a65fe357",
+  "tree": [
+    {
+      "path": "app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "65bc796a94dfd318a25660f4b79442bd331633ff",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/65bc796a94dfd318a25660f4b79442bd331633ff"
+    },
+    {
+      "path": "app/Aboutus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13fe23e4f6afdec3998c2251c9c37603cf2ddfef",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/13fe23e4f6afdec3998c2251c9c37603cf2ddfef"
+    },
+    {
+      "path": "app/Aboutus/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66f37e2737c8ea41ac070f134f7d5c84860db402",
+      "size": 7253,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/66f37e2737c8ea41ac070f134f7d5c84860db402"
+    },
+    {
+      "path": "app/AppChrome.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb2931db601d59a97563e943133521ba6d731022",
+      "size": 1392,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/fb2931db601d59a97563e943133521ba6d731022"
+    },
+    {
+      "path": "app/academy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5a6ad8bd258ae01a8574e8a51d35eee2f94ebc0b",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/5a6ad8bd258ae01a8574e8a51d35eee2f94ebc0b"
+    },
+    {
+      "path": "app/academy/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cb0559ba34e128a9c0ab7ef801f2bb744c3e0ab",
+      "size": 311,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/7cb0559ba34e128a9c0ab7ef801f2bb744c3e0ab"
+    },
+    {
+      "path": "app/afrogarm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "50f563aa2cd45a8d78d43170f6bc27a8a0a68c6d",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/50f563aa2cd45a8d78d43170f6bc27a8a0a68c6d"
+    },
+    {
+      "path": "app/afrogarm/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0282a49b4009c0b3816c206d1d609797376b9521",
+      "size": 11245,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/0282a49b4009c0b3816c206d1d609797376b9521"
+    },
+    {
+      "path": "app/amg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8daca93eb0e28651fadeb0a2b80f3510fe15cf3",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/b8daca93eb0e28651fadeb0a2b80f3510fe15cf3"
+    },
+    {
+      "path": "app/amg/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cbeab6068ff3c9e3d6f228813d8fe907cd3402d",
+      "size": 284,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/5cbeab6068ff3c9e3d6f228813d8fe907cd3402d"
+    },
+    {
+      "path": "app/api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1041dc3a4fdfda240fad98c862e7016dd1480fed",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/1041dc3a4fdfda240fad98c862e7016dd1480fed"
+    },
+    {
+      "path": "app/api/hygraph",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4cabf8baf0c984efdb9384eaa72d93438b8ed95f",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/4cabf8baf0c984efdb9384eaa72d93438b8ed95f"
+    },
+    {
+      "path": "app/api/hygraph/route.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40f978ea1cb7ab6aab650041607a5faea9fd5128",
+      "size": 2067,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/40f978ea1cb7ab6aab650041607a5faea9fd5128"
+    },
+    {
+      "path": "app/bars",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90d720b9e6c7a981e380aeb7350fb555af773cce",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/90d720b9e6c7a981e380aeb7350fb555af773cce"
+    },
+    {
+      "path": "app/bars/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fb265b59486371fc3afa58a411dc225ea7625b0",
+      "size": 5974,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/6fb265b59486371fc3afa58a411dc225ea7625b0"
+    },
+    {
+      "path": "app/bg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e504ccf80cdebc97491c344e38b35958d0e29080",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/e504ccf80cdebc97491c344e38b35958d0e29080"
+    },
+    {
+      "path": "app/bg/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bbcfefb49e2f77880d331c87a3d564c1bca1b06",
+      "size": 237,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/1bbcfefb49e2f77880d331c87a3d564c1bca1b06"
+    },
+    {
+      "path": "app/blog",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fd149f4566a66c54e6b7f5357abe553594312ea",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/5fd149f4566a66c54e6b7f5357abe553594312ea"
+    },
+    {
+      "path": "app/blog/[slug]",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70ec359fafab56587741398c414fb2fcb239f15e",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/70ec359fafab56587741398c414fb2fcb239f15e"
+    },
+    {
+      "path": "app/blog/[slug]/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fd22df4878198cd6a76a5eac31e8b4a7d1e2c18",
+      "size": 2822,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/9fd22df4878198cd6a76a5eac31e8b4a7d1e2c18"
+    },
+    {
+      "path": "app/blog/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36a93ce7f381543815eeeeb467d0f71c7e019b5e",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/36a93ce7f381543815eeeeb467d0f71c7e019b5e"
+    },
+    {
+      "path": "app/blog/components/RethinkingStyle.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bc2b13af14f1b548757fa31022b4069c9c434ba",
+      "size": 6733,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/7bc2b13af14f1b548757fa31022b4069c9c434ba"
+    },
+    {
+      "path": "app/blog/components/april2025.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "864b4d1198ea98102a028d4e265897f7bfe226c1",
+      "size": 8102,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/864b4d1198ea98102a028d4e265897f7bfe226c1"
+    },
+    {
+      "path": "app/blog/components/articleHeader.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f422f8eadba80c812eb1c108e673a2df70cdebea",
+      "size": 975,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/f422f8eadba80c812eb1c108e673a2df70cdebea"
+    },
+    {
+      "path": "app/blog/components/blogData.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1b4f8eeaa4c8b0cabb117141887b3ee5339daf2",
+      "size": 1221,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e1b4f8eeaa4c8b0cabb117141887b3ee5339daf2"
+    },
+    {
+      "path": "app/blog/components/march2025.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "671f4696461b5f02f782d0a5abae50762cd81399",
+      "size": 6711,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/671f4696461b5f02f782d0a5abae50762cd81399"
+    },
+    {
+      "path": "app/blog/components/may2025.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0873e86a6bb34a0f903a821d5e333183d389d87",
+      "size": 7431,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/b0873e86a6bb34a0f903a821d5e333183d389d87"
+    },
+    {
+      "path": "app/blog/components/philosophyGrid.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "285d64f6ceab2fbea7be91f3b6d4493a8c777150",
+      "size": 2038,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/285d64f6ceab2fbea7be91f3b6d4493a8c777150"
+    },
+    {
+      "path": "app/blog/components/productShowcase.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a390b0a8d23bb14adccaf063159f3abba2db846",
+      "size": 2565,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/9a390b0a8d23bb14adccaf063159f3abba2db846"
+    },
+    {
+      "path": "app/blog/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce2dcea7e6d60ff295a437209dc136dab15b6148",
+      "size": 34242,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ce2dcea7e6d60ff295a437209dc136dab15b6148"
+    },
+    {
+      "path": "app/brand-guidelines",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30af729a669d63ec7ab8a9f0b4ed86c7662529ef",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/30af729a669d63ec7ab8a9f0b4ed86c7662529ef"
+    },
+    {
+      "path": "app/brand-guidelines/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a6ec52756b75778b0e1db45fab97d904f9065cf",
+      "size": 1462,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/9a6ec52756b75778b0e1db45fab97d904f9065cf"
+    },
+    {
+      "path": "app/clipstack",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6fcd39aaab369bb804f4ff7b47054f6dee716ac4",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/6fcd39aaab369bb804f4ff7b47054f6dee716ac4"
+    },
+    {
+      "path": "app/clipstack/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9353c3872be1178345a0c556b651a416a81df1b3",
+      "size": 9176,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/9353c3872be1178345a0c556b651a416a81df1b3"
+    },
+    {
+      "path": "app/contact-us",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48f039f00b8ecb3f88dc451ee3a4e9fb569e787f",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/48f039f00b8ecb3f88dc451ee3a4e9fb569e787f"
+    },
+    {
+      "path": "app/contact-us/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9e74a5db5acd7b2f92ed45e95d78646eaf864d8",
+      "size": 7115,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/f9e74a5db5acd7b2f92ed45e95d78646eaf864d8"
+    },
+    {
+      "path": "app/data.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "962b4db86b1b1c93539f0e132a5aba6a58b6cdef",
+      "size": 23697,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/962b4db86b1b1c93539f0e132a5aba6a58b6cdef"
+    },
+    {
+      "path": "app/error.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4b911f6fac693ef29349d203254186183d452f6",
+      "size": 654,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/b4b911f6fac693ef29349d203254186183d452f6"
+    },
+    {
+      "path": "app/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b7c1b92955b5fc417c91e2b067a31d9d7eec10c",
+      "size": 202614,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/5b7c1b92955b5fc417c91e2b067a31d9d7eec10c"
+    },
+    {
+      "path": "app/fonts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "737f8c454207fa2bf843e8bb2938cc948f96babd",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/737f8c454207fa2bf843e8bb2938cc948f96babd"
+    },
+    {
+      "path": "app/fonts/ComixLoud.ttf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f354ac28b989543e359771c05e83d1693fb9b50",
+      "size": 14164,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/0f354ac28b989543e359771c05e83d1693fb9b50"
+    },
+    {
+      "path": "app/global-error.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b8b382c78fad0992954483f0e257b23ff0eb690",
+      "size": 821,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/2b8b382c78fad0992954483f0e257b23ff0eb690"
+    },
+    {
+      "path": "app/globals.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e08a850a7c008d8b21b5dc2d22c25c5e838ab5c4",
+      "size": 2777,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e08a850a7c008d8b21b5dc2d22c25c5e838ab5c4"
+    },
+    {
+      "path": "app/latest-updates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1dfea8649b1c3bffbe7e3609976cced246f853cb",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/1dfea8649b1c3bffbe7e3609976cced246f853cb"
+    },
+    {
+      "path": "app/latest-updates/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26633be8827e9ed31e76858ca4f45932c617d8de",
+      "size": 4453,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/26633be8827e9ed31e76858ca4f45932c617d8de"
+    },
+    {
+      "path": "app/layout.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "979637f1a134728e872367840ab59b6fb3cf368a",
+      "size": 2289,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/979637f1a134728e872367840ab59b6fb3cf368a"
+    },
+    {
+      "path": "app/loyalty_bot",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "832d48c7ad630e69652ca6a4d05d01a7d8457697",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/832d48c7ad630e69652ca6a4d05d01a7d8457697"
+    },
+    {
+      "path": "app/loyalty_bot/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebbb086a8f2dda5105e0fd7ee2ed0859022534ca",
+      "size": 2835,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ebbb086a8f2dda5105e0fd7ee2ed0859022534ca"
+    },
+    {
+      "path": "app/my-bg-remover",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6db976eb3afe59040fa278c87f899e81857e6ca",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/d6db976eb3afe59040fa278c87f899e81857e6ca"
+    },
+    {
+      "path": "app/my-bg-remover/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e215bc4ccf138bbc38ad58ad57e92135484b3c0f",
+      "size": 1450,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e215bc4ccf138bbc38ad58ad57e92135484b3c0f"
+    },
+    {
+      "path": "app/my-bg-remover/next-env.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b3be0840f3f6a2bc663b53f4b17d05d2d924df6",
+      "size": 211,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/1b3be0840f3f6a2bc663b53f4b17d05d2d924df6"
+    },
+    {
+      "path": "app/my-bg-remover/next.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbf6e9ca209d0d28601e69f7460c5aeb0e6b84f3",
+      "size": 321,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/cbf6e9ca209d0d28601e69f7460c5aeb0e6b84f3"
+    },
+    {
+      "path": "app/my-bg-remover/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44753f49bfea48ef1dfc25d22cb139817b582506",
+      "size": 55954,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/44753f49bfea48ef1dfc25d22cb139817b582506"
+    },
+    {
+      "path": "app/my-bg-remover/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "506f732e0560fb5ff7077bdf06ad717d2afc2899",
+      "size": 619,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/506f732e0560fb5ff7077bdf06ad717d2afc2899"
+    },
+    {
+      "path": "app/my-bg-remover/postcss.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3acf5aadc10976d3efbf3a296b2b8540658cefb9",
+      "size": 233,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/3acf5aadc10976d3efbf3a296b2b8540658cefb9"
+    },
+    {
+      "path": "app/my-bg-remover/postcss.config.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aa7205d4b402a1bdfbe07110c61df920b370066",
+      "size": 81,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/2aa7205d4b402a1bdfbe07110c61df920b370066"
+    },
+    {
+      "path": "app/my-bg-remover/public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "543e6df8763cfbc316d034454e52097cbb064a8f",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/543e6df8763cfbc316d034454e52097cbb064a8f"
+    },
+    {
+      "path": "app/my-bg-remover/public/amex.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78411089e7079aeb649a7413a7ea41694d9c1398",
+      "size": 4409,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/78411089e7079aeb649a7413a7ea41694d9c1398"
+    },
+    {
+      "path": "app/my-bg-remover/public/bottom-background.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff65a776e959af6063986f3eeda96202dd11b521",
+      "size": 98656,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ff65a776e959af6063986f3eeda96202dd11b521"
+    },
+    {
+      "path": "app/my-bg-remover/public/chrome.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be72022c3dff5f71199e3f9fc25546a76bdd28e1",
+      "size": 1294,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/be72022c3dff5f71199e3f9fc25546a76bdd28e1"
+    },
+    {
+      "path": "app/my-bg-remover/public/discover.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1492278f009aaa213c679f1a44fe8f34adf83637",
+      "size": 3046,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/1492278f009aaa213c679f1a44fe8f34adf83637"
+    },
+    {
+      "path": "app/my-bg-remover/public/divider.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "469eea79aa2f85f58a9e723109ee74cc15203954",
+      "size": 4105,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/469eea79aa2f85f58a9e723109ee74cc15203954"
+    },
+    {
+      "path": "app/my-bg-remover/public/file-heart.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9bc9f4943f1a1ca5f54825d4120d11f82fd86e1",
+      "size": 1495,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/a9bc9f4943f1a1ca5f54825d4120d11f82fd86e1"
+    },
+    {
+      "path": "app/my-bg-remover/public/file.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "004145cddf3f9db91b57b9cb596683c8eb420862",
+      "size": 391,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/004145cddf3f9db91b57b9cb596683c8eb420862"
+    },
+    {
+      "path": "app/my-bg-remover/public/flying-birds.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5196896a8280baf753287c8eb07f9d91be97dfa3",
+      "size": 31004,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/5196896a8280baf753287c8eb07f9d91be97dfa3"
+    },
+    {
+      "path": "app/my-bg-remover/public/globe.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "567f17b0d7c7fb662c16d4357dd74830caf2dccb",
+      "size": 1035,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/567f17b0d7c7fb662c16d4357dd74830caf2dccb"
+    },
+    {
+      "path": "app/my-bg-remover/public/how-min.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8efd01c69675ca3d1a97e0f2c14684e6c68be28c",
+      "size": 87689,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/8efd01c69675ca3d1a97e0f2c14684e6c68be28c"
+    },
+    {
+      "path": "app/my-bg-remover/public/image-upload.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3dafead37b4eebce1a78c52ad876321fa538288",
+      "size": 997,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/a3dafead37b4eebce1a78c52ad876321fa538288"
+    },
+    {
+      "path": "app/my-bg-remover/public/left.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10cf2b592742814bbdc4b926f195bba4a1245fe6",
+      "size": 345085,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/10cf2b592742814bbdc4b926f195bba4a1245fe6"
+    },
+    {
+      "path": "app/my-bg-remover/public/mastercard.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "220749f2b24e239230d2b742ae8832e00bf3953d",
+      "size": 13327,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/220749f2b24e239230d2b742ae8832e00bf3953d"
+    },
+    {
+      "path": "app/my-bg-remover/public/next.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5174b28c565c285e3e312ec5178be64fbeca8398",
+      "size": 1375,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/5174b28c565c285e3e312ec5178be64fbeca8398"
+    },
+    {
+      "path": "app/my-bg-remover/public/nike.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66c2bc2ca53cc81a6252b06d8f7b09a3b688d38a",
+      "size": 1343344,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/66c2bc2ca53cc81a6252b06d8f7b09a3b688d38a"
+    },
+    {
+      "path": "app/my-bg-remover/public/nike2.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "670d8eaf5c50bff519344d72922cc66b29f34563",
+      "size": 3062956,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/670d8eaf5c50bff519344d72922cc66b29f34563"
+    },
+    {
+      "path": "app/my-bg-remover/public/paypal.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7595b4d0914740292c9e237df06a9f83d3639ca7",
+      "size": 7209,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/7595b4d0914740292c9e237df06a9f83d3639ca7"
+    },
+    {
+      "path": "app/my-bg-remover/public/right.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cda846be811cfdf28ebe89f02460b50338965227",
+      "size": 241058,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/cda846be811cfdf28ebe89f02460b50338965227"
+    },
+    {
+      "path": "app/my-bg-remover/public/slider1.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "308f5e540eb29639471f74fea92274609bf877a1",
+      "size": 45427,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/308f5e540eb29639471f74fea92274609bf877a1"
+    },
+    {
+      "path": "app/my-bg-remover/public/slider2.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cf25464dd9d6d52ecc600248b2c917e5fd87fc6",
+      "size": 77949,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/1cf25464dd9d6d52ecc600248b2c917e5fd87fc6"
+    },
+    {
+      "path": "app/my-bg-remover/public/slider3.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0d8b1ff1551c075ac3e567fcc14d062e34aace8",
+      "size": 51999,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/a0d8b1ff1551c075ac3e567fcc14d062e34aace8"
+    },
+    {
+      "path": "app/my-bg-remover/public/slider4.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6156ec3b7ea63fc0688913214407d1940c1a860e",
+      "size": 47983,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/6156ec3b7ea63fc0688913214407d1940c1a860e"
+    },
+    {
+      "path": "app/my-bg-remover/public/slider5.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e281d9a38b510d93187cbcce91c3faa80d448238",
+      "size": 18497,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e281d9a38b510d93187cbcce91c3faa80d448238"
+    },
+    {
+      "path": "app/my-bg-remover/public/slider6.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11c41368f5512c7c82dd756024270f663325a22c",
+      "size": 27890,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/11c41368f5512c7c82dd756024270f663325a22c"
+    },
+    {
+      "path": "app/my-bg-remover/public/stripe.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "980f8d06242fc5d03d808705e00d729c9cd1faa9",
+      "size": 2534,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/980f8d06242fc5d03d808705e00d729c9cd1faa9"
+    },
+    {
+      "path": "app/my-bg-remover/public/studio-3d-logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b098aca36a7a65ae8ad495e351352911e834980a",
+      "size": 9997,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/b098aca36a7a65ae8ad495e351352911e834980a"
+    },
+    {
+      "path": "app/my-bg-remover/public/studio-for-business.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f646177f3f6befd78752426a188592f66e58304",
+      "size": 89793,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/3f646177f3f6befd78752426a188592f66e58304"
+    },
+    {
+      "path": "app/my-bg-remover/public/studio-t-shirt.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e84f43da174b52c454f5d43de410a29ec1cad194",
+      "size": 100913,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e84f43da174b52c454f5d43de410a29ec1cad194"
+    },
+    {
+      "path": "app/my-bg-remover/public/studio1.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4208dda49be8b67b709afe8ea320a3328b9823a6",
+      "size": 77547,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/4208dda49be8b67b709afe8ea320a3328b9823a6"
+    },
+    {
+      "path": "app/my-bg-remover/public/studio2.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f646177f3f6befd78752426a188592f66e58304",
+      "size": 89793,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/3f646177f3f6befd78752426a188592f66e58304"
+    },
+    {
+      "path": "app/my-bg-remover/public/studio3.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd2d804afccb369df04a653f668a618d391a9e75",
+      "size": 105012,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/dd2d804afccb369df04a653f668a618d391a9e75"
+    },
+    {
+      "path": "app/my-bg-remover/public/unleash-min.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "465ec04f853e66f392b541f7b50ed2a58aad1971",
+      "size": 114804,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/465ec04f853e66f392b541f7b50ed2a58aad1971"
+    },
+    {
+      "path": "app/my-bg-remover/public/vercel.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77053960334e2e34dc584dea8019925c3b4ccca9",
+      "size": 128,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/77053960334e2e34dc584dea8019925c3b4ccca9"
+    },
+    {
+      "path": "app/my-bg-remover/public/visa.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "667258ba2751aa00055ffa5ae61690b95bcc1557",
+      "size": 1463,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/667258ba2751aa00055ffa5ae61690b95bcc1557"
+    },
+    {
+      "path": "app/my-bg-remover/public/where-min.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5727384e55f2d458980efd3171a50f474bec748",
+      "size": 84795,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/b5727384e55f2d458980efd3171a50f474bec748"
+    },
+    {
+      "path": "app/my-bg-remover/public/window.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2b2a44f6ebc70c450043c05a002e7a93ba5d651",
+      "size": 385,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/b2b2a44f6ebc70c450043c05a002e7a93ba5d651"
+    },
+    {
+      "path": "app/my-bg-remover/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21341c629a8b6627ab4c7c2384fa539dad01b5b8",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/21341c629a8b6627ab4c7c2384fa539dad01b5b8"
+    },
+    {
+      "path": "app/my-bg-remover/src/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac9bbf5a9998a19fd097bd573e2b16c3ae479b2b",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/ac9bbf5a9998a19fd097bd573e2b16c3ae479b2b"
+    },
+    {
+      "path": "app/my-bg-remover/src/app/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "718d6fea4835ec2d246af9800eddb7ffb276240c",
+      "size": 25931,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/718d6fea4835ec2d246af9800eddb7ffb276240c"
+    },
+    {
+      "path": "app/my-bg-remover/src/app/globals.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f53489a0d622301c9af07ef279391e58540d3233",
+      "size": 696,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/f53489a0d622301c9af07ef279391e58540d3233"
+    },
+    {
+      "path": "app/my-bg-remover/src/app/layout.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "870b2af8ba4b02bc03aac2d1b51003cee8371ba1",
+      "size": 685,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/870b2af8ba4b02bc03aac2d1b51003cee8371ba1"
+    },
+    {
+      "path": "app/my-bg-remover/src/app/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e71537de4ad525e4f9410049f96fb98a7fed5a3b",
+      "size": 446,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e71537de4ad525e4f9410049f96fb98a7fed5a3b"
+    },
+    {
+      "path": "app/my-bg-remover/src/bottom-nav.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e14fadf9a27bb3b9d5fe58c2b416ef5b8b5910a",
+      "size": 1598,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/9e14fadf9a27bb3b9d5fe58c2b416ef5b8b5910a"
+    },
+    {
+      "path": "app/my-bg-remover/src/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d3c3736f346f360824c9c9cedba20a3bc665bbe",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/3d3c3736f346f360824c9c9cedba20a3bc665bbe"
+    },
+    {
+      "path": "app/my-bg-remover/src/components/ui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ad8ac6c6d5738b993e68549fc1803fcd2e6a230",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/4ad8ac6c6d5738b993e68549fc1803fcd2e6a230"
+    },
+    {
+      "path": "app/my-bg-remover/src/components/ui/button.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2da1d4667e5b1e627c1deeb8b31d86f0b79ae6da",
+      "size": 632,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/2da1d4667e5b1e627c1deeb8b31d86f0b79ae6da"
+    },
+    {
+      "path": "app/my-bg-remover/src/components/ui/input.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c1e23fa09e61902e4bbb0a29bf11474129fc723",
+      "size": 287,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/5c1e23fa09e61902e4bbb0a29bf11474129fc723"
+    },
+    {
+      "path": "app/my-bg-remover/src/features-list.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3eafede3c9b67773bd0385848845ff43c095ff09",
+      "size": 6953,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/3eafede3c9b67773bd0385848845ff43c095ff09"
+    },
+    {
+      "path": "app/my-bg-remover/src/footer.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3563e2b83ebdd300fa0cec43ea78d17b2ab09ee",
+      "size": 2827,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/b3563e2b83ebdd300fa0cec43ea78d17b2ab09ee"
+    },
+    {
+      "path": "app/my-bg-remover/src/hero.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0577b1e14496175e1d52e1077af8e2444cd91202",
+      "size": 2635,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/0577b1e14496175e1d52e1077af8e2444cd91202"
+    },
+    {
+      "path": "app/my-bg-remover/src/nav.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fb47c3f80b8738460cc940ddbdfc59a7ce9cd4e",
+      "size": 3063,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/7fb47c3f80b8738460cc940ddbdfc59a7ce9cd4e"
+    },
+    {
+      "path": "app/my-bg-remover/src/use-case.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74a7f4ba24ac73ca37daa9e1a855c116e50c4e15",
+      "size": 2877,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/74a7f4ba24ac73ca37daa9e1a855c116e50c4e15"
+    },
+    {
+      "path": "app/my-bg-remover/tailwind.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d947ab175d5eaf2c14e470b748f81df4baa2dbd3",
+      "size": 128,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/d947ab175d5eaf2c14e470b748f81df4baa2dbd3"
+    },
+    {
+      "path": "app/my-bg-remover/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e2b0f5f025d37b0f858490f9ec097b1b5f4e9d4",
+      "size": 623,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/9e2b0f5f025d37b0f858490f9ec097b1b5f4e9d4"
+    },
+    {
+      "path": "app/notepadpro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae55bcbe1fc8a8d03002423f3cc5ed661b419ca1",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/ae55bcbe1fc8a8d03002423f3cc5ed661b419ca1"
+    },
+    {
+      "path": "app/notepadpro/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2565fc56ae7175b93f8b3e67bf682b5d9a6c73ba",
+      "size": 17262,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/2565fc56ae7175b93f8b3e67bf682b5d9a6c73ba"
+    },
+    {
+      "path": "app/outfeatz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ce2160bf2adf8ad1dce4dfb73d74d8a656e06d1",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/2ce2160bf2adf8ad1dce4dfb73d74d8a656e06d1"
+    },
+    {
+      "path": "app/outfeatz/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f440892c581275ab9b3a4f3c62327cceed9f3ec2",
+      "size": 11461,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/f440892c581275ab9b3a4f3c62327cceed9f3ec2"
+    },
+    {
+      "path": "app/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "843f93e52f5321583e1bda69ec17cd82740b135e",
+      "size": 19615,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/843f93e52f5321583e1bda69ec17cd82740b135e"
+    },
+    {
+      "path": "app/partners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a91cd1d5c56dcea4f6f357cecf01e7022a1e3a95",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/a91cd1d5c56dcea4f6f357cecf01e7022a1e3a95"
+    },
+    {
+      "path": "app/partners/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "062e14b632babce2bc0c3b423a6a7b40b8ec906f",
+      "size": 291,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/062e14b632babce2bc0c3b423a6a7b40b8ec906f"
+    },
+    {
+      "path": "app/pinnacle-transfer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b34b65bbe5467993e2702750a132bf6db6c9c5ff",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/b34b65bbe5467993e2702750a132bf6db6c9c5ff"
+    },
+    {
+      "path": "app/pinnacle-transfer/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "090e4c46ec6962f1ade7e783b1e4d01014d81677",
+      "size": 12457,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/090e4c46ec6962f1ade7e783b1e4d01014d81677"
+    },
+    {
+      "path": "app/privacy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2755b8c8c8e31d6ba40fdd878670794b324dcd13",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/2755b8c8c8e31d6ba40fdd878670794b324dcd13"
+    },
+    {
+      "path": "app/privacy/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e9f9d6130b1743831421002b2428852a82ada64",
+      "size": 1559,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/8e9f9d6130b1743831421002b2428852a82ada64"
+    },
+    {
+      "path": "app/products",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "133967ec3e224fae600a393a6286567c74adc26b",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/133967ec3e224fae600a393a6286567c74adc26b"
+    },
+    {
+      "path": "app/products/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1bca76e50b268c851adc014ba335225e920fc9c8",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/1bca76e50b268c851adc014ba335225e920fc9c8"
+    },
+    {
+      "path": "app/products/components/card.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cfdb75b0335318d9dda8d85d881192f17fc8ea6",
+      "size": 1217,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/8cfdb75b0335318d9dda8d85d881192f17fc8ea6"
+    },
+    {
+      "path": "app/products/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "747ade2fc5fb2f58d29cd744f1ae3b0a86395645",
+      "size": 1899,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/747ade2fc5fb2f58d29cd744f1ae3b0a86395645"
+    },
+    {
+      "path": "app/spellcheck",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "735c0bbfaf69d25040e623d770433a92a1f5543a",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/735c0bbfaf69d25040e623d770433a92a1f5543a"
+    },
+    {
+      "path": "app/spellcheck/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37dfc63ba1ce46e41992566e8d6e134d54cc5e7c",
+      "size": 295,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/37dfc63ba1ce46e41992566e8d6e134d54cc5e7c"
+    },
+    {
+      "path": "app/spinner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e36d99b17a0bb887b4f01f0d5f06d00e99ac183",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/7e36d99b17a0bb887b4f01f0d5f06d00e99ac183"
+    },
+    {
+      "path": "app/spinner/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "72f443f42960b6d69978165ef76002b9f90f11bf",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/72f443f42960b6d69978165ef76002b9f90f11bf"
+    },
+    {
+      "path": "app/spinner/components/BoardSubmitModal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0eee3ff2e64eeeafae75a0ec773b751f24bca9f",
+      "size": 10519,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/c0eee3ff2e64eeeafae75a0ec773b751f24bca9f"
+    },
+    {
+      "path": "app/spinner/components/Editableinput.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c0397dc8e29ebea36a0d9dbe6e6e5dc76608813",
+      "size": 932,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/5c0397dc8e29ebea36a0d9dbe6e6e5dc76608813"
+    },
+    {
+      "path": "app/spinner/components/ProfilePicture.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5af808c1b214fb0fcfa8b455e521cef25f29ff2d",
+      "size": 2689,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/5af808c1b214fb0fcfa8b455e521cef25f29ff2d"
+    },
+    {
+      "path": "app/spinner/components/Ratings.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a10481fb2131029afca08dbc2b34546f2bb0376",
+      "size": 1312,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/8a10481fb2131029afca08dbc2b34546f2bb0376"
+    },
+    {
+      "path": "app/spinner/components/bullet_slider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e66420787f0c726752a9c51a3b47eae67ab541fb",
+      "size": 1702,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e66420787f0c726752a9c51a3b47eae67ab541fb"
+    },
+    {
+      "path": "app/spinner/components/button_with_background.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea0be376ef7ac032971e8629cbe3c0440f1fd193",
+      "size": 2050,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ea0be376ef7ac032971e8629cbe3c0440f1fd193"
+    },
+    {
+      "path": "app/spinner/components/button_with_gradient_text.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce074a729d77f32330e8b9fca77a738b3292eeb8",
+      "size": 773,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ce074a729d77f32330e8b9fca77a738b3292eeb8"
+    },
+    {
+      "path": "app/spinner/components/counter.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "040e66b84dd85334887536d247d2c3f4a6223eb2",
+      "size": 112,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/040e66b84dd85334887536d247d2c3f4a6223eb2"
+    },
+    {
+      "path": "app/spinner/components/crew_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c85460c4dacbe76423a9ccc2c3e4a68e4adf2915",
+      "size": 4110,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/c85460c4dacbe76423a9ccc2c3e4a68e4adf2915"
+    },
+    {
+      "path": "app/spinner/components/fidget_spinner.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0be235975d3bad46e4ece7a51664caa69c3124f",
+      "size": 20346,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/f0be235975d3bad46e4ece7a51664caa69c3124f"
+    },
+    {
+      "path": "app/spinner/components/fifth_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40d07c0528e4e721444e933013370da8554e7343",
+      "size": 1675,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/40d07c0528e4e721444e933013370da8554e7343"
+    },
+    {
+      "path": "app/spinner/components/fourth_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a3bd463cb4d1682c566758e368a0c6dbddddc6b",
+      "size": 1338,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/1a3bd463cb4d1682c566758e368a0c6dbddddc6b"
+    },
+    {
+      "path": "app/spinner/components/game_card.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56a49fcf06896a4ba31d85cc746dcf11a109e473",
+      "size": 1108,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/56a49fcf06896a4ba31d85cc746dcf11a109e473"
+    },
+    {
+      "path": "app/spinner/components/game_modes.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29c4e60efbc2ad002bdffd4e6f39694e2994b722",
+      "size": 2292,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/29c4e60efbc2ad002bdffd4e6f39694e2994b722"
+    },
+    {
+      "path": "app/spinner/components/header.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b35c9e9b7250b54226ad20c8035602851aa360fd",
+      "size": 4051,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/b35c9e9b7250b54226ad20c8035602851aa360fd"
+    },
+    {
+      "path": "app/spinner/components/hero_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2849b2495e968352c3fabe06924bde950586ae55",
+      "size": 4477,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/2849b2495e968352c3fabe06924bde950586ae55"
+    },
+    {
+      "path": "app/spinner/components/join_the_community.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37ef054ef8bfc6007b8a47af2b1615b0a2cc638b",
+      "size": 3273,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/37ef054ef8bfc6007b8a47af2b1615b0a2cc638b"
+    },
+    {
+      "path": "app/spinner/components/leaderboardTable.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8172964916c402ad571a6ed87e8c373519067f0",
+      "size": 5743,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e8172964916c402ad571a6ed87e8c373519067f0"
+    },
+    {
+      "path": "app/spinner/components/modal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b484b1e8f832b4cec6298646b93b018610ebfd7",
+      "size": 1164,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/7b484b1e8f832b4cec6298646b93b018610ebfd7"
+    },
+    {
+      "path": "app/spinner/components/multi_player_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda67b6f25a3bb13433e2626d6d59345eb112629",
+      "size": 5152,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/bda67b6f25a3bb13433e2626d6d59345eb112629"
+    },
+    {
+      "path": "app/spinner/components/number_counter.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "034910b0cd59db317a8164b84cec8f5dfbdd79b1",
+      "size": 2567,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/034910b0cd59db317a8164b84cec8f5dfbdd79b1"
+    },
+    {
+      "path": "app/spinner/components/qoute_card.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae9732f3e7da5867dbd1a232359395c1b5980c2d",
+      "size": 1463,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ae9732f3e7da5867dbd1a232359395c1b5980c2d"
+    },
+    {
+      "path": "app/spinner/components/second_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7ee98fa7ed0658310f520cfce8b689e268d5f9e",
+      "size": 5615,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/c7ee98fa7ed0658310f520cfce8b689e268d5f9e"
+    },
+    {
+      "path": "app/spinner/components/select_fidget_modal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0a493fa716049a98431da1233c711e2f330afd3",
+      "size": 4793,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/b0a493fa716049a98431da1233c711e2f330afd3"
+    },
+    {
+      "path": "app/spinner/components/text_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7cd435b7eb58e20314926f01a25bebd3e2644fb",
+      "size": 1410,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/a7cd435b7eb58e20314926f01a25bebd3e2644fb"
+    },
+    {
+      "path": "app/spinner/components/third_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "845d58da21c29806da93cf341b5f3f3895ffcf67",
+      "size": 1336,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/845d58da21c29806da93cf341b5f3f3895ffcf67"
+    },
+    {
+      "path": "app/spinner/components/view_all_button.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c60e3a37f2e436f126afb1bf0dea216cb14a36e",
+      "size": 406,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/9c60e3a37f2e436f126afb1bf0dea216cb14a36e"
+    },
+    {
+      "path": "app/spinner/components/word_slider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2c243994a2b30f86772cf4ed0d50a00ddb5be82",
+      "size": 1671,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/c2c243994a2b30f86772cf4ed0d50a00ddb5be82"
+    },
+    {
+      "path": "app/spinner/data.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1f1d0180a6ed38f4c583e9a9b4005243ecbe7bf",
+      "size": 677,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/a1f1d0180a6ed38f4c583e9a9b4005243ecbe7bf"
+    },
+    {
+      "path": "app/spinner/extra",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2887a78eb94d5ea441c4e0a630d76ba304453774",
+      "size": 10345,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/2887a78eb94d5ea441c4e0a630d76ba304453774"
+    },
+    {
+      "path": "app/spinner/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c6bfb79f368fd245e5782336b1000139cfb90b6",
+      "size": 1119,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/4c6bfb79f368fd245e5782336b1000139cfb90b6"
+    },
+    {
+      "path": "app/spinner/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77bdfd0c825f4b6b19b00390aef99490bf4a9912",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/77bdfd0c825f4b6b19b00390aef99490bf4a9912"
+    },
+    {
+      "path": "app/spinner/utils/font.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6784237be1059e6561e3c03e8162dc88e2956a8",
+      "size": 258,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/e6784237be1059e6561e3c03e8162dc88e2956a8"
+    },
+    {
+      "path": "app/spinner/utils/numberFormat.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10f609af7cce17b733c46a325e65bd0e4b5cd6ce",
+      "size": 256,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/10f609af7cce17b733c46a325e65bd0e4b5cd6ce"
+    },
+    {
+      "path": "app/terms",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f810fb8699ce4bef70ddb4fed8f994397ca4f86a",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/f810fb8699ce4bef70ddb4fed8f994397ca4f86a"
+    },
+    {
+      "path": "app/terms/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2e27bc7419752d5e8efab75b5f3cd1a5cccf13b",
+      "size": 1258,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/f2e27bc7419752d5e8efab75b5f3cd1a5cccf13b"
+    },
+    {
+      "path": "app/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2eb0882d6f71acf932cde3960bf655b48a9eca8c",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/2eb0882d6f71acf932cde3960bf655b48a9eca8c"
+    },
+    {
+      "path": "app/tools/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b6d0931ca7ef21343876223751cd3eef301bd66",
+      "size": 2991,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/3b6d0931ca7ef21343876223751cd3eef301bd66"
+    },
+    {
+      "path": "app/vmodel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5763c3600deabe0ca3ee02789dc200ba6a2f526",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/d5763c3600deabe0ca3ee02789dc200ba6a2f526"
+    },
+    {
+      "path": "app/vmodel/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da5881ae4e935340e9b1d391a49bd67bcf7bedbd",
+      "size": 23879,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/da5881ae4e935340e9b1d391a49bd67bcf7bedbd"
+    },
+    {
+      "path": "app/wearhouse",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9dbe0fc2f88e79f734b9a4f0e42f92b9cecf256c",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/9dbe0fc2f88e79f734b9a4f0e42f92b9cecf256c"
+    },
+    {
+      "path": "app/wearhouse/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4782c04bba1abb31a7d9f002380b92d6485d049f",
+      "size": 12396,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/4782c04bba1abb31a7d9f002380b92d6485d049f"
+    },
+    {
+      "path": "app/work-with-us",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0ae6e8af917638e70b18725cc61282f9ef5f000",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/d0ae6e8af917638e70b18725cc61282f9ef5f000"
+    },
+    {
+      "path": "app/work-with-us/join-team",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88cf2ca6e97d062923377817a7b3c089118e32b7",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/88cf2ca6e97d062923377817a7b3c089118e32b7"
+    },
+    {
+      "path": "app/work-with-us/join-team/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94091a468e57472aea45a2411e519b8eb9605baa",
+      "size": 11854,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/94091a468e57472aea45a2411e519b8eb9605baa"
+    },
+    {
+      "path": "app/work-with-us/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49a015e4c606da1e0c99ae5c02514a0a478963f9",
+      "size": 13066,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/49a015e4c606da1e0c99ae5c02514a0a478963f9"
+    },
+    {
+      "path": "app/work-with-us/partner-with-us",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "608dd4d13ba1eca8be7b78a1aa363bb5c6d0df2c",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/608dd4d13ba1eca8be7b78a1aa363bb5c6d0df2c"
+    },
+    {
+      "path": "app/work-with-us/partner-with-us/page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ad0761d2a4a17f79261aa387a0f23c1adc905c",
+      "size": 7851,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/50ad0761d2a4a17f79261aa387a0f23c1adc905c"
+    },
+    {
+      "path": "components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "981e16e6a7b674932a2e39b9669df8d2c4c0c096",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/981e16e6a7b674932a2e39b9669df8d2c4c0c096"
+    },
+    {
+      "path": "components/Analytics.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51ec86fb664dc50b7995cf2c26cbc7c5cf04f24e",
+      "size": 494,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/51ec86fb664dc50b7995cf2c26cbc7c5cf04f24e"
+    },
+    {
+      "path": "components/Content.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e03e34fa38e693324c5055b12283fcd3f0724d9",
+      "size": 5599,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/5e03e34fa38e693324c5055b12283fcd3f0724d9"
+    },
+    {
+      "path": "components/LinkButton.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d69ad602ee8ada685cc968ca740f382250be4ece",
+      "size": 772,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/d69ad602ee8ada685cc968ca740f382250be4ece"
+    },
+    {
+      "path": "components/UI",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8244c02d30bc8ea47350a5423dd3d6a91a82784f",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/8244c02d30bc8ea47350a5423dd3d6a91a82784f"
+    },
+    {
+      "path": "components/UI/BlogSidebar.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a0b04147a88beee002c1e88100c43813ffe1702",
+      "size": 6565,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/8a0b04147a88beee002c1e88100c43813ffe1702"
+    },
+    {
+      "path": "components/UI/CardButton.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82a714b8574ae6102db2fced0ebd9c474b96967e",
+      "size": 1255,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/82a714b8574ae6102db2fced0ebd9c474b96967e"
+    },
+    {
+      "path": "components/UI/FlatList.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87c84dbc057e878dc9348231a22d917deec2b20b",
+      "size": 486,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/87c84dbc057e878dc9348231a22d917deec2b20b"
+    },
+    {
+      "path": "components/UI/FlexContainer.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24f14ceba27f278880c2a9f0e795d1882255f9f5",
+      "size": 8972,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/24f14ceba27f278880c2a9f0e795d1882255f9f5"
+    },
+    {
+      "path": "components/UI/InputField.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "649446eaa4814429cefa974ef0d2a0fde0671e8f",
+      "size": 1270,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/649446eaa4814429cefa974ef0d2a0fde0671e8f"
+    },
+    {
+      "path": "components/UI/Label.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2304f5f923658f844f9262649ea636ce704d83b3",
+      "size": 543,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/2304f5f923658f844f9262649ea636ce704d83b3"
+    },
+    {
+      "path": "components/UI/LearnMoreBtn.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa986f4f76d9893ef60b02adc2e7ee074b8968f2",
+      "size": 1268,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/aa986f4f76d9893ef60b02adc2e7ee074b8968f2"
+    },
+    {
+      "path": "components/UI/ProductBannerSlider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bf414650a4b5c275cfa45e4cdcf01b2eda365b9",
+      "size": 2137,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/4bf414650a4b5c275cfa45e4cdcf01b2eda365b9"
+    },
+    {
+      "path": "components/UI/SelectField.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba4857f2fc8c065abf101f63f2e41a49e5711d82",
+      "size": 5063,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ba4857f2fc8c065abf101f63f2e41a49e5711d82"
+    },
+    {
+      "path": "components/UI/SideBar.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdd26941d1ff6754ba12433e016bf416c3cd5bcd",
+      "size": 2711,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/cdd26941d1ff6754ba12433e016bf416c3cd5bcd"
+    },
+    {
+      "path": "components/UI/SliderBackground.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bee512615682bb4c89606384d97ca099b33a2818",
+      "size": 5496,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/bee512615682bb4c89606384d97ca099b33a2818"
+    },
+    {
+      "path": "components/UI/SmallLearnBtn.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00e6458b86670fb3df8fbe03a8aa3884d8548bb7",
+      "size": 1193,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/00e6458b86670fb3df8fbe03a8aa3884d8548bb7"
+    },
+    {
+      "path": "components/UI/Title.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bb64068922063c73ae316ecbea22f094d7c0274",
+      "size": 375,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/6bb64068922063c73ae316ecbea22f094d7c0274"
+    },
+    {
+      "path": "components/UI/TitleSection.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be68f5708954debf7740efa6131ea04a9dfcf08",
+      "size": 1211,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/4be68f5708954debf7740efa6131ea04a9dfcf08"
+    },
+    {
+      "path": "components/UI/animating_text.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba59ff1549335697ca1aa459234355a9f123bb87",
+      "size": 1996,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ba59ff1549335697ca1aa459234355a9f123bb87"
+    },
+    {
+      "path": "components/UI/flexContainer.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7303f5cd3bd9e2320ccbe281e2e1536cfbf7f68",
+      "size": 176,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/f7303f5cd3bd9e2320ccbe281e2e1536cfbf7f68"
+    },
+    {
+      "path": "components/UI/subtitle.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c775e7261514517c10c0e793b3e315c05dac459d",
+      "size": 365,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/c775e7261514517c10c0e793b3e315c05dac459d"
+    },
+    {
+      "path": "components/UI/view_all_button.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6ab41f23857e1b6ebde040dfa6f8edceebc3a58",
+      "size": 451,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/c6ab41f23857e1b6ebde040dfa6f8edceebc3a58"
+    },
+    {
+      "path": "components/Upload.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63ba864c20914733d6966efc5a1c820f8f5836a3",
+      "size": 3792,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/63ba864c20914733d6966efc5a1c820f8f5836a3"
+    },
+    {
+      "path": "components/_old_ts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb1f101a2630b1a6cbbc24aee33c37ed29dd14cc",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/cb1f101a2630b1a6cbbc24aee33c37ed29dd14cc"
+    },
+    {
+      "path": "components/_old_ts/current.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1713b937de60e9a31633ae4801bcd83072108297",
+      "size": 2555,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/1713b937de60e9a31633ae4801bcd83072108297"
+    },
+    {
+      "path": "components/_old_ts/old.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ee55f7e1dbaf6959288cc6278cfbf63a6658a31",
+      "size": 8632,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/8ee55f7e1dbaf6959288cc6278cfbf63a6658a31"
+    },
+    {
+      "path": "components/common",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef10274938d3db941a4e10ad8c27a98bf897a41c",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/ef10274938d3db941a4e10ad8c27a98bf897a41c"
+    },
+    {
+      "path": "components/common/Aside.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe024017ed88d9c34dc50d5a94ac535c59ab9f3e",
+      "size": 868,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/fe024017ed88d9c34dc50d5a94ac535c59ab9f3e"
+    },
+    {
+      "path": "components/common/CustomCourseSlider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7492ee3d87fc809903165838109c266b392f0159",
+      "size": 1804,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/7492ee3d87fc809903165838109c266b392f0159"
+    },
+    {
+      "path": "components/common/Nav.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed4b5fc4423d27bf8d0805792485d52529a3d021",
+      "size": 13111,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ed4b5fc4423d27bf8d0805792485d52529a3d021"
+    },
+    {
+      "path": "components/common/autoSlider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9319c3682817ca3d9164e2be25a933d9a2e0b4bc",
+      "size": 1597,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/9319c3682817ca3d9164e2be25a933d9a2e0b4bc"
+    },
+    {
+      "path": "components/common/carousel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c5e09b13cb25290aab14a8b2bd399f554fc298d4",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/c5e09b13cb25290aab14a8b2bd399f554fc298d4"
+    },
+    {
+      "path": "components/common/carousel/FirstHero.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d0e7cc34c8f7b54b6e568e78e9cd76b774c206a",
+      "size": 2383,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/8d0e7cc34c8f7b54b6e568e78e9cd76b774c206a"
+    },
+    {
+      "path": "components/common/carousel/FourthHero.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfc328b82590a94964cbe381cb7aa08f2949e2b9",
+      "size": 9825,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/dfc328b82590a94964cbe381cb7aa08f2949e2b9"
+    },
+    {
+      "path": "components/common/carousel/SecondHero.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21fe05e29010d013be1b9ccdf3b574563988cb97",
+      "size": 2493,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/21fe05e29010d013be1b9ccdf3b574563988cb97"
+    },
+    {
+      "path": "components/common/carousel/ThirdHero.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cf1140cdfc9dc3a941851863b640f2d1b6a839b",
+      "size": 5387,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/3cf1140cdfc9dc3a941851863b640f2d1b6a839b"
+    },
+    {
+      "path": "components/common/numberFormat.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bcca8b5b82f5e1c4661f80cec5ad23137897dc5",
+      "size": 310,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/6bcca8b5b82f5e1c4661f80cec5ad23137897dc5"
+    },
+    {
+      "path": "components/course",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fcd00eb9166fdf5ab25ab8671ea1612f360cc520",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/fcd00eb9166fdf5ab25ab8671ea1612f360cc520"
+    },
+    {
+      "path": "components/course/CourseCard.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83ccd7824e0f2e13f1c8c84c9fba25d714eb3e49",
+      "size": 1617,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/83ccd7824e0f2e13f1c8c84c9fba25d714eb3e49"
+    },
+    {
+      "path": "components/footer.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e9c45878c79c1db506229e3e317ee0d2a3f793",
+      "size": 1998,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/10e9c45878c79c1db506229e3e317ee0d2a3f793"
+    },
+    {
+      "path": "components/loyalty_bot_components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad57cae1298fe14fc750f7288065de7e5502a875",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/ad57cae1298fe14fc750f7288065de7e5502a875"
+    },
+    {
+      "path": "components/loyalty_bot_components/button.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04496bd37bb698e69e7a3ebf2c1a58dd54988fc0",
+      "size": 251,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/04496bd37bb698e69e7a3ebf2c1a58dd54988fc0"
+    },
+    {
+      "path": "components/loyalty_bot_components/fifth_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff9b3d8ea7a8c499a555df8d3821c41c13495628",
+      "size": 1904,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/ff9b3d8ea7a8c499a555df8d3821c41c13495628"
+    },
+    {
+      "path": "components/loyalty_bot_components/fourth_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "870323526d7b27927d1c35fc46e9a9ed769e270a",
+      "size": 2421,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/870323526d7b27927d1c35fc46e9a9ed769e270a"
+    },
+    {
+      "path": "components/loyalty_bot_components/header.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f106a433b45f8747e4a22c2b70929fba7aabc0d",
+      "size": 457,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/6f106a433b45f8747e4a22c2b70929fba7aabc0d"
+    },
+    {
+      "path": "components/loyalty_bot_components/hero_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71ee317112bdd8d9f086c3413d87a3b5babbada0",
+      "size": 1275,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/71ee317112bdd8d9f086c3413d87a3b5babbada0"
+    },
+    {
+      "path": "components/loyalty_bot_components/second_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f37c23a00c2d4a3e152f7acc75d592745ae78cd",
+      "size": 1650,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/6f37c23a00c2d4a3e152f7acc75d592745ae78cd"
+    },
+    {
+      "path": "components/loyalty_bot_components/third_section.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d68dde77ffd4103865f26d096ce36b15ee3218aa",
+      "size": 1672,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/d68dde77ffd4103865f26d096ce36b15ee3218aa"
+    },
+    {
+      "path": "components/notepadpro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8f99dc6f3eb18eb83a8c3e502e2d20a61e0b6e9",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/f8f99dc6f3eb18eb83a8c3e502e2d20a61e0b6e9"
+    },
+    {
+      "path": "components/notepadpro/NotepadProPhoneCarousel.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02f0d37d8eda630ce49f3fc787546e945c2bcc63",
+      "size": 5873,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/02f0d37d8eda630ce49f3fc787546e945c2bcc63"
+    },
+    {
+      "path": "components/pinnacle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2db78eb8251fd18647056887d4e38092bd85e3ba",
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/trees/2db78eb8251fd18647056887d4e38092bd85e3ba"
+    },
+    {
+      "path": "components/pinnacle/PinnaclePhoneCarousel.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f185d084648894bc97a77733497f42023baf11d7",
+      "size": 5564,
+      "url": "https://api.github.com/repos/VoltisLabs/voltislabs.com/git/blobs/f185d084648894bc97a77733497f42023baf11d7"
+    }
+  ],
+  "truncated": false
+}
