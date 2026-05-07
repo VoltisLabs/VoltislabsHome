@@ -1,0 +1,15 @@
+/* Home: section-sectors — same portfolio SVGs as Portfolio → Years */
+.section-sectors__thumbnails img {
+  object-fit: contain;
+  max-height: min(22vw, 9rem);
+  width: auto;
+  height: auto;
+  padding: 0.35rem;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.section-sectors__thumbnails img[src$=".svg"] {
+  background: #0c0c0c;
+}

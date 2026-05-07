@@ -102,14 +102,14 @@ body.page-id-products .vl-products-grid-wrap {
   justify-content: center;
   position: relative;
   border-bottom: none;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 2rem 2rem 0 0;
   overflow: hidden;
 }
 
 .vl-products-grid-wrap .vl-product-card__thumb {
   flex-shrink: 0;
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 2rem;
   border: none;
   box-sizing: border-box;
   margin-bottom: 0.65rem;
@@ -168,7 +168,7 @@ body.page-id-products .vl-products-grid-wrap {
   max-height: none;
   object-fit: contain;
   object-position: center;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
 }
 .vl-product-card__body {
@@ -295,3 +295,54 @@ body.page-id-products .vl-products-grid-wrap {
   z-index: 1;
 }
 /* Voltis live site keeps 2 columns on small viewports; narrow cards stay readable */
+
+/* Large hero type: loosen line-height so ascenders/descenders are not visibly clipped */
+body.page-id-products header.hero {
+  overflow: visible;
+}
+body.page-id-products .hero__content {
+  overflow: visible;
+}
+body.page-id-products .hero__description {
+  line-height: 1.1 !important;
+  padding-bottom: 0.15em !important;
+  overflow: visible !important;
+}
+
+/* Principles list: titles + paragraphs stacked on the left (theme grid was separating columns wide apart) */
+body.page-id-products .section.section-table > .grid > ul.vl-products-value-table {
+  grid-column: 1 / -1 !important;
+  max-width: min(42rem, 100%);
+  margin-inline: max(var(--space-grid-padding), 1rem) max(var(--space-grid-padding), 1rem);
+  justify-self: start;
+}
+body.page-id-products .vl-products-value-table .section-table__item.grid.subgrid {
+  display: flex !important;
+  flex-flow: column nowrap !important;
+  align-items: flex-start !important;
+  gap: 0.4rem !important;
+}
+body.page-id-products .vl-products-value-table .section-table__item > [pos] {
+  grid-column: 1 / -1 !important;
+  justify-self: start !important;
+  max-width: 42rem;
+}
+body.page-id-products .vl-products-value-table .section-table__title,
+body.page-id-products .vl-products-value-table .section-table__text {
+  text-align: left !important;
+}
+body.page-id-products .vl-products-value-table .section-table__text .p1 {
+  text-align: left;
+  margin: 0 !important;
+}
+
+/* Pull quote: normal body copy (avoid .section-title huge type + text-indent + accent <em> bits) */
+body.page-id-products .vl-products-pullquote-section .vl-products-pullquote .p1,
+body.page-id-businesses .vl-products-pullquote-section .vl-products-pullquote .p1 {
+  text-align: left;
+  margin: 0;
+  max-width: 38rem;
+  line-height: 1.6;
+  font-size: inherit;
+  font-weight: 400;
+}

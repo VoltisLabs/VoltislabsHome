@@ -54,6 +54,12 @@ body.switch .media video {
   margin: 0.5rem 0 0;
 }
 
+.vl-home-hero__copy .p1 {
+  line-height: 1.55;
+  overflow: visible;
+  padding-bottom: 0.2em;
+}
+
 .vl-home-hero__panel {
   width: 100%;
 }
@@ -115,4 +121,13 @@ body.switch .media video {
   .vl-home-hero__copy {
     max-width: none;
   }
+}
+
+/* Portfolio Years view: local SVG thumbs scale inside the same thumbnail frame as raster art */
+.works-chronology .work__thumbnail .media img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: #0c0c0c;
 }

@@ -1,0 +1,69 @@
+/* Inner detail pages — prose and CTAs aligned with Grapheine sections */
+.vl-inner .p1,
+.vl-inner p {
+  margin-bottom: 1rem;
+  line-height: 1.55;
+}
+
+.vl-inner h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.vl-inner h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.vl-inner ul {
+  margin: 0.75rem 0 1.25rem 1.25rem;
+  list-style: disc;
+}
+
+.vl-inner li {
+  margin-bottom: 0.35rem;
+}
+
+.vl-inner__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.vl-inner__cta a {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid currentColor;
+  transition: opacity 0.2s ease;
+}
+
+.vl-inner__cta a:hover {
+  opacity: 0.85;
+}
+
+.vl-inner__cta a--primary {
+  background: #ff2b2b;
+  color: #fff;
+  border-color: #ff2b2b;
+}
+
+.vl-inner__cta a--ghost {
+  background: transparent;
+  color: inherit;
+}
+
+.vl-inner__note {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 1rem;
+}
