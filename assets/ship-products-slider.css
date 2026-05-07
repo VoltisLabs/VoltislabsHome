@@ -1,0 +1,52 @@
+/* Ship-products slider (about mission hero frame, etc.) inside `.vl-home-hero__frame` */
+.vl-about-mission-combined .vl-home-hero__frame .vl-ship-slider.media {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+
+
+.vl-about-mission-combined .vl-home-hero__frame:has(.vl-ship-slider) {
+  box-shadow: none;
+}
+
+.vl-about-mission-combined .vl-home-hero__frame .vl-ship-slider__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: bottom;
+}
+
+.vl-ship-slider__viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Slide art is 600×375 (8∶5): viewport stays that proportion so scaling stays uniform (no cropping) */
+  aspect-ratio: 600 / 375;
+}
+
+.vl-ship-slider__slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  backface-visibility: hidden;
+  transform: translate3d(110%, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-ship-slider__slide {
+    transform: none !important;
+  }
+}

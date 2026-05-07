@@ -1,6 +1,7 @@
 /**
- * Voltis Labs blog index - mirrors src/app/blog/page.tsx against Hygraph CDN.
- * Same query, pagination (9 / page), filters, category tabs, grid/list, counts.
+ * Voltis Labs articles index - mirrors src/app/blog/page.tsx against Hygraph CDN.
+ * - blog.html: full index (9 / page), filters, grid/list, infinite scroll.
+ * - home.html: first `CONFIG.homePostsCount` items into #vl-home-blog-posts (same card markup).
  */
 (function () {
   const CONFIG = {
@@ -9,6 +10,8 @@
     /** Canonical article URLs on the Next.js site (static bundle has no route per slug). */
     articleBaseUrl: 'https://voltislabs.com/blog',
     postsPerPage: 9,
+    /** Homepage (home.html): first N items, same query and card markup as articles index. */
+    homePostsCount: 5,
   };
 
   const GET_POSTS_QUERY = `
@@ -297,8 +300,9 @@
     });
   }
 
-  function skeletonHtml(view) {
-    const inner = Array.from({ length: 3 })
+  function skeletonHtml(view, itemCount) {
+    const n = typeof itemCount === 'number' && itemCount > 0 ? itemCount : 3;
+    const inner = Array.from({ length: n })
       .map(
         () => `
       <div class="vl-blog-skel vl-blog-skel--${view}">
@@ -318,7 +322,7 @@
       return `
       <div class="vl-blog-empty">
         <svg class="vl-blog-empty__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        <h3 class="vl-blog-empty__title">No posts found</h3>
+        <h3 class="vl-blog-empty__title">No articles found</h3>
         <p class="vl-blog-empty__text">Try adjusting your date filters or category selection to find more content.</p>
       </div>`;
     }
@@ -421,7 +425,11 @@
     container.innerHTML = cats
       .map(
         (cat) =>
-          `<button type="button" class="vl-blog-cat${state.activeTab === cat ? ' vl-blog-cat--active' : ''}" data-category="${escapeHtml(cat)}">${escapeHtml(cat)}</button>`,
+          `<button type="button" class="vl-blog-cat vl-liquid-btn vl-liquid-btn--sm${
+            state.activeTab === cat ? ' vl-blog-cat--active' : ' vl-liquid-btn--ghost'
+          }" data-category="${escapeHtml(cat)}"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">${escapeHtml(
+            cat,
+          )}</span></button>`,
       )
       .join('');
   }
@@ -431,7 +439,7 @@
     if (!el) return;
     const filtered = getFilteredPosts();
     const n = filtered.length;
-    const label = n === 1 ? 'post' : 'posts';
+    const label = n === 1 ? 'article' : 'articles';
     let text = `Showing ${n} ${label}`;
     if (state.totalPostsLoaded > 0) {
       text += ` (${state.totalPostsLoaded} total loaded)`;
@@ -448,7 +456,7 @@
         <div class="vl-blog-error-inner">
           <p class="vl-blog-error__title">Network Error</p>
           <p class="vl-blog-error__msg">${escapeHtml(state.error)}</p>
-          <button type="button" class="vl-blog-btn vl-blog-btn--primary" id="vl-blog-retry">${state.retrying ? 'Retrying…' : 'Retry'}</button>
+          <button type="button" class="vl-liquid-btn" id="vl-blog-retry"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">${escapeHtml(state.retrying ? 'Retrying…' : 'Retry')}</span></button>
         </div>`;
       const btn = $('vl-blog-retry');
       if (btn && !state.retrying) {
@@ -468,7 +476,7 @@
         errEl.innerHTML = `
           <div class="vl-blog-loadmore-err">
             <p>${escapeHtml(state.loadMoreError)}</p>
-            <button type="button" class="vl-blog-btn vl-blog-btn--danger" id="vl-blog-retry-more">Retry</button>
+            <button type="button" class="vl-liquid-btn vl-liquid-btn--danger" id="vl-blog-retry-more"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">Retry</span></button>
           </div>`;
         const r = $('vl-blog-retry-more');
         if (r) {
@@ -610,7 +618,8 @@
         state.hasMorePosts = false;
       }
     } catch (e) {
-      state.loadMoreError = 'Failed to load more posts. Please check your network connection.';
+      state.loadMoreError =
+        'Failed to load more articles. Please check your network connection.';
     } finally {
       state.loadingMore = false;
       loadLock = false;
@@ -683,7 +692,54 @@
     );
   }
 
+  async function initHomeBlogWidget() {
+    const mount = $('vl-home-blog-posts');
+    const errWrap = $('vl-home-blog-error');
+    if (!mount) return;
+
+    const count = CONFIG.homePostsCount || 4;
+    mount.innerHTML = skeletonHtml('list', count);
+    if (errWrap) {
+      errWrap.hidden = true;
+      errWrap.innerHTML = '';
+    }
+
+    try {
+      const data = await fetchPosts(count, 0);
+      const raw = data?.data?.posts;
+      const list = (Array.isArray(raw) ? raw : []).map(normalizePost).slice(0, count);
+      mount.innerHTML =
+        list.length > 0
+          ? renderPostsHtml(list, 'list')
+          : `<div class="vl-blog-posts vl-blog-posts--list"><p class="vl-home-blog__empty p2">No articles yet.</p></div>`;
+    } catch (e) {
+      mount.innerHTML = '';
+      if (errWrap) {
+        errWrap.hidden = false;
+        errWrap.innerHTML = `
+        <div class="vl-blog-error-inner">
+          <p class="vl-blog-error__title">Network Error</p>
+          <p class="vl-blog-error__msg">${escapeHtml(e.message || 'Please check your network connection and try again.')}</p>
+          <button type="button" class="vl-liquid-btn" id="vl-home-blog-retry"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">Retry</span></button>
+        </div>`;
+        const r = $('vl-home-blog-retry');
+        if (r) {
+          r.onclick = () => {
+            initHomeBlogWidget();
+          };
+        }
+      }
+    }
+  }
+
   function init() {
+    const homeMount = $('vl-home-blog-posts');
+    const blogMount = $('vl-blog-posts');
+    if (homeMount && !blogMount) {
+      initHomeBlogWidget();
+      return;
+    }
+    if (!blogMount) return;
     bindControls();
     initialLoad(false);
   }

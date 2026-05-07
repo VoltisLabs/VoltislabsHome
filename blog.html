@@ -12,10 +12,10 @@
     <meta name="msapplication-tap-highlight" content="no"/>
     <meta name="theme-color" content="#000000"/>
 
-    <title>Blog - Voltis Labs</title>
+    <title>Articles - Voltis Labs</title>
 <link rel="alternate" href="#" hreflang="fr" />
 <link rel="alternate" href="blog.html" hreflang="en" />
-<meta name="dc.title" content="Blog - Voltis Labs">
+<meta name="dc.title" content="Articles - Voltis Labs">
 <meta name="dc.relation" content="blog.html">
 <meta name="dc.source" content="#">
 <meta name="dc.language" content="en_US">
@@ -28,7 +28,7 @@
 <meta property="og:type" content="article">
 <meta property="article:author" content="https://github.com/VoltisLabs">
 <meta property="article:publisher" content="https://github.com/VoltisLabs">
-<meta property="og:title" content="Blog - Voltis Labs">
+<meta property="og:title" content="Articles - Voltis Labs">
 <meta property="og:image" content="#">
 <meta property="og:image:secure_url" content="#">
 <meta property="og:image:width" content="512">
@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@voltislabs">
 <meta name="twitter:creator" content="@voltislabs">
-<meta name="twitter:title" content="Blog - Voltis Labs">
+<meta name="twitter:title" content="Articles - Voltis Labs">
 <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
 <script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"Service","name":"Voltis Labs","serviceType":"Contact","slogan":"Reliable software and product delivery","@id":"#","provider":{"@type":"LocalBusiness","name":"Voltis Labs","telephone":"","image":"","priceRange":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"","addressRegion":"","postalCode":"","addressCountry":""}}}</script>
 <script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"Article","datePublished":"2025-05-19T15:38:22+02:00","dateModified":"2025-10-24T12:23:20+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"#"},"headline":"Contact","author":{"@type":"Person","name":"ocitocine","url":"#"},"publisher":{"@type":"Organization","name":"Voltis Labs","logo":{"@type":"ImageObject","url":"#","width":"512","height":"512"},"sameAs":["https:\/\/github.com\/VoltisLabs","https:\/\/github.com\/VoltisLabs","https:\/\/github.com\/VoltisLabs","https:\/\/github.com\/VoltisLabs","https:\/\/github.com\/VoltisLabs","https:\/\/github.com\/VoltisLabs"]}}</script>
@@ -138,12 +138,20 @@ var wpso = {"ajaxurl":"#","nonce":"5232f0a0e0","user_items":[]};
 </header>
 
 <main>
-<section class="section section-wysiwyg vl-blog-section">
+<section class="section section-wysiwyg vl-blog-section vl-news-edition" data-news-edition aria-labelledby="vl-blog-masthead-title">
     <div class="grid">
         <div pos="row" pos-s="row" class="vl-blog-shell">
-            <p class="vl-blog-shell__intro p2">Live posts from the same Hygraph API as <a href="https://github.com/VoltisLabs/voltislabs.com/blob/main/src/app/blog/page.tsx" target="_blank" rel="noopener noreferrer">voltislabs.com/blog</a> (9 per batch, infinite scroll). Article links open the canonical Next.js route.</p>
-
-            <h1 class="vl-blog-shell__title">News</h1>
+            <header class="vl-blog-masthead">
+                <div class="vl-blog-masthead__row">
+                    <h1 id="vl-blog-masthead-title" pos="row" pos-s="row" class="hero__title vl-blog-shell__title vl-blog-masthead__title">Articles</h1>
+                    <button type="button" class="vl-news-tone__btn vl-liquid-btn vl-liquid-btn--ghost vl-liquid-btn--sm" data-news-tone-cycle>
+                        <span class="vl-liquid-btn__fill" aria-hidden="true"></span>
+                        <span class="vl-liquid-btn__text"><span class="vl-news-tone__label">Auto</span></span>
+                    </button>
+                </div>
+                <p class="vl-blog-masthead__dek p2">Launches, essays, and perspectives from the Voltis Labs studio.</p>
+                <hr class="vl-blog-masthead__hr" aria-hidden="true" />
+            </header>
 
             <div class="vl-blog-filters-row">
                 <div class="vl-blog-select-wrap">
@@ -157,15 +165,15 @@ var wpso = {"ajaxurl":"#","nonce":"5232f0a0e0","user_items":[]};
                 <div id="vl-blog-date-wrap" class="vl-blog-date-field" hidden>
                     <label class="vl-blog-visually-hidden" for="vl-blog-date-input">Search by date phrase</label>
                     <input id="vl-blog-date-input" type="text" class="vl-blog-input" placeholder="Search by date (e.g., February, April 2025, February 16, 2025)" autocomplete="off" />
-                    <span id="vl-blog-date-error" class="vl-blog-date-error" role="alert" hidden>No posts found for this date</span>
+                    <span id="vl-blog-date-error" class="vl-blog-date-error" role="alert" hidden>No articles found for this date</span>
                 </div>
-                <button type="button" id="vl-blog-clear-filters" class="vl-blog-clear" hidden>Clear Filters</button>
+                <button type="button" id="vl-blog-clear-filters" class="vl-blog-clear vl-liquid-btn vl-liquid-btn--ghost vl-liquid-btn--sm" hidden><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">Clear Filters</span></button>
             </div>
 
             <div class="vl-blog-controls-row">
                 <div id="vl-blog-categories" class="vl-blog-categories" aria-label="Categories"></div>
                 <div class="vl-blog-controls-right">
-                    <label class="vl-blog-visually-hidden" for="vl-blog-sort">Sort posts</label>
+                    <label class="vl-blog-visually-hidden" for="vl-blog-sort">Sort articles</label>
                     <select id="vl-blog-sort" class="vl-blog-select vl-blog-select--compact">
                         <option value="newest">Newest first</option>
                         <option value="oldest">Oldest first</option>
@@ -194,13 +202,13 @@ var wpso = {"ajaxurl":"#","nonce":"5232f0a0e0","user_items":[]};
             <div id="vl-blog-loading-more" class="vl-blog-loading-more" hidden>
                 <div class="vl-blog-loading-more__inner">
                     <span class="vl-blog-spinner" aria-hidden="true"></span>
-                    <span>Loading more posts…</span>
+                    <span>Loading more articles…</span>
                 </div>
             </div>
 
             <div id="vl-blog-end" class="vl-blog-end" hidden>
                 <div class="vl-blog-end__line"></div>
-                <p class="vl-blog-end__text">You've reached the end of all posts</p>
+                <p class="vl-blog-end__text">You've reached the end</p>
                 <div class="vl-blog-end__line"></div>
             </div>
 
@@ -209,16 +217,16 @@ var wpso = {"ajaxurl":"#","nonce":"5232f0a0e0","user_items":[]};
                 <p class="vl-blog-newsletter__lead">Join our newsletter to get updates on new products, features, and our philosophy of human-centered tech.</p>
                 <form class="vl-blog-newsletter__form" action="#" method="get" onsubmit="return false;">
                     <input type="email" class="vl-blog-newsletter__input" placeholder="Your email address" aria-label="Email for newsletter" />
-                    <button type="button" class="vl-blog-btn vl-blog-btn--primary">Subscribe</button>
+                    <button type="button" class="vl-liquid-btn"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">Subscribe</span></button>
                 </form>
             </div>
+
+            <button type="button" id="vl-blog-back-top" class="vl-blog-back-top" hidden aria-label="Back to top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+            </button>
         </div>
     </div>
 </section>
-
-<button type="button" id="vl-blog-back-top" class="vl-blog-back-top" hidden aria-label="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
-</button>
 </main>
 <footer class="footer parallax-section">
     <div class="grid footer__container parallax-section__container">
@@ -595,6 +603,7 @@ var RocketPreloadLinksConfig = {"excludeUris":"/contact/|/en/contact/|/(?:.+/)?f
 //# sourceURL=rocket-preload-links-js-after
 /* ]]> */
 </script>
+<script src="assets/news-edition-tone.js" defer></script>
 <script src="assets/blog-feed.js" defer></script>
 <script type="text/javascript" src="assets/grapheine-main.js" id="main-script-js"></script>
 <script type="text/javascript" id="main-script-js-after">

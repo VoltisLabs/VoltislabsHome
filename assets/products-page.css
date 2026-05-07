@@ -27,7 +27,6 @@ body.page-id-products .vl-products-grid-wrap {
   grid-column: 1 / -1;
   width: 100%;
   max-width: none;
-  padding-inline: clamp(1rem, 4vw, 1.5rem);
   box-sizing: border-box;
 }
 
@@ -88,8 +87,9 @@ body.page-id-products .vl-products-grid-wrap {
   transform: none;
   background: transparent;
 }
-.vl-products-grid-wrap .vl-product-card:hover .vl-product-card__thumb {
-  transform: scale(1.02);
+.vl-products-grid-wrap .vl-product-card:hover .vl-product-card__thumb-img {
+  transform: scale(1.04);
+  transition: transform 0.2s ease;
 }
 .vl-product-card:hover {
   border-color: rgba(255, 43, 43, 0.45);
@@ -117,6 +117,7 @@ body.page-id-products .vl-products-grid-wrap {
   /* Block + relative so the icon absolutely fills the frame (avoid flex-row squishing) */
   display: block;
   position: relative;
+  cursor: pointer;
 }
 .vl-product-card--productivity .vl-product-card__thumb {
   background: linear-gradient(155deg, #1a2035 0%, #0a0b10 100%);
@@ -145,6 +146,7 @@ body.page-id-products .vl-products-grid-wrap {
   );
   pointer-events: none;
 }
+
 .vl-product-card__thumb-img {
   position: relative;
   z-index: 1;
@@ -170,6 +172,80 @@ body.page-id-products .vl-products-grid-wrap {
   object-position: center;
   border-radius: 20px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+}
+
+/* ── Spring layer (Animate UI–style cord + sprung icon mass; see products-spring-icons.js) ── */
+body.page-id-products .vl-products-grid-wrap .vl-product-thumb-spring {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.page-id-products .vl-products-grid-wrap .vl-product-thumb-spring__svg {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+body.page-id-products .vl-products-grid-wrap .vl-product-thumb-spring__line {
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-width: 1.25;
+}
+
+body.page-id-products .vl-products-grid-wrap .vl-product-thumb-spring__mass {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 92%;
+  height: 92%;
+  max-width: 7.85rem;
+  max-height: 7.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  will-change: transform;
+  pointer-events: none;
+}
+
+body.page-id-products .vl-products-grid-wrap .vl-product-thumb-spring__mass .vl-product-card__thumb-img {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  transform-origin: center center;
+  width: 100% !important;
+  height: 100% !important;
+  transition: transform 0.2s ease;
+}
+
+body.page-id-products.vl-theme-middle
+  .vl-products-grid-wrap
+  .vl-product-thumb-spring__line {
+  stroke: rgba(70, 78, 92, 0.22);
+}
+
+/* Catalog: no gradient “tile”, glow overlay, rim, or shadow frame behind icons */
+body.page-id-products .vl-products-grid-wrap .vl-product-card__thumb {
+  background: transparent !important;
+}
+
+body.page-id-products .vl-products-grid-wrap .vl-product-card__thumb::after {
+  content: none;
+  display: none;
+}
+
+body.page-id-products .vl-products-grid-wrap .vl-product-card__thumb-img {
+  box-shadow: none !important;
+}
+
+body.page-id-products.vl-theme-middle .vl-products-grid-wrap .vl-product-card__thumb {
+  border: none;
+}
+
+body.page-id-products.vl-theme-middle .vl-products-grid-wrap .vl-product-card:hover .vl-product-card__thumb {
+  border: none;
 }
 .vl-product-card__body {
   padding: 0.5rem 0.5rem 0.65rem;
@@ -230,7 +306,53 @@ body.page-id-products .vl-products-grid-wrap {
   opacity: 0.75;
 }
 
-/* Match live products page: compact tiles (icon + title); keep extras for a11y */
+/* Match live products page: compact tiles (icon + title); keep extras for a11y.
+   `#voltis-apps` lists full descriptions from voltislabs.com `data.tsx`. */
+#voltis-apps .vl-products-grid-wrap .vl-product-card__meta,
+#voltis-apps .vl-products-grid-wrap .vl-product-card__desc {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border: 0;
+  clip-path: none;
+}
+
+#voltis-apps .vl-products-grid-wrap .vl-product-card__meta {
+  margin-bottom: 0.2rem;
+}
+
+#voltis-apps .vl-products-grid-wrap .vl-product-card__desc {
+  margin-top: 0.35rem;
+}
+
+/* Long catalog copy reads better left-aligned beneath each tile */
+#voltis-apps .vl-products-grid-wrap .vl-product-card__body {
+  align-items: stretch;
+  text-align: left;
+  padding: 0.45rem 0.5rem 0.65rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#voltis-apps .vl-products-grid-wrap .vl-product-card__meta,
+#voltis-apps .vl-products-grid-wrap .vl-product-card__title {
+  text-align: center;
+}
+
+#voltis-apps .vl-products-grid-wrap .vl-product-card__desc,
+#voltis-apps .vl-products-grid-wrap .vl-product-card__link {
+  align-self: stretch;
+}
+
+#voltis-apps .vl-products-grid {
+  align-items: start;
+}
+
 .vl-products-grid-wrap .vl-product-card__meta,
 .vl-products-grid-wrap .vl-product-card__desc {
   position: absolute;
@@ -259,6 +381,297 @@ body.page-id-products .vl-products-grid-wrap {
   outline: 2px solid rgba(255, 43, 43, 0.85);
   outline-offset: 2px;
 }
+
+body.page-id-businesses #licensing .vl-products-grid-wrap {
+  margin-top: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+body.page-id-businesses #licensing .vl-products-grid-wrap .vl-product-card__thumb {
+  overflow: visible;
+}
+
+/* Businesses hero video: match home header hero - grid gutters, tight title-to-media gap */
+body.page-id-businesses main > div > div > .section.section-media--full:first-child {
+  margin-top: clamp(0.65rem, 1.6vw, 1.1rem) !important;
+}
+
+body.page-id-businesses .section-media--full .section-media__container {
+  padding-left: var(--space-grid-padding) !important;
+  padding-right: var(--space-grid-padding) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box;
+}
+
+body.page-id-businesses .section-media--full .section-media__figure {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+body.page-id-businesses .section-media--full .media {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Hero orbit renders outside the intrinsic box; clipping would crop the ring at 12 / 6 o'clock. */
+body.page-id-businesses .section-media--full .media.vl-businesses-hero-wrap {
+  overflow: visible;
+}
+
+body.page-id-businesses .section-media--full .media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* Products page: clean, shared content shell for headings, copy, grids, and columns */
+body.page-id-products {
+  --vl-products-shell-max: 75rem;
+  --vl-products-shell-pad: var(--space-grid-padding, clamp(1rem, 4vw, 1.5rem));
+}
+
+body.page-id-products .vl-products-shell {
+  width: 100%;
+  max-width: var(--vl-products-shell-max);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Unify products prose/table/columns to one centered text column width */
+body.page-id-products .section.section-table > .grid.vl-products-shell,
+body.page-id-products #deliverables + .section-columns > .grid.vl-products-shell,
+body.page-id-products .section-wysiwyg__container > .text,
+body.page-id-products .vl-products-pullquote {
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+}
+
+body.page-id-products .section-wysiwyg__container > .text.vl-products-shell[pos="5-12"] {
+  grid-column: 1 / -1 !important;
+}
+
+/* Single rule for the problematic prose area (pullquote + approach + who) */
+body.page-id-products .section-wysiwyg__container > .text.vl-products-unified-copy {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+  justify-self: center !important;
+  text-align: left !important;
+}
+
+/* Businesses/About: same full-row placement as Products unified-copy blocks */
+body.page-id-businesses .section-wysiwyg__container > .text.vl-products-unified-copy,
+/* About #mission keeps a two-column sticky rail; prose there must stay on cols 5–12 */
+body.page-id-17031 .section.section-wysiwyg:not(#mission) .section-wysiwyg__container > .text.vl-products-unified-copy {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+  justify-self: center !important;
+  text-align: left !important;
+}
+
+/* Businesses: mirror products container track behavior for tables/columns */
+body.page-id-businesses .section-table > .grid > .section-table__list,
+body.page-id-businesses .section-columns > .grid > .grid.subgrid[pos="5-12"] {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+}
+
+/* Businesses: fix "License with confidence..." block layout to single centered text flow */
+body.page-id-businesses .section-table > .grid > .section-table__list {
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+}
+
+body.page-id-businesses .section-table .section-table__item.grid.subgrid {
+  display: flex !important;
+  flex-flow: column nowrap !important;
+  align-items: flex-start !important;
+  gap: 0.45rem !important;
+}
+
+body.page-id-businesses .section-table .section-table__item > [pos] {
+  grid-column: 1 / -1 !important;
+  justify-self: start !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+body.page-id-businesses .section-table .section-table__title,
+body.page-id-businesses .section-table .section-table__text,
+body.page-id-businesses .section-table .section-table__text .p1 {
+  text-align: left !important;
+  margin: 0 !important;
+}
+
+/* Businesses: fix "Deliverables we can provide" column grid drift */
+body.page-id-businesses .section-columns > .grid > .grid.subgrid[pos="5-12"] {
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+}
+
+body.page-id-businesses .section-columns > .grid > .grid.subgrid[pos="5-12"] > .section-columns__text {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  justify-self: stretch !important;
+  text-align: left !important;
+}
+
+/* Businesses + About: normalize deliverables column block (no right-track anchoring) */
+body.page-id-businesses .section.section-columns > .grid > .grid.subgrid[pos="5-12"],
+body.page-id-17031 .section.section-columns > .grid > .grid.subgrid[pos="5-12"] {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1rem 1.25rem !important;
+}
+
+body.page-id-businesses .section.section-columns > .grid > .grid.subgrid[pos="5-12"] > .section-columns__text,
+body.page-id-17031 .section.section-columns > .grid > .grid.subgrid[pos="5-12"] > .section-columns__text {
+  grid-column: auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  justify-self: stretch !important;
+  text-align: left !important;
+}
+
+@media (max-width: 767px) {
+  body.page-id-businesses .section.section-columns > .grid > .grid.subgrid[pos="5-12"],
+  body.page-id-17031 .section.section-columns > .grid > .grid.subgrid[pos="5-12"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+body.page-id-products .section-wysiwyg__container > .text.vl-products-unified-copy h2,
+body.page-id-products .section-wysiwyg__container > .text.vl-products-unified-copy h3,
+body.page-id-products .section-wysiwyg__container > .text.vl-products-unified-copy p,
+body.page-id-products .section-wysiwyg__container > .text.vl-products-unified-copy .p1,
+body.page-id-products .section-wysiwyg__container > .text.vl-products-unified-copy .p2 {
+  text-align: left !important;
+}
+
+body.page-id-products .section-wysiwyg__container > .text.vl-products-unified-copy ul,
+body.page-id-products .section-wysiwyg__container > .text.vl-products-unified-copy ol {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+body.page-id-products .section-wysiwyg__container > .text.vl-products-shell h2,
+body.page-id-products .section-wysiwyg__container > .text.vl-products-shell .p1 {
+  text-align: left;
+}
+
+body.page-id-products #voltis-core .section-wysiwyg__container > .text.vl-products-shell h2 {
+  margin-bottom: 0.35rem;
+}
+
+body.page-id-products #voltis-core .section-wysiwyg__container > .text.vl-products-shell .p1 {
+  margin-top: 0;
+  margin-bottom: clamp(1.1rem, 2.6vw, 1.8rem);
+}
+
+body.page-id-products #voltis-core .vl-products-grid-wrap.vl-products-shell {
+  margin-top: clamp(0.8rem, 2vw, 1.3rem);
+}
+
+body.page-id-products #voltis-apps .vl-products-grid-wrap.vl-products-shell .vl-products-grid,
+body.page-id-products #voltis-core .vl-products-grid-wrap.vl-products-shell .vl-products-grid {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+body.page-id-products .section.section-table > .grid.vl-products-shell > ul.vl-products-value-table {
+  grid-column: 1 / -1 !important;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.page-id-products #deliverables + .section-columns > .grid.vl-products-shell > .grid.subgrid[pos="5-12"] {
+  grid-column: 1 / -1 !important;
+}
+
+/* Businesses licensing icons: smaller mark size (~1/4), keep tile frame */
+body.page-id-businesses #licensing .vl-products-grid-wrap .vl-product-card__thumb-img {
+  width: 22% !important;
+  height: 22% !important;
+  border-radius: 10px;
+}
+
+/* Businesses licensing: remove big icon containers, keep icon + label only */
+body.page-id-businesses #licensing .vl-products-grid-wrap .vl-product-card {
+  max-width: 9rem;
+}
+
+body.page-id-businesses #licensing .vl-products-grid-wrap .vl-product-card__thumb {
+  background: transparent !important;
+  border-radius: 0 !important;
+  aspect-ratio: auto;
+  min-height: 0;
+  margin-bottom: 0.45rem;
+}
+
+body.page-id-businesses #licensing .vl-products-grid-wrap .vl-product-card__thumb::after {
+  display: none;
+}
+
+body.page-id-businesses #licensing .vl-products-grid-wrap .vl-product-card__thumb-img {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+/* Keep icons in constant subtle motion even between shuffle cycles */
+@keyframes vl-icon-drift {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  25% { transform: translate3d(1px, -2px, 0) rotate(0.4deg); }
+  50% { transform: translate3d(-1px, 1px, 0) rotate(-0.4deg); }
+  75% { transform: translate3d(2px, 0, 0) rotate(0.3deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+body.page-id-businesses #licensing .vl-products-grid-wrap .vl-product-card__thumb-img.vl-icon-drift {
+  animation-name: vl-icon-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+body.page-id-businesses #licensing .vl-products-grid-wrap .vl-product-card__title {
+  display: none;
+}
+
 .vl-sector-pills {
   display: flex;
   flex-wrap: wrap;
@@ -309,13 +722,7 @@ body.page-id-products .hero__description {
   overflow: visible !important;
 }
 
-/* Principles list: titles + paragraphs stacked on the left (theme grid was separating columns wide apart) */
-body.page-id-products .section.section-table > .grid > ul.vl-products-value-table {
-  grid-column: 1 / -1 !important;
-  max-width: min(42rem, 100%);
-  margin-inline: max(var(--space-grid-padding), 1rem) max(var(--space-grid-padding), 1rem);
-  justify-self: start;
-}
+/* Principles list: titles + paragraphs stacked on the left */
 body.page-id-products .vl-products-value-table .section-table__item.grid.subgrid {
   display: flex !important;
   flex-flow: column nowrap !important;
@@ -325,7 +732,7 @@ body.page-id-products .vl-products-value-table .section-table__item.grid.subgrid
 body.page-id-products .vl-products-value-table .section-table__item > [pos] {
   grid-column: 1 / -1 !important;
   justify-self: start !important;
-  max-width: 42rem;
+  max-width: none;
 }
 body.page-id-products .vl-products-value-table .section-table__title,
 body.page-id-products .vl-products-value-table .section-table__text {
@@ -341,8 +748,133 @@ body.page-id-products .vl-products-pullquote-section .vl-products-pullquote .p1,
 body.page-id-businesses .vl-products-pullquote-section .vl-products-pullquote .p1 {
   text-align: left;
   margin: 0;
-  max-width: 38rem;
+  max-width: none;
   line-height: 1.6;
   font-size: inherit;
   font-weight: 400;
+}
+
+/* Products page: single text system for the whole page */
+body.page-id-products .section-wysiwyg__container > .text,
+body.page-id-products .section-table .section-table__title,
+body.page-id-products .section-table .section-table__text,
+body.page-id-products .section-columns .section-columns__text,
+body.page-id-products .section-title .text {
+  width: 100% !important;
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+  justify-self: center !important;
+  text-align: left !important;
+}
+
+body.page-id-products .section-wysiwyg__container > .text h1,
+body.page-id-products .section-wysiwyg__container > .text h2,
+body.page-id-products .section-wysiwyg__container > .text h3,
+body.page-id-products .section-wysiwyg__container > .text p,
+body.page-id-products .section-wysiwyg__container > .text .p1,
+body.page-id-products .section-wysiwyg__container > .text .p2,
+body.page-id-products .section-table .section-table__title,
+body.page-id-products .section-table .section-table__text,
+body.page-id-products .section-columns .section-columns__text {
+  text-align: left !important;
+}
+
+/* Businesses page: mirror products single text system across full page */
+body.page-id-businesses .section-wysiwyg__container > .text,
+body.page-id-businesses .section-table .section-table__title,
+body.page-id-businesses .section-table .section-table__text,
+body.page-id-businesses .section-columns .section-columns__text,
+body.page-id-businesses .section-title .text,
+body.page-id-businesses .section-table-index .section-table-index__text {
+  width: 100% !important;
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+  justify-self: center !important;
+  text-align: left !important;
+}
+
+body.page-id-businesses .section-wysiwyg__container > .text h1,
+body.page-id-businesses .section-wysiwyg__container > .text h2,
+body.page-id-businesses .section-wysiwyg__container > .text h3,
+body.page-id-businesses .section-wysiwyg__container > .text p,
+body.page-id-businesses .section-wysiwyg__container > .text .p1,
+body.page-id-businesses .section-wysiwyg__container > .text .p2,
+body.page-id-businesses .section-table .section-table__title,
+body.page-id-businesses .section-table .section-table__text,
+body.page-id-businesses .section-columns .section-columns__text,
+body.page-id-businesses .section-table-index .section-table-index__text {
+  text-align: left !important;
+}
+
+/* Longform blocks below rail (voltislabs.com product pages ported to static HTML) */
+main .vl-product-voltis-longform {
+  width: 100%;
+}
+
+main .vl-product-voltis-longform > .section {
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+main .vl-product-voltis-longform .vl-product-voltis-prose > .grid > .vl-product-voltis-prose-inner {
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-inline: auto;
+}
+
+main .vl-product-voltis-longform .vl-product-voltis-prose-inner h2:first-child {
+  margin-top: 0 !important;
+}
+
+main .vl-product-voltis-longform table.vl-product-voltis-data {
+  width: 100%;
+  border-collapse: collapse;
+  margin: clamp(1rem, 2.5vw, 1.5rem) 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+main .vl-product-voltis-longform table.vl-product-voltis-data caption {
+  text-align: left;
+  padding: 0.5rem 0 0.35rem;
+  font-weight: 600;
+}
+
+main .vl-product-voltis-longform table.vl-product-voltis-data th,
+main .vl-product-voltis-longform table.vl-product-voltis-data td {
+  padding: 0.62rem 0.85rem;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+main .vl-product-voltis-longform table.vl-product-voltis-data thead th {
+  font-weight: 600;
+}
+
+main .vl-product-voltis-longform table.vl-product-voltis-data tbody tr:last-child th,
+main .vl-product-voltis-longform table.vl-product-voltis-data tbody tr:last-child td {
+  border-bottom: none;
+}
+
+main .vl-product-voltis-longform ul.vl-product-voltis-tight > li + li {
+  margin-top: 0.4rem;
+}
+
+main .vl-product-voltis-longform .vl-product-voltis-cta-banner {
+  max-width: var(--body-text-max, 58rem);
+  margin-inline: auto;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 43, 43, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  text-align: center;
+}
+
+main .vl-product-voltis-longform .vl-product-voltis-cta-banner .vl-inner__cta {
+  justify-content: center;
+  margin-top: 1rem;
 }

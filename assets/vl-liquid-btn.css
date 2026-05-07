@@ -1,0 +1,200 @@
+/**
+ * Voltis Liquid CTA — site-wide component (matches homepage “View Portfolio”).
+ * Use on <a> or <button>:
+ *   <a class="vl-liquid-btn" href="…"><span class="vl-liquid-btn__fill" aria-hidden="true"></span><span class="vl-liquid-btn__text">Label</span></a>
+ * Modifiers: .vl-liquid-btn--ghost (outline / secondary), .vl-liquid-btn--sm (compact)
+ */
+
+a.vl-liquid-btn,
+button.vl-liquid-btn {
+  --liquid-button-color: var(--color-accent, #ff2b2b);
+  --liquid-button-background-color: rgba(11, 12, 14, 0.94);
+  --liquid-fill-start: 0.11;
+  --liquid-btn-radius: 10px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.62rem 1.65rem;
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--liquid-button-color) 48%, transparent);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 0.85vw + 0.72rem, 1.02rem);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  white-space: nowrap;
+  color: rgba(252, 252, 249, 0.98);
+  border-radius: var(--liquid-btn-radius);
+  background: var(--liquid-button-background-color);
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition:
+    transform 0.22s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.32);
+}
+
+button.vl-liquid-btn {
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  text-align: center;
+}
+
+.vl-liquid-btn__fill {
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  bottom: -2px;
+  top: -2px;
+  z-index: 0;
+  background: var(--liquid-button-color);
+  transform: scaleY(var(--liquid-fill-start));
+  transform-origin: 50% 100%;
+  border-radius: calc(var(--liquid-btn-radius) - 1px);
+  transition: transform 0.54s cubic-bezier(0.32, 0.94, 0.45, 1);
+  pointer-events: none;
+}
+
+.vl-liquid-btn__text {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35em;
+}
+
+.vl-liquid-btn:hover,
+.vl-liquid-btn:focus-visible {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--liquid-button-color) 72%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--liquid-button-color) 42%, transparent),
+    0 18px 44px rgba(0, 0, 0, 0.38),
+    0 0 36px color-mix(in srgb, var(--liquid-button-color) 22%, transparent);
+}
+
+.vl-liquid-btn:hover .vl-liquid-btn__fill,
+.vl-liquid-btn:focus-visible .vl-liquid-btn__fill {
+  transform: scaleY(1);
+  border-radius: calc(var(--liquid-btn-radius) - 1px);
+}
+
+.vl-liquid-btn:focus-visible {
+  outline: 2px dashed var(--liquid-button-color);
+  outline-offset: 4px;
+}
+
+.vl-liquid-btn:active {
+  transform: translateY(0);
+}
+
+.vl-liquid-btn:hover:active,
+.vl-liquid-btn:focus-visible:active {
+  transform: translateY(1px);
+}
+
+/* Secondary: lighter shell, same fill motion */
+.vl-liquid-btn--ghost {
+  --liquid-button-background-color: rgba(11, 12, 14, 0.22);
+  --liquid-fill-start: 0.07;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.24);
+}
+
+.vl-liquid-btn--ghost:hover,
+.vl-liquid-btn--ghost:focus-visible {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--liquid-button-color) 32%, transparent),
+    0 14px 36px rgba(0, 0, 0, 0.32);
+}
+
+/* Prose / light panels: dark label on frosted shell */
+.vl-inner .vl-liquid-btn--ghost,
+body.vl-theme-middle .vl-liquid-btn--ghost {
+  color: #121418;
+  --liquid-button-background-color: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 6px 22px rgba(15, 18, 24, 0.1);
+}
+
+body.vl-theme-middle .vl-liquid-btn--ghost:hover,
+body.vl-theme-middle .vl-liquid-btn--ghost:focus-visible {
+  color: #fffaf8;
+}
+
+.vl-inner .vl-liquid-btn--ghost:hover,
+.vl-inner .vl-liquid-btn--ghost:focus-visible {
+  color: #fffaf8;
+}
+
+body.vl-theme-middle .vl-liquid-btn--ghost .vl-liquid-btn__fill,
+.vl-inner .vl-liquid-btn--ghost .vl-liquid-btn__fill {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--liquid-button-color) 88%, #fff),
+    var(--liquid-button-color)
+  );
+}
+
+/* Mid-page light strip: primary solid inverts like homepage */
+body.vl-theme-middle .vl-liquid-btn:not(.vl-liquid-btn--ghost) {
+  color: #121418;
+  --liquid-button-background-color: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 0 0 1px rgba(255, 43, 43, 0.22),
+    0 8px 26px rgba(20, 24, 32, 0.1);
+}
+
+body.vl-theme-middle .vl-liquid-btn:not(.vl-liquid-btn--ghost):hover,
+body.vl-theme-middle .vl-liquid-btn:not(.vl-liquid-btn--ghost):focus-visible {
+  color: #fffaf8;
+}
+
+body.vl-theme-middle .vl-liquid-btn:not(.vl-liquid-btn--ghost) .vl-liquid-btn__fill {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--liquid-button-color) 92%, #fff),
+    var(--liquid-button-color)
+  );
+}
+
+/* Destructive / error recovery (still uses liquid motion) */
+.vl-liquid-btn--danger {
+  --liquid-button-color: #dc2626;
+}
+
+/* Compact (news rail, small CTAs) */
+.vl-liquid-btn--sm {
+  padding: 0.42rem 0.95rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.vl-liquid-btn--sm.vl-liquid-btn--ghost {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-liquid-btn,
+  .vl-liquid-btn__fill {
+    transition-duration: 0.01ms !important;
+  }
+
+  .vl-liquid-btn:hover,
+  .vl-liquid-btn:focus-visible,
+  .vl-liquid-btn:active {
+    transform: none;
+  }
+
+  .vl-liquid-btn:focus-visible .vl-liquid-btn__fill,
+  .vl-liquid-btn:hover .vl-liquid-btn__fill {
+    transform: scaleY(1);
+  }
+}

@@ -1,7 +1,7 @@
 $base = Split-Path -Parent $MyInvocation.MyCommand.Path
 $files = @(
   "index.html", "home.html", "portfolio-all.html", "portfolio-alphabetical.html",
-  "sectors.html", "expertise.html", "magazine.html", "agency.html", "contact.html"
+  "sectors.html", "expertise.html", "magazine.html", "about-us.html", "contact.html"
 )
 
 $logoHeader = '<span class="voltis-wordmark" style="display:block;color:#fff;font-weight:700;font-size:clamp(1rem,2.5vw,1.35rem);letter-spacing:-0.03em;line-height:1;">Voltis Labs</span>'
@@ -29,7 +29,8 @@ foreach ($f in $files) {
   )
 
   $c = $c -replace 'href="magazine\.html"\s*>Magazine</a>', 'href="https://github.com/VoltisLabs" target="_blank" rel="noopener noreferrer">GitHub</a>'
-  $c = $c -replace 'href="agency\.html"\s*>Agency</a>', 'href="agency.html">About</a>'
+  $c = $c -replace 'href="agency\.html">Agency</a>', 'href="about-us.html">About</a>'
+  $c = $c -replace 'href="about-us\.html">Agency</a>', 'href="about-us.html">About</a>'
 
   $c = $c.Replace(
     $G + ' supports brands that are keen to make design a driver of social and economic transformation, helping them meet the challenges of tomorrow.',
@@ -90,10 +91,10 @@ if (Test-Path $homePath) {
   Write-Host "Patched home.html hero"
 }
 
-$agencyPath = Join-Path $base "agency.html"
-if (Test-Path $agencyPath) {
+$aboutPath = Join-Path $base "about-us.html"
+if (Test-Path $aboutPath) {
   $G = 'Graph' + [char]0x00E9 + 'ine'
-  $a = [System.IO.File]::ReadAllText($agencyPath)
+  $a = [System.IO.File]::ReadAllText($aboutPath)
   $agencyHeroPat = [regex]::Escape($G) + ' <br><span style="color:#ff2b2b">strategy &<br>brand design\s*</span>'
   $a = [regex]::Replace(
     $a,
@@ -104,8 +105,8 @@ if (Test-Path $agencyPath) {
     'Voltis Labs <br><span style="color:#ff2b2b">strategy &<br>brand design  </span>',
     'Voltis Labs <br><span style="color:#ff2b2b">software &<br>product studio</span>'
   )
-  [System.IO.File]::WriteAllText($agencyPath, $a, [System.Text.UTF8Encoding]::new($false))
-  Write-Host "Patched agency.html hero"
+  [System.IO.File]::WriteAllText($aboutPath, $a, [System.Text.UTF8Encoding]::new($false))
+  Write-Host "Patched about-us.html hero"
 }
 
 function Patch-HeroInner([string]$filePath, [string]$oldInner, [string]$newInner) {

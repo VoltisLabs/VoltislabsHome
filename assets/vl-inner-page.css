@@ -1,4 +1,4 @@
-/* Inner detail pages — prose and CTAs aligned with Grapheine sections */
+/* Inner detail pages - prose and CTAs aligned with Grapheine sections */
 .vl-inner .p1,
 .vl-inner p {
   margin-bottom: 1rem;
@@ -8,6 +8,8 @@
 .vl-inner h2 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+  font-size: inherit;
+  line-height: inherit;
   font-weight: 600;
 }
 
@@ -36,31 +38,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.vl-inner__cta a {
-  display: inline-block;
-  padding: 0.6rem 1.1rem;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  border: 1px solid currentColor;
-  transition: opacity 0.2s ease;
-}
-
-.vl-inner__cta a:hover {
-  opacity: 0.85;
-}
-
-.vl-inner__cta a--primary {
-  background: #ff2b2b;
-  color: #fff;
-  border-color: #ff2b2b;
-}
-
-.vl-inner__cta a--ghost {
-  background: transparent;
-  color: inherit;
-}
+/* CTAs use shared `vl-liquid-btn` (+ `--ghost` secondary) from vl-liquid-btn.css */
 
 .vl-inner__note {
   font-size: 0.9rem;

@@ -13,3 +13,449 @@
 .section-sectors__thumbnails img[src$=".svg"] {
   background: #0c0c0c;
 }
+
+/* Wearhouse hero phone carousel (copied animation assets from WEARHOUSE-web) */
+.vl-wh-phone-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.vl-wh-phone-carousel__phone-link {
+  display: block;
+  width: 100%;
+  perspective: 800px;
+  perspective-origin: 50% 50%;
+}
+
+.vl-wh-phone-carousel__viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2rem;
+  aspect-ratio: 2560 / 5284;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-wh-phone-carousel__viewport {
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .vl-wh-phone-carousel__phone-link {
+    perspective: none;
+  }
+}
+
+.vl-wh-phone-carousel__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+.vl-wh-phone-carousel__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.vl-wh-phone-carousel__brand {
+  width: auto;
+  height: 100%;
+  display: block;
+}
+
+.vl-wh-phone-carousel__brand-row {
+  margin-top: 0.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.14rem;
+}
+
+.vl-wh-phone-carousel__copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vl-wh-phone-carousel__brand-row > a {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.vl-wh-phone-carousel__caption {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.vl-wh-phone-carousel__sub {
+  margin: 0.14rem 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.66rem;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Keep Wearhouse carousel readable when page background fades to white */
+body.home.vl-theme-middle .vl-wh-phone-carousel__caption {
+  color: #111;
+}
+
+body.home.vl-theme-middle .vl-wh-phone-carousel__sub {
+  color: rgba(17, 17, 17, 0.78);
+}
+
+/* Home sectors row: keep list vertically centered with phone carousel */
+.section-sectors__container > .grid.subgrid[pos="row"] {
+  align-items: center;
+}
+
+.section-sectors__container > .grid.subgrid[pos="row"] .section-sectors__list {
+  align-self: center;
+}
+
+/* Remove all dividers around home products boundary */
+body.home #home-products {
+  position: relative;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+body.home #home-products::before {
+  display: none !important;
+  content: none !important;
+}
+
+body.home #home-products::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove the extra separator coming from the section above Products */
+body.home .section-works-homepage {
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+body.home .section-works-homepage::after,
+body.home .section-works-homepage::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Keep only one divider: remove the next section's top rule */
+body.home .section-works-homepage__list {
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+body.home .section-works-homepage__list::before,
+body.home .section-works-homepage__list::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hard kill any remaining separators between hero preview and products */
+body.home .vl-home-hero-preview,
+body.home .vl-home-hero-preview__track-wrap,
+body.home .vl-home-hero-preview__track,
+body.home .section-works-homepage,
+body.home .section-works-homepage__list,
+body.home #home-products {
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+body.home .vl-home-hero-preview::before,
+body.home .vl-home-hero-preview::after,
+body.home .vl-home-hero-preview__track-wrap::before,
+body.home .vl-home-hero-preview__track-wrap::after,
+body.home .section-works-homepage::before,
+body.home .section-works-homepage::after,
+body.home .section-works-homepage__list::before,
+body.home .section-works-homepage__list::after,
+body.home #home-products::before,
+body.home #home-products::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Second divider source: hero copy separator from theme block styles */
+body.home .vl-home-hero__copy,
+body.home .vl-home-hero__copy.text {
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+body.home .vl-home-hero__copy::before,
+body.home .vl-home-hero__copy::after,
+body.home .vl-home-hero__copy.text::before,
+body.home .vl-home-hero__copy.text::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+}
+
+/* Exact remaining sources: section-works list + footer separators */
+body.home .section-works-homepage > ol.section-works-homepage__list,
+body.home .section-works-homepage > footer,
+body.home .section-works-homepage > footer .section-works-homepage__footer {
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+body.home .section-works-homepage > ol.section-works-homepage__list::before,
+body.home .section-works-homepage > ol.section-works-homepage__list::after,
+body.home .section-works-homepage > footer::before,
+body.home .section-works-homepage > footer::after,
+body.home .section-works-homepage > footer .section-works-homepage__footer::before,
+body.home .section-works-homepage > footer .section-works-homepage__footer::after {
+  display: none !important;
+  content: none !important;
+}
+
+body.home #home-products .grid,
+body.home #home-products .section-wysiwyg__container,
+body.home #home-products .vl-home-products-grid-wrap {
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Collapse spacing between previous section and Products */
+body.home .section-works-homepage {
+  margin-bottom: 0 !important;
+  /* Was ~1–1.8rem; trim hard so Wearhouse row doesn’t float in white space */
+  padding-bottom: clamp(0.25rem, 0.8vw, 0.5rem) !important;
+}
+
+/* Ship-products hero sits above this row; theme .section-sectors used ~10rem vertical top + huge padding-bottom — crush it */
+body.home .page-template-homepage-static .section-works-homepage:first-of-type > .section-sectors {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: clamp(0.5rem, 1.5vw, 1rem) !important;
+}
+
+body.home #home-products {
+  margin-top: clamp(0.85rem, 2.2vw, 1.5rem) !important;
+  padding-top: clamp(0.35rem, 1vw, 0.75rem) !important;
+  margin-bottom: clamp(2.25rem, 5.5vw, 3.75rem) !important;
+  padding-bottom: clamp(1.5rem, 4vw, 2.75rem) !important;
+}
+
+body.home #home-products + .section-works-homepage {
+  margin-top: clamp(0.75rem, 2vw, 1.5rem) !important;
+  padding-top: clamp(0.5rem, 1.5vw, 1.1rem) !important;
+}
+
+/* Home products (cloned animated icon behavior from businesses licensing) */
+.vl-home-products-grid-wrap {
+  grid-column: 1 / -1;
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  overflow: visible !important;
+  max-width: none;
+  padding-inline: var(--edge-start, clamp(1rem, 4vw, 1.5rem));
+  box-sizing: border-box;
+}
+
+/* Home: product grid CTA row layout (button uses global `vl-liquid-btn` in vl-liquid-btn.css) */
+body.home .vl-home-products-cta-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 clamp(0.95rem, 2.4vw, 1.55rem);
+}
+
+body.home .vl-home-products-grid-wrap > .vl-home-products-grid {
+  align-self: stretch;
+}
+
+.vl-home-products-grid-wrap.grid.subgrid > .vl-home-products-grid {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  min-width: 0;
+}
+
+.vl-home-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.4rem 2rem;
+  width: 100%;
+  max-width: 62rem;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+}
+
+.vl-home-product-card {
+  width: 100%;
+  max-width: 9rem;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  will-change: transform;
+  opacity: 1 !important;
+  visibility: visible !important;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.vl-home-product-card.is-dragging {
+  cursor: grabbing;
+  z-index: 30;
+}
+
+.vl-home-product-card__link {
+  display: block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  will-change: transform;
+}
+
+/* Spring layer (#home-products only — not used on `.vl-products-grid-wrap`) */
+body.home #home-products .vl-home-product-thumb-spring {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.home #home-products .vl-home-product-thumb-spring__svg {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+body.home #home-products .vl-home-product-thumb-spring__line {
+  stroke: rgba(255, 170, 150, 0.38);
+  stroke-width: 1.75;
+}
+
+body.home #home-products .vl-home-product-thumb-spring__mass {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+  pointer-events: none;
+}
+
+body.home #home-products .vl-home-product-thumb-spring__mass .vl-home-product-card__icon {
+  position: relative;
+  width: 112%;
+  height: 112%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  mix-blend-mode: normal;
+  filter: none !important;
+}
+
+body.home #home-products .vl-home-product-card__link:not(:has(.vl-home-product-thumb-spring)) > .vl-home-product-card__icon {
+  width: 66px;
+  height: 66px;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+body.home.vl-theme-middle #home-products .vl-home-product-thumb-spring__line {
+  stroke: rgba(200, 55, 45, 0.48);
+}
+
+body.home #home-products .vl-home-products-grid:hover .vl-home-product-card__icon.vl-home-icon-drift {
+  animation-play-state: paused;
+}
+
+.vl-home-product-card__icon {
+  transform-origin: center center;
+}
+
+@keyframes vl-home-icon-drift {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  20% { transform: translate3d(2px, -3px, 0) rotate(0.8deg); }
+  40% { transform: translate3d(-3px, 2px, 0) rotate(-0.7deg); }
+  60% { transform: translate3d(3px, 1px, 0) rotate(0.6deg); }
+  80% { transform: translate3d(-2px, -2px, 0) rotate(-0.5deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+.vl-home-product-card__icon.vl-home-icon-drift {
+  animation-name: vl-home-icon-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 860px) {
+  .vl-home-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.25rem;
+  }
+}

@@ -1,0 +1,913 @@
+/* Static About page: parity with voltislabs.com Animate UI CodeBlock hero (typing + caret). */
+
+.vl-agency-about .hero .hero__content.vl-agency-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 2.75rem);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .vl-agency-about .hero .hero__content.vl-agency-hero-layout {
+    /* Equal halves across the hero content box */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(1.25rem, 3vw, 2.5rem);
+  }
+}
+
+.vl-agency-about .vl-agency-hero__copy,
+.vl-agency-about .vl-agency-hero__demo {
+  min-width: 0;
+  width: 100%;
+}
+
+.vl-agency-about .vl-agency-hero__copy .hero__description {
+  margin-bottom: 0;
+}
+
+/*
+ * Tabs row + hero rule: Graphene paints `.hero__content:before` on the divider between the tab
+ * strip and headline. Without extra air, that line reads “touching” the tabs / sticky header chrome.
+ */
+body.page-id-17031 .vl-agency-about .hero .hero__content.vl-agency-hero-layout {
+  padding-top: clamp(1.15rem, 2.25vw, 2rem);
+}
+
+/* Black hero → mission: theme uses tiny bottom pad with `.hero:has(.hero__description)`; open a clear band */
+body.page-id-17031 .vl-agency-about .hero {
+  padding-bottom: clamp(1.5rem, 3.75vw, 3rem);
+}
+
+.vl-animate-code-block {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  max-height: min(372px, 70vh);
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #141414;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
+  justify-self: end;
+}
+
+/* About hero code panel: same half-width footprint as home (horizontal, not portrait card). */
+.vl-agency-about .vl-agency-hero__demo {
+  justify-self: stretch;
+  width: 100%;
+  min-width: 0;
+}
+
+.vl-agency-about .vl-agency-hero__demo .vl-animate-code-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  height: clamp(320px, 42vh, 448px);
+  min-height: clamp(320px, 42vh, 448px);
+  max-height: min(480px, 62vh);
+  overflow: hidden;
+  justify-self: stretch;
+  align-self: start;
+}
+
+.vl-agency-about .vl-agency-hero__demo .vl-animate-code-block__pre {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  .vl-animate-code-block {
+    border-color: rgba(20, 16, 13, 0.18);
+    background: #f7f5f3;
+    box-shadow: 0 1px 3px rgba(20, 16, 13, 0.08);
+  }
+
+  .vl-animate-code-block__pre code {
+    color: #242220;
+  }
+}
+
+.vl-animate-code-block__pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-wrap: break-word;
+  font-family:
+    ui-monospace,
+    "Cascadia Code",
+    "Source Code Pro",
+    Menlo,
+    Consolas,
+    monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  tab-size: 2;
+}
+
+.vl-animate-code-block__pre code {
+  display: inline;
+  white-space: inherit;
+  color: #e4ddd4;
+  background: transparent;
+}
+
+.vl-animate-code-block__caret {
+  display: inline-block;
+  width: 1ch;
+  margin-left: 1px;
+  font-weight: 400;
+  color: inherit;
+  vertical-align: text-bottom;
+}
+
+.vl-animate-code-block[data-done="false"] .vl-animate-code-block__caret {
+  animation: vl-code-caret-blink 1s steps(1, start) infinite;
+}
+
+.vl-animate-code-block[data-done="true"] .vl-animate-code-block__caret {
+  visibility: hidden;
+}
+
+@keyframes vl-code-caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-animate-code-block[data-done="false"] .vl-animate-code-block__caret {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* About page prose (about-us.html body) */
+.vl-agency-about-body .vl-agency-values-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vl-agency-about-body .vl-agency-values-list li.p1:not(:last-child) {
+  margin-bottom: 1.1rem;
+}
+
+.vl-agency-about-body .vl-agency-value-title {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.vl-agency-about-body .vl-agency-inline-link {
+  color: var(--color-accent, #ff2b2b);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.vl-agency-about-body .vl-agency-inline-link:hover,
+.vl-agency-about-body .vl-agency-inline-link:focus-visible {
+  opacity: 0.88;
+  outline: none;
+}
+
+/* Home hero: Animate UI-style code block sits in the panel (replaces ship-products slider) */
+body.home .vl-home-hero--with-code-demo {
+  align-items: start;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  justify-self: stretch;
+}
+
+body.home .vl-home-hero__frame:has(.vl-animate-code-block)::before {
+  content: none;
+  display: none;
+}
+
+/* Home hero — after typing finishes, faux launch splash */
+body.home .vl-home-hero__frame .vl-animate-code-block {
+  display: flex;
+  flex-direction: column;
+  /* Fixed footprint from first paint — code scrolls inside `<pre>`; launch uses same frame */
+  box-sizing: border-box;
+  height: clamp(320px, 42vh, 448px);
+  min-height: clamp(320px, 42vh, 448px);
+  max-height: min(480px, 62vh);
+  overflow: hidden;
+  transition: none;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block[data-vl-phase="code"]
+  .vl-animate-code-block__pre {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  margin: 0;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block[data-vl-phase="launch"] {
+  padding: 0;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block[data-vl-phase="launch"]
+  .vl-animate-code-block__pre {
+  flex: none;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block[data-vl-phase="launch"] .vl-animate-code-block__launch {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__launch[hidden] {
+  display: none !important;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__launch {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__launch-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+body.home .vl-home-hero__frame .vl-launch-demo__stage-shell {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+body.home .vl-home-hero__frame .vl-launch-demo__toolbar--bottom {
+  border-bottom: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  justify-content: center;
+}
+
+body.home .vl-home-hero__frame .vl-launch-demo__footer-status {
+  font-family:
+    ui-monospace,
+    "Cascadia Code",
+    Menlo,
+    Consolas,
+    monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: rgba(186, 210, 172, 0.55);
+}
+
+body.home .vl-home-hero__frame .vl-launch-boot-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0.55rem 0.82rem 0.65rem;
+  gap: 0.42rem;
+  background:
+    linear-gradient(180deg, rgba(10, 18, 14, 0.97), rgba(5, 8, 7, 0.99)),
+    radial-gradient(circle at 18% -10%, rgba(90, 220, 140, 0.12), transparent 45%);
+}
+
+body.home .vl-home-hero__frame .vl-launch-boot-overlay[hidden] {
+  display: none !important;
+}
+
+body.home .vl-home-hero__frame .vl-boot-pixel-track {
+  flex-shrink: 0;
+  height: 13px;
+  border: 1px solid rgba(120, 200, 150, 0.22);
+  background: rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+body.home .vl-home-hero__frame .vl-boot-pixel-fill {
+  height: 100%;
+  width: 0%;
+  will-change: width;
+  image-rendering: pixelated;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(126, 240, 162, 0.92) 0 5px,
+    rgba(54, 120, 72, 0.88) 5px 10px
+  );
+}
+
+@keyframes vl-boot-pixel-sweep {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+body.home .vl-home-hero__frame .vl-boot-pixel-fill.vl-boot-pixel-fill--animate {
+  animation: vl-boot-pixel-sweep 1.08s steps(26, end) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home .vl-home-hero__frame .vl-boot-pixel-fill.vl-boot-pixel-fill--animate {
+    animation-duration: 0.01ms;
+    width: 100%;
+  }
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__launch-log {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.2rem 0 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: rgba(180, 220, 160, 0.95);
+  font-family:
+    ui-monospace,
+    "Cascadia Code",
+    Menlo,
+    Consolas,
+    monospace;
+}
+
+body.home .vl-home-hero__frame .vl-boot-start-btn {
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 0.12rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 107, 82, 0.45);
+  border-radius: 6px;
+  background: rgba(18, 26, 22, 0.85);
+  color: rgba(255, 244, 236, 0.95);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+body.home .vl-home-hero__frame .vl-boot-start-btn:hover,
+body.home .vl-home-hero__frame .vl-boot-start-btn:focus-visible {
+  border-color: rgba(255, 107, 82, 0.75);
+  outline: none;
+}
+
+body.home .vl-home-hero__frame .vl-boot-line:not(:last-of-type) {
+  margin-bottom: 0.2em;
+}
+
+/* Home Voltimicro typing — colourful tokens */
+body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-kw {
+  color: #6ecbff;
+  font-weight: 600;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-num {
+  color: #d4a8ff;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-str {
+  color: #7ef0a2;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-comment {
+  color: rgba(170, 205, 175, 0.55);
+  font-style: italic;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-doc {
+  color: rgba(150, 200, 240, 0.65);
+  font-style: italic;
+}
+
+body.home .vl-home-hero__frame .vl-animate-code-block__launch-main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem 0.65rem;
+  text-align: left;
+  min-height: 0;
+}
+
+body.home .vl-launch-demo__toolbar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.36rem 0.62rem 0.42rem;
+  min-width: 0;
+}
+
+body.home .vl-home-hero__frame .vl-launch-demo__toolbar--top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+body.home .vl-launch-demo__welcome {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size: clamp(0.88rem, 1.65vw, 1.05rem);
+  color: rgba(248, 248, 245, 0.96);
+  text-transform: lowercase;
+  line-height: 1.25;
+}
+
+body.home .vl-launch-demo__toolbar-actions {
+  flex: 0 0 auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.1rem;
+}
+
+body.home .vl-launch-demo__games-slot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+body.home .vl-launch-demo__bare-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.22rem;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(226, 235, 215, 0.88);
+  cursor: pointer;
+  line-height: 0;
+  font: inherit;
+}
+
+body.home .vl-launch-demo__bare-icon:hover,
+body.home .vl-launch-demo__bare-icon:focus-visible {
+  color: #ff6b52;
+  outline: none;
+}
+
+body.home .vl-launch-demo__bare-icon--exit-fs:hover,
+body.home .vl-launch-demo__bare-icon--exit-fs:focus-visible {
+  color: #ff9595;
+}
+
+body.home .vl-launch-demo__bare-icon svg {
+  display: block;
+}
+
+body.home .vl-mini-floppy {
+  width: 100%;
+  max-width: min(352px, 100%);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  align-items: stretch;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+@media (min-width: 720px) {
+  body.home .vl-mini-floppy {
+    max-width: none;
+    margin-inline: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+body.home .vl-mini-floppy--fullscreen {
+  max-width: none !important;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 0.32rem clamp(0.32rem, 1.4vw, 0.85rem);
+  justify-content: space-between;
+  background:
+    radial-gradient(circle at 28% -8%, rgba(90, 220, 140, 0.18), transparent 52%),
+    linear-gradient(165deg, #070a09 0%, #050807 100%);
+}
+
+body.home .vl-mini-floppy__game-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.38rem;
+  flex-shrink: 0;
+}
+
+body.home .vl-mini-floppy__icon-btn.vl-mini-floppy__icon-btn--corner {
+  border-radius: 10px;
+  border-color: rgba(255, 120, 90, 0.45);
+  background: rgba(12, 18, 16, 0.72);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+body.home .vl-mini-floppy__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.24rem 0.38rem;
+  border-radius: 6px;
+  border: 1px solid rgba(140, 205, 155, 0.25);
+  background: rgba(20, 26, 22, 0.6);
+  color: rgba(220, 228, 212, 0.9);
+  cursor: pointer;
+  font: inherit;
+}
+
+body.home .vl-mini-floppy__icon-btn:hover,
+body.home .vl-mini-floppy__icon-btn:focus-visible {
+  border-color: rgba(255, 43, 43, 0.5);
+  outline: none;
+}
+
+body.home .vl-mini-floppy__icon-btn:disabled {
+  cursor: not-allowed;
+}
+
+body.home .vl-mini-floppy__icon-btn--exit-fs {
+  border-color: rgba(255, 120, 120, 0.42);
+}
+
+body.home .vl-mini-floppy__footer-hud {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0.42rem 0.5rem 0.5rem;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  font-family:
+    ui-monospace,
+    Menlo,
+    Consolas,
+    monospace;
+  color: rgba(206, 218, 198, 0.82);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.home .vl-mini-floppy__stage-brand {
+  position: absolute;
+  left: 0.45rem;
+  bottom: 0.42rem;
+  z-index: 2;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.42;
+  color: rgba(255, 248, 240, 0.88);
+  line-height: 1.2;
+}
+
+body.home .vl-mini-floppy__corner-bar {
+  position: absolute;
+  right: 0.38rem;
+  bottom: 0.38rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+body.home .vl-mini-floppy__corner-bar .vl-mini-floppy__icon-btn {
+  pointer-events: auto;
+}
+
+body.home .vl-mini-floppy__stage {
+  position: relative;
+  width: 100%;
+  max-width: min(352px, 100%);
+  margin: 0 auto;
+  aspect-ratio: 288 / 360;
+  max-height: min(420px, 52vh);
+  flex-shrink: 0;
+}
+
+@media (min-width: 720px) {
+  body.home .vl-mini-floppy__stage {
+    max-width: none;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 200px;
+    max-height: min(620px, 58vh);
+  }
+
+  body.home .vl-mini-floppy--fullscreen .vl-mini-floppy__stage {
+    max-height: none;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+  }
+}
+
+body.home .vl-mini-floppy__overlays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+body.home .vl-mini-floppy__hi-entry,
+body.home .vl-mini-floppy__scores-sheet {
+  pointer-events: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(18.5rem, 92%);
+  box-sizing: border-box;
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid rgba(120, 200, 135, 0.35);
+  background: rgba(10, 14, 13, 0.96);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  color: rgba(246, 246, 238, 0.95);
+}
+
+body.home .vl-mini-floppy__hi-entry-title,
+body.home .vl-mini-floppy__sheet-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+body.home .vl-mini-floppy__hi-entry-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+body.home .vl-mini-floppy__hi-entry-row label {
+  font-size: 0.72rem;
+}
+
+body.home .vl-mini-floppy__hi-entry-input {
+  flex: 1;
+  min-width: 4.5rem;
+  max-width: 6rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid rgba(180, 215, 165, 0.35);
+  background: rgba(6, 10, 10, 0.9);
+  color: inherit;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+
+body.home .vl-mini-floppy__hi-entry-save,
+body.home .vl-mini-floppy__sheet-close {
+  margin-top: 0.45rem;
+  padding: 0.32rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 43, 43, 0.4);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+body.home .vl-mini-floppy__scores-list {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.76rem;
+}
+
+body.home .vl-mini-floppy__scores-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+body.home .vl-mini-floppy__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(110, 210, 135, 0.22);
+  cursor: pointer;
+  touch-action: manipulation;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body.home .vl-mini-floppy__canvas:focus-visible {
+  outline: 2px dashed var(--color-accent, #ff2b2b);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: light) {
+  body.home .vl-home-hero__frame .vl-animate-code-block__launch-log {
+    color: rgba(24, 60, 32, 0.92);
+  }
+
+  body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-kw {
+    color: #0060b7;
+  }
+
+  body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-num {
+    color: #6b3fd4;
+  }
+
+  body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-str {
+    color: #0f7a3b;
+  }
+
+  body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-comment {
+    color: rgba(40, 92, 52, 0.55);
+  }
+
+  body.home .vl-home-hero__frame .vl-animate-code-block__pre code .vl-code-hl-doc {
+    color: rgba(32, 92, 132, 0.65);
+  }
+
+  body.home .vl-launch-demo__welcome {
+    color: #141512;
+  }
+
+  body.home .vl-launch-demo__bare-icon {
+    color: #273229;
+  }
+
+  body.home .vl-launch-demo__bare-icon:hover,
+  body.home .vl-launch-demo__bare-icon:focus-visible {
+    color: #c72828;
+  }
+
+  body.home .vl-mini-floppy__footer-hud {
+    color: rgba(34, 62, 42, 0.78);
+    border-top-color: rgba(18, 16, 13, 0.1);
+  }
+
+  body.home .vl-mini-floppy__stage-brand {
+    color: #3a362f;
+  }
+
+  body.home .vl-mini-floppy__icon-btn {
+    border-color: rgba(42, 96, 56, 0.32);
+    background: rgba(247, 246, 243, 0.88);
+    color: #1d2a22;
+  }
+
+  body.home .vl-mini-floppy__canvas {
+    border-color: rgba(42, 96, 56, 0.28);
+  }
+
+  body.home .vl-mini-floppy__hi-entry,
+  body.home .vl-mini-floppy__scores-sheet {
+    background: rgba(255, 255, 253, 0.98);
+    border-color: rgba(40, 92, 56, 0.25);
+    color: #141a16;
+  }
+
+  body.home .vl-mini-floppy__hi-entry-input {
+    background: #fff;
+    border-color: rgba(40, 92, 56, 0.32);
+    color: #111;
+  }
+}
+
+/* About + Mission: sticky rail shares one scroll span with prose so the slider sticks past the prose divider */
+.vl-about-mission-combined,
+.vl-about-mission-combined .grid,
+.vl-about-mission-combined .section-wysiwyg__container {
+  overflow: visible;
+}
+
+.vl-about-mission-combined #mission.vl-mission-copy {
+  margin-top: clamp(2rem, 5vw, 3.25rem);
+  padding-top: clamp(2rem, 5vw, 3.25rem);
+  border-top: 1px solid color-mix(in srgb, var(--color-text, #ccc) 16%, transparent);
+}
+
+/* Graphene theme wires `.section-wysiwyg__container h2::after { width: 100vw; right: 100%; }`.
+   Removing it on About prose keeps section dividers aligned with the text column (not spanning the sticky rail). */
+body.page-id-17031 .vl-agency-about .section-wysiwyg__container > .text h2::after {
+  content: none !important;
+  display: none !important;
+}
+
+.vl-about-mission-combined .vl-mission-sticky-shell {
+  min-width: 0;
+  justify-self: start;
+  width: 100%;
+  max-width: min(100%, 22rem);
+  align-self: stretch;
+}
+
+/*
+ * Sticky rail: vertically centre the slider while it can float; only pin toward the header or
+ * viewport bottom once the sticky range hits the ends of this section — no transform (better with sticky).
+ */
+.vl-about-mission-combined {
+  --vl-mission-sticky-h: clamp(12.75rem, 18vw + 7.5rem, 16rem);
+}
+
+.vl-about-mission-combined .vl-mission-sticky-inner {
+  position: sticky;
+  /* Keep the sticky rail comfortably below site header chrome / hero↔mission seam */
+  --vl-site-header-clear: clamp(5rem, 8.5vw + 2.5rem, 7.75rem);
+  align-self: start;
+}
+
+@media (max-width: 899px) {
+  .vl-about-mission-combined .vl-mission-sticky-inner {
+    position: relative;
+    top: auto !important;
+  }
+
+  .vl-about-mission-combined .vl-mission-sticky-shell {
+    order: 2;
+    justify-self: center;
+    max-width: min(22rem, 100%);
+  }
+
+  .vl-about-mission-combined .vl-about-mission-prose-column {
+    order: 1;
+  }
+}
+
+@media (min-width: 900px) {
+  .vl-about-mission-combined .vl-mission-sticky-shell {
+    max-width: 100%;
+  }
+
+  .vl-about-mission-combined .vl-mission-sticky-inner {
+    top: clamp(
+      var(--vl-site-header-clear),
+      calc((100svh - var(--vl-mission-sticky-h)) / 2),
+      calc(100svh - var(--vl-mission-sticky-h) - clamp(0.5rem, 2vh, 1rem))
+    );
+  }
+
+  /* Override prose column width so cols 5–12 + sticky rail layout stays intact */
+  body.page-id-17031
+    .vl-about-mission-combined
+    .section-wysiwyg__container
+    > .text.vl-about-mission-prose-column {
+    max-width: none !important;
+    width: auto !important;
+    margin-inline: 0 !important;
+    justify-self: stretch !important;
+  }
+}
+
+.vl-about-mission-combined .vl-home-hero__frame::before {
+  content: none;
+  display: none !important;
+}
+
+.vl-about-mission-combined #mission.vl-mission-copy > h2:first-child {
+  margin-top: 0;
+}
+
+.vl-about-mission-combined #mission.vl-mission-copy h2#looking-ahead {
+  margin-top: clamp(1.85rem, 4.2vw, 2.65rem);
+}

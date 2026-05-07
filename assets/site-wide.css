@@ -1,4 +1,160 @@
 /* Voltis mirror - site-wide fixes on top of grapheine-main.css */
+@import url("./vl-liquid-btn.css");
+
+/*
+ * Sticky site header: reinforce Graphene (some layout/CSS interactions break
+ * position:sticky so the bar stopped pinning while scrolling).
+ */
+body.js .header {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 420 !important;
+}
+
+/* Global edge start: content and horizontal spacing share same origin */
+:root {
+  --edge-start: clamp(1rem, 4vw, 1.5rem);
+  --space-grid-padding: var(--edge-start) !important;
+  /* Matches rhythm above tagline (“About Voltis Labs” sits after this divider block). */
+  --vl-home-about-rule-pad: clamp(1.5rem, 3.8vw, 2.4rem);
+}
+
+/* Body text baseline: left aligned site-wide */
+body p,
+body li,
+body .p1,
+body .p2,
+body .section-wysiwyg__container > .text h2,
+body .section-title .p2 {
+  text-align: left !important;
+}
+
+/* Centered text column override: true page-center placement, left-aligned copy */
+:root {
+  --body-text-max: 58rem;
+}
+
+/* h2 outside `.text` (heroes, cards, etc.): semibold */
+body h2 {
+  font-weight: 600 !important;
+}
+
+/* `.text` section headings: match About "Looking ahead" (inherit body copy size + semibold + rhythm).
+   Exclude home hero (`.vl-home-hero__copy.text h2`) - it keeps `.vl-home-hero__headline` sizing. */
+body .text h2:not(.vl-home-hero__headline) {
+  font-size: inherit !important;
+  font-weight: 600 !important;
+  line-height: inherit !important;
+  margin-bottom: 0.75em !important;
+}
+
+body .text h3 {
+  font-weight: 600 !important;
+}
+
+body .section-wysiwyg__container > .text,
+body .section-title .text,
+body .section-columns .section-columns__text,
+body .section-table .section-table__item,
+body .vl-products-pullquote,
+body .vl-inner,
+body .vl-blog-article__header,
+body .vl-blog-article__prose {
+  width: 100% !important;
+  max-width: var(--body-text-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+  justify-self: center !important;
+}
+
+body .section-table .section-table__title,
+body .section-table .section-table__text {
+  width: 100% !important;
+  max-width: var(--body-text-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body .section-wysiwyg__container > .text p,
+body .section-wysiwyg__container > .text .p1,
+body .section-wysiwyg__container > .text .p2,
+body .section-wysiwyg__container > .text h2,
+body .section-title .text .p2,
+body .section-table .section-table__title,
+body .section-table .section-table__text {
+  text-align: left !important;
+}
+
+/* Explicit products-style format for Businesses + About pages */
+body.page-id-businesses .vl-products-unified-copy,
+body.page-id-17031 .vl-products-unified-copy {
+  width: 100% !important;
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+  justify-self: center !important;
+  text-align: left !important;
+}
+
+body.page-id-businesses .vl-products-unified-copy h1,
+body.page-id-businesses .vl-products-unified-copy h2,
+body.page-id-businesses .vl-products-unified-copy h3,
+body.page-id-businesses .vl-products-unified-copy p,
+body.page-id-businesses .vl-products-unified-copy .p1,
+body.page-id-businesses .vl-products-unified-copy .p2,
+body.page-id-17031 .vl-products-unified-copy h1,
+body.page-id-17031 .vl-products-unified-copy h2,
+body.page-id-17031 .vl-products-unified-copy h3,
+body.page-id-17031 .vl-products-unified-copy p,
+body.page-id-17031 .vl-products-unified-copy .p1,
+body.page-id-17031 .vl-products-unified-copy .p2 {
+  text-align: left !important;
+}
+
+/*
+ * Businesses: Graphene draws `.section-wysiwyg__container h2::after` with `width: 100vw` and
+ * `right: 100%` inside `overflow: hidden` containers. When the first heading in a block is an
+ * h2 (e.g. “Our licensing approach”), the line no longer lines up with the centered prose column.
+ * Span the divider only across the `.text` column like a normal inset rule.
+ */
+body.page-id-businesses .section-wysiwyg__container > .text.vl-products-unified-copy h2::after {
+  right: auto !important;
+  left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* About page (about-us.html): same unified centered column + left-aligned copy */
+body.page-id-17031 .section-wysiwyg__container > .text,
+body.page-id-17031 .section-table .section-table__title,
+body.page-id-17031 .section-table .section-table__text,
+body.page-id-17031 .section-columns .section-columns__text,
+body.page-id-17031 .section-title .text,
+body.page-id-17031 .section-table-index .section-table-index__text {
+  width: 100% !important;
+  max-width: var(--body-text-max, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-inline: auto !important;
+  justify-self: center !important;
+  text-align: left !important;
+}
+
+body.page-id-17031 .section-wysiwyg__container > .text h1,
+body.page-id-17031 .section-wysiwyg__container > .text h2,
+body.page-id-17031 .section-wysiwyg__container > .text h3,
+body.page-id-17031 .section-wysiwyg__container > .text p,
+body.page-id-17031 .section-wysiwyg__container > .text .p1,
+body.page-id-17031 .section-wysiwyg__container > .text .p2,
+body.page-id-17031 .section-table .section-table__title,
+body.page-id-17031 .section-table .section-table__text,
+body.page-id-17031 .section-columns .section-columns__text,
+body.page-id-17031 .section-table-index .section-table-index__text {
+  text-align: left !important;
+}
 
 /* Reveal .media images when theme JS does not flip --active (static file:// loads) */
 body.switch .media::after {
@@ -13,11 +169,89 @@ body.switch .media video {
 }
 
 /* ----- Home: Voltis hero banner ----- */
-.page-template-homepage .vl-home-hero {
-  padding-top: clamp(6.5rem, 16vw, 12.5rem);
-  padding-bottom: clamp(2.5rem, 6vw, 4rem);
-  row-gap: clamp(1.5rem, 4vw, 2.5rem);
-  align-items: end;
+body.home .vl-home-hero {
+  margin-top: clamp(1rem, 3vw, 2rem);
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(1.25rem, 3vw, 2.1rem);
+  row-gap: clamp(1rem, 2.4vw, 1.6rem);
+  align-items: start;
+}
+
+/* Home: keep new Grapheine hero on top, then old hero section below (no overlap) */
+body.home .header-homepage {
+  padding-top: clamp(5.25rem, 11vw, 8rem);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+body.home .header-homepage__title {
+  margin-bottom: clamp(0.25rem, 1.6vw, 1.5rem);
+  /* Match inner-page hero (e.g. businesses .hero__description): theme uses 6.25rem / 100% lh */
+  font-size: clamp(2rem, 11vw, 6.25rem) !important;
+  line-height: 1 !important;
+}
+
+/* Theme pins span min-height to old 5rem title size; tie to actual font-size */
+body.home .header-homepage__title > span {
+  min-height: calc(1em * 1.15) !important;
+}
+
+/* Home static mode: disable Grapheine hero/sector animations completely */
+body.home .page-template-homepage-static .header-homepage__title {
+  opacity: 1 !important;
+  font-weight: 400 !important;
+}
+
+body.home .page-template-homepage-static .header-homepage__hero,
+body.home .page-template-homepage-static .header-homepage__hero .media {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+body.home .page-template-homepage-static .header-homepage__title > span:last-child {
+  position: relative;
+  display: block;
+  min-height: 1.15em;
+}
+
+body.home .page-template-homepage-static .header-homepage__title > span:last-child > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block !important;
+  animation: vl-home-fade-words 18s ease-in-out infinite;
+}
+
+body.home .page-template-homepage-static .header-homepage__title > span:last-child > span:nth-child(1) { animation-delay: 0s; }
+body.home .page-template-homepage-static .header-homepage__title > span:last-child > span:nth-child(2) { animation-delay: 3s; }
+body.home .page-template-homepage-static .header-homepage__title > span:last-child > span:nth-child(3) { animation-delay: 6s; }
+body.home .page-template-homepage-static .header-homepage__title > span:last-child > span:nth-child(4) { animation-delay: 9s; }
+body.home .page-template-homepage-static .header-homepage__title > span:last-child > span:nth-child(5) { animation-delay: 12s; }
+body.home .page-template-homepage-static .header-homepage__title > span:last-child > span:nth-child(6) { animation-delay: 15s; }
+
+@keyframes vl-home-fade-words {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  4% {
+    opacity: 1;
+    visibility: visible;
+  }
+  13% {
+    opacity: 1;
+    visibility: visible;
+  }
+  17% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .vl-home-hero__copy {
@@ -37,14 +271,43 @@ body.switch .media video {
 
 .vl-home-hero__headline {
   margin: 0;
-  font-size: clamp(2.25rem, 5.2vw, 3.75rem);
-  font-weight: 400;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.9rem, 4.2vw, 3.05rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+/* Graphene `.text h2` draws a full-width top rule + extra padding — strip it for the home hero heading (same class on div with role). */
+body.home .vl-home-hero__copy.text :is(h2, div).vl-home-hero__headline {
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .vl-home-hero__accent {
   color: var(--color-accent, #ff2b2b);
+}
+
+.vl-home-hero__sub {
+  margin: 0;
+  max-width: 34rem;
+  font-size: clamp(1.02rem, 2.35vw, 1.1875rem);
+  line-height: 1.62;
+  color: color-mix(in srgb, var(--color-text) 88%, transparent);
+}
+
+/* Home: match the section-title sentence style and left-align it */
+body.home .section-title .text {
+  text-align: left !important;
+  justify-self: start !important;
+}
+
+body.home .section-title .p2 {
+  text-align: left !important;
+}
+
+body.home .section.section-title {
+  padding-top: var(--vl-home-about-rule-pad);
 }
 
 .vl-home-hero__actions {
@@ -52,6 +315,12 @@ body.switch .media video {
   flex-wrap: wrap;
   gap: 1rem 1.5rem;
   margin: 0.5rem 0 0;
+}
+
+/* Hero quick links - slightly larger + bolder than default navigation links (~1.0625rem / 400) */
+body.home .vl-home-hero__actions .navigation__link {
+  font-size: clamp(1.125rem, 2.7vw, 1.21875rem);
+  font-weight: 500;
 }
 
 .vl-home-hero__copy .p1 {
@@ -62,6 +331,7 @@ body.switch .media video {
 
 .vl-home-hero__panel {
   width: 100%;
+  margin-top: 0;
 }
 
 .vl-home-hero__frame {
@@ -83,6 +353,61 @@ body.switch .media video {
   height: auto;
   vertical-align: bottom;
 }
+
+.vl-home-hero-banners {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2560 / 1583;
+  overflow: hidden;
+  background: transparent;
+}
+
+.vl-home-hero-banners__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(110%, 0, 0);
+  z-index: 1;
+  transition: transform 620ms cubic-bezier(.22,1,.36,1);
+}
+
+.vl-home-hero-banners__slide.is-active {
+  transform: translate3d(0, 0, 0);
+  z-index: 2;
+}
+
+.vl-home-hero-banners__slide.is-entering {
+  z-index: 3;
+}
+
+.vl-home-hero-banners__slide.is-leaving {
+  z-index: 2;
+}
+/* Hero banners mode: remove overlay and corner logo layer */
+.vl-home-hero__frame--banners::before {
+  display: none;
+}
+
+.vl-home-hero__frame--banners .vl-home-hero__logo-strip {
+  display: none;
+}
+
+/* Fresh home hero rotator */
+.vl-home-hero__frame--banners {
+  max-width: min(100%, 36rem);
+  margin-left: 0;
+  margin-right: auto;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
+}
+
 
 .vl-home-hero__frame::before {
   content: "";
@@ -114,13 +439,141 @@ body.switch .media video {
 }
 
 @media only screen and (max-width: 1023px) {
-  .page-template-homepage .vl-home-hero {
+  body.home .vl-home-hero {
     padding-top: 120px;
     align-items: start;
   }
   .vl-home-hero__copy {
     max-width: none;
   }
+}
+
+/* Scroll zone: lighter canvas mid-page (preference + homepage toggle; Articles index exempt) */
+body:not(.vl-blog-page) {
+  transition: background-color 520ms ease, color 520ms ease;
+}
+
+body:not(.vl-blog-page).vl-theme-middle {
+  --color-background: #fff;
+  --color-text: #111;
+  background-color: #fff;
+  color: #111;
+}
+
+/*
+ * Homepage: Graphene/GSAP scrubs `html.--light` on `body.switch` (see grapheine-main.js).
+ * That scrub runs separately from `body.vl-theme-middle`, so the header "White scroll"
+ * toggle must override the light tokens when the user disables the effect.
+ * Values mirror `body.switch` in grapheine-main.css (dark canvas).
+ */
+html.--light body.switch.vl-white-scroll-disabled {
+  --color-text: var(--color-white) !important;
+  --color-background: var(--color-black) !important;
+  --color-separator: color-mix(
+      in srgb,
+      var(--color-text) 20%,
+      transparent
+    )
+    !important;
+  --color-placeholder: color-mix(
+      in srgb,
+      var(--color-text) 12%,
+      var(--color-background)
+    )
+    !important;
+  background: var(--color-background) !important;
+  color: var(--color-text) !important;
+  transition-property: none !important;
+}
+
+/* Hero Articles sits above preceding sections; footer stays above Articles for overlap scrub */
+body.home .footer.footer {
+  position: relative;
+  z-index: 5;
+}
+
+.vl-scroll-toggle {
+  margin-left: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  height: 2rem;
+  padding: 0 0.55rem;
+  cursor: pointer;
+}
+
+.vl-scroll-toggle__icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.vl-scroll-toggle__label {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 160ms ease, opacity 160ms ease;
+  font-size: 0.78rem;
+}
+
+.vl-scroll-toggle:hover .vl-scroll-toggle__label,
+.vl-scroll-toggle:focus-visible .vl-scroll-toggle__label {
+  max-width: 8rem;
+  opacity: 1;
+}
+
+.vl-scroll-toggle[aria-pressed="true"] {
+  border-color: rgba(255, 43, 43, 0.6);
+}
+
+@media (max-width: 1023px) {
+  .vl-scroll-toggle--mobile {
+    margin: 1rem 0 0;
+    align-self: flex-start;
+  }
+}
+
+/* Mobile menu panel: keep brand mark left-aligned with nav items */
+@media (max-width: 1023px) {
+  .header__navigation-mobile {
+    align-items: flex-start !important;
+  }
+
+  .header__navigation-mobile .navigation,
+  .header__navigation-mobile .navigation__list {
+    width: 100%;
+  }
+
+  .header__navigation-mobile .header__logo,
+  .header__navigation-mobile .footer__logo,
+  .header__navigation-mobile img[src*="assets/voltis.svg"] {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    text-align: left !important;
+    justify-self: start !important;
+    align-self: flex-start !important;
+    transform: none !important;
+  }
+}
+
+/* Footer: logo starts on the same column as footer nav */
+.footer .footer__container > .footer__logo {
+  grid-column: 1 / -1 !important;
+  justify-self: start !important;
+  width: 100%;
+}
+
+.footer .footer__container > .footer__logo img,
+.footer .footer__container > .footer__logo svg {
+  display: block;
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 /* Portfolio Years view: local SVG thumbs scale inside the same thumbnail frame as raster art */
@@ -131,3 +584,354 @@ body.switch .media video {
   object-fit: contain;
   background: #0c0c0c;
 }
+
+/* Wearhouse row: VModel intro stacked above Wearhouse title; theme grid uses @container work */
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-width: 36rem;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  margin: 0 0 0.15rem;
+  font-size: clamp(0.78rem, 1.15vw, 0.875rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: color-mix(in srgb, var(--color-text, #111) 55%, transparent);
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__tab {
+  margin: 0;
+  padding: 0.15rem 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.15s ease, opacity 0.15s ease;
+  opacity: 0.72;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__tab:hover,
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__tab:focus-visible {
+  opacity: 1;
+  color: var(--color-text, #111);
+  outline: none;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__tab.is-active {
+  opacity: 1;
+  color: var(--color-accent, #ff2b2b);
+  font-weight: 600;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__tab-sep {
+  opacity: 0.45;
+  user-select: none;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__panes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  position: relative;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__pane {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__pane:not(.is-intro-active) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__pane.is-intro-active {
+  position: relative;
+  z-index: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__title {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--color-text, #111);
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__dek {
+  margin: 0;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--color-text, #111) 90%, transparent);
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__cta.vl-liquid-btn--ghost {
+  align-self: flex-start;
+  white-space: nowrap;
+  color: color-mix(in srgb, var(--color-text, #111) 94%, transparent);
+  --liquid-button-background-color: rgba(255, 255, 255, 0.52);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__cta.vl-liquid-btn--ghost:hover,
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__cta.vl-liquid-btn--ghost:focus-visible {
+  color: #fffaf8;
+}
+
+.work--wearhouse-vmodel-intro .vl-work-vmodel-intro__cta.vl-liquid-btn--ghost .vl-liquid-btn__fill {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-accent, #ff2b2b) 88%, #fff),
+    var(--color-accent, #ff2b2b)
+  );
+}
+
+/* Wide card: intro + Wearhouse stacked left, excerpt spans right (matches theme 8-col split) */
+@container work (min-width: 60vw) {
+  .work--wearhouse-vmodel-intro .vl-work-vmodel-intro {
+    grid-column: 1 / 5;
+    grid-row: 2;
+    align-self: start;
+    max-width: none;
+  }
+
+  .work--wearhouse-vmodel-intro .work__excerpt {
+    grid-column: -5 / -1 !important;
+    grid-row: 2 !important;
+    align-self: start;
+  }
+}
+
+/* Mid width: full-bleed stacking */
+@container work (min-width: 28vw) and (max-width: 59vw) {
+  .work--wearhouse-vmodel-intro .vl-work-vmodel-intro {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/*
+ * Graphene footer parallax: theme JS previously needed extra scroll runway on very tall footers.
+ * Excessive viewport-based padding reads as an empty slab; keep a modest bottom rhythm instead.
+ */
+@media (min-width: 1024px) {
+  html.js footer.footer.parallax-section {
+    padding-bottom: clamp(1rem, 2vw, 1.75rem);
+    box-sizing: border-box;
+    background-color: var(--color-accent);
+  }
+
+  html.js footer.footer.parallax-section > .footer__container {
+    background-color: transparent !important;
+  }
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+  html.js footer.footer.parallax-section {
+    padding-bottom: 0 !important;
+    background-color: transparent !important;
+  }
+
+  html.js footer.footer.parallax-section > .footer__container {
+    background-color: var(--color-accent) !important;
+  }
+}
+
+/*
+ * Portfolio (Years / A-Z / archive “All”): Graphene puts a slim `padding-top` under `.hero__content:before`
+ * but a large `padding-bottom` on `.hero`, so the title hugs the upper rule. Equalise top/bottom padding
+ * in the strip between that rule and the next section divider.
+ */
+body.page-template-page-archive-work-chronological
+  .hero:not(:has(.hero__description)),
+body.page-template-page-archive-work-alphabetical .hero:not(:has(.hero__description)),
+body.post-type-archive-work.archive .archive-work > .hero:not(:has(.hero__description)) {
+  --vl-portfolio-title-pad: clamp(1rem, 2.75vw, 1.875rem);
+  padding-bottom: var(--vl-portfolio-title-pad);
+}
+
+body.page-template-page-archive-work-chronological
+  .hero:not(:has(.hero__description))
+  .hero__content:first-of-type,
+body.page-template-page-archive-work-alphabetical .hero:not(:has(.hero__description)) .hero__content:first-of-type,
+body.post-type-archive-work.archive
+  .archive-work
+  > .hero:not(:has(.hero__description))
+  .hero__content:first-of-type {
+  padding-top: var(--vl-portfolio-title-pad) !important;
+}
+
+@media only screen and (max-width: 1023px) {
+  body.page-template-page-archive-work-chronological
+    .hero:not(:has(.hero__description)),
+  body.page-template-page-archive-work-alphabetical
+    .hero:not(:has(.hero__description)),
+  body.post-type-archive-work.archive
+    .archive-work
+    > .hero:not(:has(.hero__description)) {
+    padding-bottom: var(--vl-portfolio-title-pad, clamp(1rem, 2.75vw, 1.875rem)) !important;
+  }
+}
+
+/* ── Global “empty hit” click feedback (Animate UI Click primitive ring-style port for static HTML) ── */
+.vl-global-click-feedback {
+  /* ~30% smaller than earlier ring */
+  --vl-global-click-size: clamp(87px, 12.6vmin, 140px);
+  position: fixed;
+  z-index: 2147483000;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: var(--vl-global-click-size);
+  height: var(--vl-global-click-size);
+  margin: 0;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--color-accent, #ff2b2b) 78%, transparent);
+  background: radial-gradient(
+    circle,
+    transparent 62%,
+    color-mix(in srgb, var(--color-accent, #ff2b2b) 18%, transparent) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.12);
+  will-change: transform, opacity;
+  transition:
+    transform 380ms cubic-bezier(0.25, 0.82, 0.35, 1),
+    opacity 420ms ease-out,
+    filter 380ms ease;
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-global-click-feedback {
+    transition-duration: 0.01ms;
+    opacity: 0.55 !important;
+    transform: translate(-50%, -50%) scale(0.6) !important;
+  }
+}
+
+.vl-global-click-feedback--pulse {
+  opacity: 0.92;
+  transform: translate(-50%, -50%) scale(1.58);
+  filter: blur(0.5px);
+}
+
+/* Static contact page (FormSubmit) */
+.vl-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.vl-contact-form {
+  width: 100%;
+  max-width: 42rem;
+  margin: 0;
+}
+
+.vl-contact-form__row {
+  margin-bottom: 1.25rem;
+}
+
+.vl-contact-form__row--two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1.35rem;
+}
+
+@media (min-width: 560px) {
+  .vl-contact-form__row--two {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.vl-contact-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9375rem;
+}
+
+.vl-contact-form input[type="text"],
+.vl-contact-form input[type="email"],
+.vl-contact-form input[type="tel"],
+.vl-contact-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.85rem;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(0, 0, 0, 0.18);
+  color: inherit;
+  font: inherit;
+  line-height: 1.4;
+}
+
+.vl-contact-form textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.vl-contact-form input:focus,
+.vl-contact-form textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--color-accent, #ff2b2b) 70%, transparent);
+  outline-offset: 1px;
+}
+
+body.vl-theme-middle .vl-contact-form input[type="text"],
+body.vl-theme-middle .vl-contact-form input[type="email"],
+body.vl-theme-middle .vl-contact-form input[type="tel"],
+body.vl-theme-middle .vl-contact-form textarea {
+  border-color: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.vl-contact-form__hint {
+  margin: -0.25rem 0 1rem;
+  font-size: 0.875rem;
+  opacity: 0.82;
+}
+
+.vl-contact-form__actions .vl-liquid-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 480px) {
+  .vl-contact-form__actions .vl-liquid-btn {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+

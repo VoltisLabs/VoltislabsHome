@@ -11,7 +11,7 @@ sectors_new = r'''<div class="section-sectors grid">
 
         <div pos="1-6" pos-s="row" class="section-sectors__text">
             <div class="text">
-                <p class="p2">Shipped work and experiments — the same preview art as <a href="portfolio.html">Portfolio → Years</a>. Follow any tile to product pages, case studies, or the full catalog.</p>
+                <p class="p2">Shipped work and experiments - the same preview art as <a href="portfolio.html">Portfolio → Years</a>. Follow any tile to product pages, case studies, or the full catalog.</p>
                 <p class="p2"><a href="products.html">All products</a> · <a href="portfolio.html">Portfolio</a> · <a href="https://github.com/VoltisLabs" target="_blank" rel="noopener noreferrer">GitHub</a></p>
             </div>
         </div>
@@ -20,7 +20,7 @@ sectors_new = r'''<div class="section-sectors grid">
                 <div class="section-sectors__thumbnails-container">
                     <div class="section-sectors__thumbnails">
                         <img width="2560" height="1583" src="assets/portfolio/Wearhouse.svg" alt="Wearhouse" loading="lazy" decoding="async" />
-                        <img width="2560" height="1583" src="assets/portfolio/Afrogarm.svg" alt="Afrogarm" loading="lazy" decoding="async" />
+                        <img width="2560" height="1583" src="assets/portfolio/Afrogarm.png" alt="Afrogarm" loading="lazy" decoding="async" />
                         <img width="2560" height="1583" src="assets/portfolio/NotepadPro.svg" alt="NotepadPro" loading="lazy" decoding="async" />
                         <img width="2560" height="1583" src="assets/portfolio/Clipstack.svg" alt="Clipstack" loading="lazy" decoding="async" />
                         <img width="2560" height="1583" src="assets/portfolio/Pinnacle.svg" alt="Pinnacle Transfer" loading="lazy" decoding="async" />
@@ -29,7 +29,7 @@ sectors_new = r'''<div class="section-sectors grid">
                     <div class="section-sectors__thumbnails">
                         <img width="2560" height="1583" src="assets/portfolio/Frame%201171276187.svg" alt="Voltis Labs games" loading="lazy" decoding="async" />
                         <img width="2560" height="1583" src="assets/portfolio/Frame%201171276188.svg" alt="Pebble Cleaning" loading="lazy" decoding="async" />
-                        <img width="2560" height="1583" src="assets/portfolio/Spinnersonic.svg" alt="Spinnersonic" loading="lazy" decoding="async" />
+                        <img width="2560" height="1583" src="assets/portfolio/Spinnersonic.png" alt="Spinnersonic" loading="lazy" decoding="async" />
                         <img width="2560" height="1583" src="assets/portfolio/Spinnersonic%20Web.svg" alt="Spinnersonic (web)" loading="lazy" decoding="async" />
                         <img width="2560" height="1583" src="assets/portfolio/Frame%201171276186.svg" alt="Voltis Labs Website" loading="lazy" decoding="async" />
                         <img width="2560" height="1583" src="assets/portfolio/Frame%201171276190.svg" alt="VModel" loading="lazy" decoding="async" />
@@ -37,7 +37,7 @@ sectors_new = r'''<div class="section-sectors grid">
                 </div>
             </div>
             <ul class="section-sectors__list" pos="7-12" pos-s="row">
-                <li class="section-sectors__item"><a href="portfolio.html">Portfolio — Years</a></li>
+                <li class="section-sectors__item"><a href="portfolio.html">Portfolio - Years</a></li>
                 <li class="section-sectors__item"><a href="products.html#voltis-apps">Product catalog</a></li>
                 <li class="section-sectors__item"><a href="product-wearhouse.html">Fashion &amp; retail</a></li>
                 <li class="section-sectors__item"><a href="product-vmodel.html">Creators</a></li>
@@ -80,14 +80,14 @@ works_new = r'''<ol class="grid section-works-homepage__list">
             <h3 class="work__title">Wearhouse</h3>
             <span class="work__sector">Fashion &amp; retail</span>
         </a>
-        <div class="work__excerpt"><p>Secondhand fashion marketplace — list, discover, and shop preloved pieces with a modern, community-driven experience.</p></div>
+        <div class="work__excerpt"><p>Secondhand fashion marketplace - list, discover, and shop preloved pieces with a modern, community-driven experience.</p></div>
     </div>
 </li>
 <li class="work">
     <div class="work__container grid">
         <div class="work__thumbnail">
             <div class="media">
-                <img width="2560" height="1583" src="assets/portfolio/Afrogarm.svg" class="" alt="Afrogarm" loading="lazy" decoding="async" />
+                <img width="2560" height="1583" src="assets/portfolio/Afrogarm.png" class="" alt="Afrogarm" loading="lazy" decoding="async" />
             </div>
             <div class="work__thumbnail-over" aria-hidden="true"></div>
         </div>
@@ -103,7 +103,7 @@ works_new = r'''<ol class="grid section-works-homepage__list">
     <div class="work__container grid">
         <div class="work__thumbnail">
             <div class="media">
-                <img width="2560" height="1583" src="assets/portfolio/Spinnersonic.svg" class="" alt="Spinnersonic" loading="lazy" decoding="async" />
+                <img width="2560" height="1583" src="assets/portfolio/Spinnersonic.png" class="" alt="Spinnersonic" loading="lazy" decoding="async" />
             </div>
             <div class="work__thumbnail-over" aria-hidden="true"></div>
         </div>
@@ -151,19 +151,19 @@ works_new = r'''<ol class="grid section-works-homepage__list">
 
 title_new = r'''<section class="grid section section-title">
     <div pos="2-12" pos-s="row" class="text">
-        <p class="p2">Shipping software with <em>clear propositions</em>, <em>consistent UX</em>, and <em>code you can extend</em> — from prototype to production.</p>
+        <p class="p2">Shipping software with <em>clear propositions</em>, <em>consistent UX</em>, and <em>code you can extend</em> - from prototype to production.</p>
     </div>
 </section>'''
 
 about_new = r'''<section class="section-about">
     <div class="grid">
         <div pos="7-12" pos-s="row" class="section-about__text text">
-            <p class="p2">Voltis Labs is a software and product studio. We build apps people use daily — marketplaces, creator tools, games, and utilities — with pragmatic delivery and open collaboration on GitHub.</p>
+            <p class="p2">Voltis Labs is a software and product studio. We build apps people use daily - marketplaces, creator tools, games, and utilities - with pragmatic delivery and open collaboration on GitHub.</p>
             <p class="p2">Use this site for product stories and writing; the voltislabs.com repo on GitHub has implementation detail when you need to go deeper.</p>
         </div>
 
         <div pos="10-12" pos-s="row">
-            <a class="section-about__link" href="agency.html">About Voltis Labs</a>
+            <a class="section-about__link" href="about-us.html">About Voltis Labs</a>
         </div>
     </div>
 </section>'''
@@ -175,7 +175,7 @@ i0 = text.index(m0)
 i1 = text.index(m1)
 text = text[:i0] + sectors_new + "\n    " + text[i1:]
 
-# 2) works list — re-find after mutation
+# 2) works list - re-find after mutation
 ol_start = text.index('<ol class="grid section-works-homepage__list">')
 footer_marker = '</ol>\n\n    <footer class="grid">'
 ol_end = text.index(footer_marker, ol_start)
@@ -188,7 +188,7 @@ t0 = text.index(ts)
 t1 = text.index(te, t0)
 text = text[:t0] + title_new + text[t1:]
 
-# 4) section-about — find again
+# 4) section-about - find again
 as_mark = '<section class="section-about">'
 # next section after about is news
 ae = '</section>                <section class="section-news-homepage"'
