@@ -87,6 +87,11 @@ body .section-table .section-table__text {
   text-align: left !important;
 }
 
+/* Grapheine sets `text-indent` on `.section-title .text` — that indents only line 1 and makes wrapped paragraphs look staggered */
+body .section-title .text {
+  text-indent: 0 !important;
+}
+
 /* Explicit products-style format for Businesses + About pages */
 body.page-id-businesses .vl-products-unified-copy,
 body.page-id-17031 .vl-products-unified-copy {
@@ -308,6 +313,17 @@ body.home .section-title .p2 {
 
 body.home .section.section-title {
   padding-top: var(--vl-home-about-rule-pad);
+}
+
+/* Home About: Grapheine uses two columns (`column-count: 2`) on `.section-about__text` on wide viewports — copy flows vertically per column first, which breaks alignment with adjacent lines. Single column reads as one block. */
+body.home .section-about__text.text {
+  column-count: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.home .section-about__text .p2 {
+  text-indent: 0 !important;
 }
 
 .vl-home-hero__actions {

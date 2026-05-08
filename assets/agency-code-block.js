@@ -69,6 +69,7 @@
       window.clearTimeout(session.loopAdvanceTimer);
       session.loopAdvanceTimer = null;
     }
+    if ((HOME_TAGLINE_SLIDES.length || 0) <= 1) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
@@ -241,10 +242,6 @@
     return score > list[list.length - 1].score;
   }
 
-  /** World pixel size - fixed logical canvas (stage scales visually, no layout jump). */
-  var FLAPPY_W = 288;
-  var FLAPPY_H = 360;
-
   function svgIcon(paths, attrs) {
     var ns = "http://www.w3.org/2000/svg";
     var svg = document.createElementNS(ns, "svg");
@@ -253,10 +250,12 @@
     svg.setAttribute("height", "18");
     svg.setAttribute("aria-hidden", "true");
     svg.setAttribute("focusable", "false");
-    if (attrs)
+    if (attrs) {
       Object.keys(attrs).forEach(function (k) {
+        if (k === "stroke" || k === "strokeWidth" || k === "fillNone") return;
         svg.setAttribute(k, attrs[k]);
       });
+    }
     for (var p = 0; p < paths.length; p++) {
       var path = document.createElementNS(ns, "path");
       path.setAttribute("d", paths[p]);
@@ -306,13 +305,15 @@
       "vl-launch-demo__bare-icon vl-launch-demo__bare-icon--refresh",
       "Restart code demo from the beginning",
       function () {
+        /* Single-stroke arcs (same geometry family as fullscreen control) avoid muddy scaling */
         return svgIcon(
           [
-            "M23 4v6h-6",
-            "M1 20v-6h6",
-            "M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15",
+            "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8",
+            "M3 3v5h5",
+            "M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16",
+            "M21 21v-5h-5",
           ],
-          { stroke: true, strokeWidth: "2" },
+          { stroke: true, strokeWidth: "1.65" },
         );
       },
     );
@@ -558,6 +559,14 @@
     overlays.className = "vl-mini-floppy__overlays";
     stage.appendChild(overlays);
 
+    var tryAgainBtn = document.createElement("button");
+    tryAgainBtn.type = "button";
+    tryAgainBtn.className = "vl-mini-floppy__try-again";
+    tryAgainBtn.textContent = "Try again";
+    tryAgainBtn.hidden = true;
+    tryAgainBtn.setAttribute("aria-hidden", "true");
+    overlays.appendChild(tryAgainBtn);
+
     var dpr = typeof window.devicePixelRatio === "number" ? window.devicePixelRatio : 1;
     var ctx = canvas.getContext("2d");
 
@@ -569,20 +578,26 @@
     var PIPE_GAP = 112;
     var PIPE_W = 44;
     var PIPE_HORIZONTAL_GAP = 158;
-    var BIRD_X = FLAPPY_W * 0.28;
+    /** Baseline logical size — only used for worldScale (sprite screen size matches old 288×360 fit). */
+    var BASE_WORLD_W = 288;
+    var BASE_WORLD_H = 360;
+    /** Current world viewport — grows with container; more level visible without changing scale. */
+    var viewW = BASE_WORLD_W;
+    var viewH = BASE_WORLD_H;
+    var BIRD_X = viewW * 0.28;
     var BIRD_R = 12;
-    var groundY = FLAPPY_H - 22;
+    var groundY = viewH - 22;
 
     /** @type {'idle' | 'splash' | 'playing' | 'dying' | 'dead' | 'paused'} */
     var phase = "idle";
     var splashT0 = 0;
     var deathT0 = 0;
     var deathSx = BIRD_X;
-    var deathSy = FLAPPY_H / 2;
+    var deathSy = viewH / 2;
     /** @type {{ x:number,y:number,vx:number,vy:number,r:number,life:number, color:string }[]} */
     var splatDots = [];
 
-    var birdY = FLAPPY_H / 2;
+    var birdY = viewH / 2;
     var vy = 0;
     /** @type {{ x: number, gapY: number, scored: boolean }[]} */
     var pipes = [];
@@ -641,32 +656,44 @@
     }
 
     function resize() {
-      var sw =
-        typeof stage.clientWidth === "number" && stage.clientWidth >= 48
-          ? stage.clientWidth
-          : FLAPPY_W;
-      var maxW = sw;
-      var worldScale = maxW / FLAPPY_W;
+      var cwRaw = typeof stage.clientWidth === "number" ? stage.clientWidth : 0;
+      var chRaw = typeof stage.clientHeight === "number" ? stage.clientHeight : 0;
+      var cw = cwRaw >= 48 ? cwRaw : BASE_WORLD_W;
+      /* Before first layout pass height can be 0 — assume tight aspect box from width until ResizeObserver catches up */
+      var aspectH = cw * (BASE_WORLD_H / BASE_WORLD_W);
+      var ch = chRaw >= 48 ? chRaw : aspectH;
+      var scaleW = cw / BASE_WORLD_W;
+      var scaleH = ch / BASE_WORLD_H;
+      /** Same baseline scale as 288×360 — wider/taller containers only reveal more world. */
+      var worldScale = Math.min(scaleW, scaleH);
+      if (!(worldScale > 0 && isFinite(worldScale))) worldScale = scaleW || 1;
       if (isWrapFullscreen()) {
-        worldScale = Math.min(worldScale * 1.14, 4.25);
+        var widthBoost = Math.min(scaleW * 1.14, 4.25);
+        worldScale = Math.min(widthBoost, scaleH);
       }
-      canvas.style.width = maxW + "px";
-      canvas.style.height = Math.round(FLAPPY_H * worldScale) + "px";
-      canvas.width = Math.max(1, Math.round(maxW * dpr));
-      canvas.height = Math.max(1, Math.round(FLAPPY_H * worldScale * dpr));
+
+      viewW = cw / worldScale;
+      viewH = ch / worldScale;
+      BIRD_X = viewW * 0.28;
+      groundY = viewH - 22;
+
+      canvas.style.width = Math.round(cw) + "px";
+      canvas.style.height = Math.round(ch) + "px";
+      canvas.width = Math.max(1, Math.round(cw * dpr));
+      canvas.height = Math.max(1, Math.round(ch * dpr));
       ctx.setTransform(dpr * worldScale, 0, 0, dpr * worldScale, 0, 0);
       drawWorld();
     }
 
     function rndGapY() {
       var pad = 64;
-      return pad + Math.random() * (FLAPPY_H - PIPE_GAP - 2 * pad);
+      return pad + Math.random() * (viewH - PIPE_GAP - 2 * pad);
     }
 
     function resetGame() {
-      birdY = FLAPPY_H / 2;
+      birdY = viewH / 2;
       vy = 0;
-      pipes = [{ x: FLAPPY_W + 72, gapY: rndGapY(), scored: false }];
+      pipes = [{ x: viewW + 72, gapY: rndGapY(), scored: false }];
       score = 0;
       frame = 0;
       splatDots = [];
@@ -702,12 +729,13 @@
 
     function finishDying() {
       phase = "dead";
+      syncTryAgainButton();
       setHud(
         floppyQualifies(score)
-          ? "Top 10! Enter initials below or tap restart."
-          : "Game over - score " +
+          ? "Top 10! Enter initials below · Try again anytime."
+          : "Game over · score " +
               score +
-              ". Tap the playfield or Space to retry.",
+              " · Try again button, Space, or tap playfield.",
       );
       if (floppyQualifies(score)) {
         ensureHiEntry(score);
@@ -792,7 +820,7 @@
             raw +
             " · score " +
             finalScore +
-            ". Tap playfield or Space to retry.",
+            ". Try again, Space, or tap playfield.",
         );
         updateHiPanelIfOpen();
       }
@@ -951,6 +979,29 @@
       pauseBtn.style.opacity = on ? "1" : "0.45";
     }
 
+    function syncTryAgainButton() {
+      var show = phase === "dead";
+      tryAgainBtn.hidden = !show;
+      tryAgainBtn.setAttribute("aria-hidden", show ? "false" : "true");
+      tryAgainBtn.setAttribute(
+        "aria-label",
+        "Try again · restarts round without replaying boot",
+      );
+    }
+
+    function retryRoundFromDeath() {
+      if (phase !== "dead") return;
+      phase = "splash";
+      splashT0 = Date.now();
+      resetGame();
+      removeHiModal();
+      setHud("Score: 0");
+      syncTryAgainButton();
+      syncPauseAvailability();
+      if (rafId == null) rafId = window.requestAnimationFrame(loop);
+      drawWorld();
+    }
+
     function flap() {
       if (phase === "idle") {
         phase = "splash";
@@ -965,11 +1016,7 @@
         return;
       }
       if (phase === "dead") {
-        phase = "idle";
-        removeHiModal();
-        setHud("Tap playfield or Space for Floppy Ball");
-        syncPauseAvailability();
-        drawWorld();
+        retryRoundFromDeath();
         return;
       }
       if (phase === "paused") {
@@ -981,7 +1028,7 @@
     }
 
     function hitGroundOrCeiling() {
-      return birdY - BIRD_R < 6 || birdY + BIRD_R > FLAPPY_H - 8;
+      return birdY - BIRD_R < 6 || birdY + BIRD_R > viewH - 8;
     }
 
     function pipeCollision(p) {
@@ -1016,24 +1063,24 @@
     function drawGroundDecor() {
       var groundH = 22;
       ctx.fillStyle = "#182225";
-      ctx.fillRect(0, FLAPPY_H - groundH, FLAPPY_W, groundH);
+      ctx.fillRect(0, viewH - groundH, viewW, groundH);
       ctx.strokeStyle = "rgba(120, 200, 140, 0.22)";
       ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.moveTo(0, FLAPPY_H - groundH);
-      ctx.lineTo(FLAPPY_W, FLAPPY_H - groundH);
+      ctx.moveTo(0, viewH - groundH);
+      ctx.lineTo(viewW, viewH - groundH);
       ctx.stroke();
       ctx.fillStyle = "rgba(80, 190, 120, 0.12)";
       for (var s = 0; s < 6; s++) {
-        var ox = ((frame * 0.4 + s * 52) % (FLAPPY_W + 40)) - 40;
-        ctx.fillRect(ox, FLAPPY_H - groundH - 8, 28, 5);
+        var ox = ((frame * 0.4 + s * 52) % (viewW + 40)) - 40;
+        ctx.fillRect(ox, viewH - groundH - 8, 28, 5);
       }
     }
 
     function drawWorld() {
       ctx.save();
       ctx.fillStyle = "#0d1112";
-      ctx.fillRect(0, 0, FLAPPY_W, FLAPPY_H);
+      ctx.fillRect(0, 0, viewW, viewH);
       drawGroundDecor();
 
       if (phase === "playing" || phase === "paused" || phase === "dying" || phase === "dead") {
@@ -1046,11 +1093,11 @@
           var topH = p.gapY - PIPE_GAP / 2;
           var botY = p.gapY + PIPE_GAP / 2;
           ctx.fillRect(p.x, 0, PIPE_W, Math.max(0, topH));
-          ctx.fillRect(p.x, botY, PIPE_W, FLAPPY_H - botY);
+          ctx.fillRect(p.x, botY, PIPE_W, viewH - botY);
           ctx.strokeStyle = "rgba(120, 220, 150, 0.45)";
           ctx.lineWidth = 2;
           ctx.strokeRect(p.x, 0, PIPE_W, Math.max(0, topH));
-          ctx.strokeRect(p.x, botY, PIPE_W, FLAPPY_H - botY);
+          ctx.strokeRect(p.x, botY, PIPE_W, viewH - botY);
         }
         ctx.globalAlpha = 1;
       }
@@ -1058,34 +1105,34 @@
       ctx.textAlign = "center";
 
       if (phase === "idle") {
-        drawBall(FLAPPY_W / 2, FLAPPY_H * 0.52, BIRD_R, 1, 1);
+        drawBall(viewW / 2, viewH * 0.52, BIRD_R, 1, 1);
         ctx.fillStyle = "rgba(248, 248, 240, 0.9)";
         ctx.font = "600 18px ui-sans-serif, system-ui, sans-serif";
-        ctx.fillText("Floppy Ball", FLAPPY_W / 2, FLAPPY_H * 0.32);
+        ctx.fillText("Floppy Ball", viewW / 2, viewH * 0.32);
         ctx.font = "500 13px ui-sans-serif, system-ui, sans-serif";
         ctx.fillStyle = "rgba(248, 248, 240, 0.6)";
         ctx.fillText(
           "Tap or Space - splash bounce, then dodge the gates",
-          FLAPPY_W / 2,
-          FLAPPY_H * 0.76,
+          viewW / 2,
+          viewH * 0.76,
         );
       }
 
       if (phase === "splash") {
         var bounce = reducedMotion ? 12 : Math.abs(Math.sin((Date.now() - splashT0) / 145)) * 46;
         var by =
-          FLAPPY_H - 22 - BIRD_R - 4 - bounce;
+          viewH - 22 - BIRD_R - 4 - bounce;
         ctx.fillStyle = "rgba(248, 248, 240, 0.9)";
         ctx.font = "600 17px ui-sans-serif, system-ui, sans-serif";
-        ctx.fillText("Floppy Ball", FLAPPY_W / 2, FLAPPY_H * 0.32);
-        drawBall(FLAPPY_W / 2, by, BIRD_R, 1 + bounce * 0.0045, 1 - bounce * 0.003);
+        ctx.fillText("Floppy Ball", viewW / 2, viewH * 0.32);
+        drawBall(viewW / 2, by, BIRD_R, 1 + bounce * 0.0045, 1 - bounce * 0.003);
 
         ctx.font = "500 11px ui-sans-serif, system-ui, sans-serif";
         ctx.fillStyle = "rgba(248, 248, 240, 0.5)";
         ctx.fillText(
           bounce > 8 ? "Get ready..." : "...",
-          FLAPPY_W / 2,
-          FLAPPY_H * 0.2,
+          viewW / 2,
+          viewH * 0.2,
         );
       }
 
@@ -1113,23 +1160,19 @@
 
       if (phase === "paused") {
         ctx.fillStyle = "rgba(6, 8, 10, 0.55)";
-        ctx.fillRect(0, 0, FLAPPY_W, FLAPPY_H);
+        ctx.fillRect(0, 0, viewW, viewH);
         ctx.fillStyle = "rgba(248, 248, 240, 0.95)";
         ctx.font = "600 24px ui-sans-serif, system-ui, sans-serif";
-        ctx.fillText("Paused", FLAPPY_W / 2, FLAPPY_H * 0.45);
+        ctx.fillText("Paused", viewW / 2, viewH * 0.45);
       }
 
       if (phase === "dead") {
         ctx.fillStyle = "rgba(248, 248, 240, 0.92)";
         ctx.font = "600 17px ui-sans-serif, system-ui, sans-serif";
-        ctx.fillText("Score " + score, FLAPPY_W / 2, FLAPPY_H * 0.42);
+        ctx.fillText("Score " + score, viewW / 2, viewH * 0.42);
         ctx.font = "500 11px ui-sans-serif, system-ui, sans-serif";
         ctx.fillStyle = "rgba(248, 248, 240, 0.62)";
-        ctx.fillText(
-          "Tap playfield or Space to restart",
-          FLAPPY_W / 2,
-          FLAPPY_H * 0.53,
-        );
+        ctx.fillText("Try again · Space · tap playfield", viewW / 2, viewH * 0.53);
       }
 
       ctx.restore();
@@ -1178,9 +1221,9 @@
       }
 
       var rightmost = pipes[pipes.length - 1];
-      if (!rightmost || rightmost.x < FLAPPY_W - 52) {
+      if (!rightmost || rightmost.x < viewW - 52) {
         pipes.push({
-          x: rightmost ? rightmost.x + PIPE_HORIZONTAL_GAP : FLAPPY_W + 72,
+          x: rightmost ? rightmost.x + PIPE_HORIZONTAL_GAP : viewW + 72,
           gapY: rndGapY(),
           scored: false,
         });
@@ -1271,6 +1314,7 @@
       ro.observe(stage);
     }
     resize();
+    syncTryAgainButton();
     drawWorld();
     syncFullscreenUi();
 
@@ -1410,7 +1454,6 @@
 
     if (!bootBtn || !bootOverlay || !pixelFill || !logEl) {
       setLaunchMain(mainEl, reducedMotion, session);
-      scheduleHomeSlideLoop(root, preEl, codeEl, launchEl, session);
       return;
     }
 
@@ -1440,13 +1483,16 @@
     }
 
     function finishBootAndMount() {
+      if (session.loopAdvanceTimer != null) {
+        window.clearTimeout(session.loopAdvanceTimer);
+        session.loopAdvanceTimer = null;
+      }
       if (session.aborting) return;
       logEl.innerHTML = "";
       bootBtn.hidden = true;
       bootBtn.onclick = null;
       bootOverlay.setAttribute("hidden", "");
       setLaunchMain(mainEl, reducedMotion, session);
-      scheduleHomeSlideLoop(root, preEl, codeEl, launchEl, session);
     }
 
     function onStartClick() {
@@ -1457,6 +1503,7 @@
       if (session.aborting) return;
       bootBtn.hidden = false;
       bootBtn.onclick = onStartClick;
+      scheduleHomeSlideLoop(root, preEl, codeEl, launchEl, session);
     }
 
     function appendLinesSequential(lines, ix) {

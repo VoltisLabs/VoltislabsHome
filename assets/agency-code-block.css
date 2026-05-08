@@ -250,8 +250,8 @@ body.home .vl-home-hero__frame .vl-animate-code-block__launch-body {
   display: flex;
   flex-direction: column;
   min-height: 0;
+  overflow: hidden;
 }
-
 body.home .vl-home-hero__frame .vl-launch-demo__stage-shell {
   position: relative;
   flex: 1 1 auto;
@@ -490,12 +490,16 @@ body.home .vl-launch-demo__bare-icon--exit-fs:focus-visible {
 
 body.home .vl-launch-demo__bare-icon svg {
   display: block;
+  shape-rendering: geometricPrecision;
+}
+
+body.home .vl-mini-floppy__icon-btn svg {
+  shape-rendering: geometricPrecision;
 }
 
 body.home .vl-mini-floppy {
   width: 100%;
-  max-width: min(352px, 100%);
-  margin-inline: auto;
+  margin-inline: 0;
   display: flex;
   flex-direction: column;
   gap: 0.28rem;
@@ -620,20 +624,25 @@ body.home .vl-mini-floppy__corner-bar .vl-mini-floppy__icon-btn {
 body.home .vl-mini-floppy__stage {
   position: relative;
   width: 100%;
-  max-width: min(352px, 100%);
-  margin: 0 auto;
-  aspect-ratio: 288 / 360;
-  max-height: min(420px, 52vh);
-  flex-shrink: 0;
+  flex: 1 1 auto;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  min-height: 180px;
+  max-height: min(620px, 58vh);
+}
+
+@media (max-width: 719px) {
+  body.home .vl-mini-floppy__stage {
+    max-height: min(480px, 56vh);
+  }
 }
 
 @media (min-width: 720px) {
   body.home .vl-mini-floppy__stage {
-    max-width: none;
-    width: 100%;
-    flex: 1 1 auto;
     min-height: 200px;
-    max-height: min(620px, 58vh);
   }
 
   body.home .vl-mini-floppy--fullscreen .vl-mini-floppy__stage {
@@ -649,6 +658,35 @@ body.home .vl-mini-floppy__overlays {
   inset: 0;
   pointer-events: none;
   z-index: 3;
+}
+
+body.home .vl-mini-floppy__try-again {
+  pointer-events: auto;
+  position: absolute;
+  left: 50%;
+  bottom: max(19%, 3.2rem);
+  transform: translateX(-50%);
+  z-index: 5;
+  margin: 0;
+  padding: 0.4rem 1.05rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 125, 88, 0.52);
+  background: rgba(10, 12, 11, 0.94);
+  color: rgba(252, 248, 240, 0.96);
+  font: 600 0.8rem ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.home .vl-mini-floppy__try-again:hover,
+body.home .vl-mini-floppy__try-again:focus-visible {
+  border-color: rgba(255, 48, 48, 0.62);
+  outline: none;
+}
+
+body.home .vl-mini-floppy__try-again[hidden] {
+  display: none !important;
 }
 
 body.home .vl-mini-floppy__hi-entry,
@@ -730,12 +768,17 @@ body.home .vl-mini-floppy__canvas {
   display: block;
   width: 100%;
   height: 100%;
+  max-width: none;
+  max-height: none;
   border-radius: 8px;
   border: 1px solid rgba(110, 210, 135, 0.22);
   cursor: pointer;
   touch-action: manipulation;
   outline: none;
   box-sizing: border-box;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-self: stretch;
 }
 
 body.home .vl-mini-floppy__canvas:focus-visible {
@@ -798,6 +841,12 @@ body.home .vl-mini-floppy__canvas:focus-visible {
 
   body.home .vl-mini-floppy__canvas {
     border-color: rgba(42, 96, 56, 0.28);
+  }
+
+  body.home .vl-mini-floppy__try-again {
+    background: rgba(255, 255, 253, 0.96);
+    color: #141a16;
+    border-color: rgba(222, 90, 60, 0.45);
   }
 
   body.home .vl-mini-floppy__hi-entry,
